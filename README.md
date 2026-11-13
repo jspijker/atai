@@ -50,8 +50,11 @@ just a postcode. Resolve a resident's postcode to coordinates with
 
 ## Flow on GitHub
 
+0. A resident opens a **Research question** issue (just their question, no plan).
+   The `analysis-request-planner` agent (`.github/agents/`) reads it, does steps
+   1–2 of the skill, and opens the matching **Analysis request** issue below.
 1. Someone opens an issue with the **Analysis request** form and pastes the
-   resident's question and the plan JSON.
+   resident's question and the plan JSON (or the agent opens it from step 0).
 2. A maintainer checks it and adds the label `run-analysis`.
 3. The workflow extracts the plan, checks it against
    `.github/skills/air-quality-analyst/assets/schemas/plan.schema.json`, and runs
@@ -74,7 +77,8 @@ just a postcode. Resolve a resident's postcode to coordinates with
 1. Copy this folder into the root of your repository.
    In repository Settings › Actions › General, set workflow permissions to
    "Read and write" if the comment step fails with a permissions error.
-2. Create the labels `analysis-request`, `run-analysis` and `results-ready`.
+2. Create the labels `research-question`, `analysis-request`, `run-analysis` and
+   `results-ready`.
 3. Connect each tool in `scripts/run_analysis.R` to the real Samen Analyseren or
    openair function, and add the data source (the stub only logs
    "not implemented").
