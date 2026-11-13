@@ -466,15 +466,25 @@ tool_average_over_time <- function(p) {
 # ---------------------------------------------------------------------------
 # dispatch
 # ---------------------------------------------------------------------------
+# Documented tools that are allowed but not yet implemented. These return a
+# clear "not implemented yet" result instead of a hard "Tool not allowed"
+# rejection, so a reader can tell "planned but unimplemented" from "forbidden".
+not_impl <- function(step) function(p) list(
+  step = step, status = "not_available",
+  inputs_used = if (is.null(p)) setNames(list(), character()) else p,
+  values = list(), warnings = list("not implemented yet"), files = list())
+
 tools <- list(
-  check_data_coverage   = tool_check_data_coverage,
-  get_sensor_data       = tool_get_sensor_data,
-  detect_faulty_sensors = tool_detect_faulty_sensors,
-  flag_high_humidity    = tool_flag_high_humidity,
-  filter_outliers       = tool_filter_outliers,
-  get_background        = tool_get_background,
-  to_openair_format     = tool_to_openair_format,
-  average_over_time     = tool_average_over_time
+  check_data_coverage     = tool_check_data_coverage,
+  get_sensor_data         = tool_get_sensor_data,
+  detect_faulty_sensors   = tool_detect_faulty_sensors,
+  flag_high_humidity      = tool_flag_high_humidity,
+  compare_with_neighbours = not_impl("sensor_check"),
+  filter_outliers         = tool_filter_outliers,
+  get_background          = tool_get_background,
+  to_openair_format       = tool_to_openair_format,
+  plot_over_time          = not_impl("analysis"),
+  average_over_time       = tool_average_over_time
 )
 
 results <- list(
