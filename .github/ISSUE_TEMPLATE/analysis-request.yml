@@ -1,0 +1,34 @@
+name: Analysis request
+description: A resident question with its analysis plan (step 2 output). A maintainer adds the label "run-analysis" to start the workflow.
+title: "[Analysis] "
+labels: ["analysis-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Paste the resident's question and the plan JSON produced in step 2.
+        The plan must follow `.github/skills/air-quality-analyst/assets/schemas/plan.schema.json`.
+        Nothing runs until a maintainer adds the label **run-analysis**.
+  - type: textarea
+    id: question
+    attributes:
+      label: Resident question
+      description: The question exactly as the resident asked it.
+      placeholder: Was the air worse in January than in December?
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Analysis plan (JSON)
+      description: The plan from step 2, approved by the resident.
+      render: json
+    validations:
+      required: true
+  - type: checkboxes
+    id: approval
+    attributes:
+      label: Approval
+      options:
+        - label: The resident approved this plan
+          required: true

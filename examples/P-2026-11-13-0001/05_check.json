@@ -1,0 +1,60 @@
+{
+  "run_id": "P-2026-11-13-0001",
+  "status": "pass",
+  "numbers_found": [
+    {
+      "text": "9.4",
+      "value_id": "median_jan"
+    },
+    {
+      "text": "12.0",
+      "value_id": "median_dec"
+    },
+    {
+      "text": "17",
+      "value_id": "episode_start"
+    },
+    {
+      "text": "22",
+      "value_id": "episode_end"
+    },
+    {
+      "text": "72.4",
+      "value_id": "peak_day_1_value"
+    },
+    {
+      "text": "20",
+      "value_id": "peak_day_1"
+    },
+    {
+      "text": "25",
+      "value_id": "high_day_threshold"
+    },
+    {
+      "text": "8",
+      "value_id": "days_above_25_jan"
+    },
+    {
+      "text": "5",
+      "value_id": "excluded_broken"
+    },
+    {
+      "text": "39",
+      "value_id": "sensors_used"
+    },
+    {
+      "text": "54",
+      "value_id": "sensors_found"
+    },
+    {
+      "text": "5",
+      "value_id": "excluded_broken"
+    },
+    {
+      "text": "25.5",
+      "value_id": "humid_hours_pct"
+    }
+  ],
+  "numbers_missing": [],
+  "checked_at": "2026-11-13T12:28:49+00:00"
+}

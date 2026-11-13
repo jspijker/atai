@@ -35,20 +35,9 @@ validated R functions perform every calculation.
 
 ## Workflow
 
-Follow these steps in order. Do not skip any. Each step writes one file in
-`runs/<run_id>/` (formats in `assets/schemas/`).
+Follow these steps in order. Do not skip any.
 
-### Step 0 – Listen (`00_context.json`)
-A question is often a proxy for a concern. Before classifying it, find out with
-at most three short questions, one at a time (see `references/dialogue.md`):
-the concern, what the resident noticed, what they will do with the answer, and
-what they expect the data to show if their suspicion is right. The resident may
-skip this and go straight to the analysis. If the concern is about health or a
-complaint, note the hand-over now and still answer the air-quality part.
-
-### Step 1 – Understand the question (`01_request.json`)
-- Choose the recipe that tests the resident's **expectation** from step 0, not
-  only the literal question (`references/dialogue.md` section 2).
+### Step 1 – Understand the question
 - Classify the question with `references/question-recipes.md`
   (e.g. temporal comparison, location, trend, anomaly, threshold, reference
   comparison, education).
@@ -61,7 +50,7 @@ complaint, note the hand-over now and still answer the air-quality part.
   - period: the last full calendar month
   - area: sensors within 1 km of the given address or postcode
 
-### Step 2 – Make a plan (`02_plan.json`)
+### Step 2 – Make a plan
 Write the plan in two forms:
 - **For the resident**, in plain words, max. 3 sentences.
   Example: "I'll compare the 4 sensors within 1 km of your postcode for December
@@ -85,36 +74,34 @@ faulty sensors, humidity, drift, neighbour comparison. Exclude faulty sensors an
 log why. Then call `get_background` for the same period (regional background
 station first). Use the results in the analysis and in "How sure are we?".
 
-### Step 5 – Run the analysis (steps 3–5 write `03_results.json`)
+### Step 5 – Run the analysis
 Call the tools in the order of the plan. Do not change parameters without telling
 the resident. Every call is logged automatically; you do not write the audit log.
 
-### Step 6 – Explain the result (`04_answer.json`)
+### Step 6 – Explain the result
 Use the layout in `assets/answer-template.md` exactly, and write it as
 `04_answer.json` (`assets/schemas/answer.schema.json`). Use only numbers from
 `03_results.json`, and list each one in `numbers_cited` with its value id. Include the uncertainty section every time.
 
-Shape the answer to the purpose from step 0 (`references/dialogue.md`
-section 1): reassurance, evidence, curiosity or a health decision.
+### Step 7 – Number check (automated)
+The number check runs for you: R (`scripts/check_run.py`) confirms that every
+number in `04_answer.json` appears in `03_results.json` and writes the verdict to
+`05_check.json` (`assets/schemas/check.schema.json`). You do not write this file.
+If the check fails, fix the answer so every number traces back to a value id
+before continuing.
 
-### Step 7 – Number check (`05_check.json`, automatic)
-R checks that every number in the answer appears in `03_results.json`. If it
-fails, rewrite the answer; never show a failed answer.
-
-### Step 8 – Reflect (`06_reflection.json`)
-Ask: "Does this match what you experienced?" If not, explore the difference and
-offer one follow-up analysis, or hand over (GGD, municipality/omgevingsdienst,
-RIVM expert). See `references/dialogue.md` sections 3–4.
+### Step 8 – Offer follow-ups
+Suggest one or two logical next questions, for example a comparison with the
+nearest official reference station.
 
 ## Reference files (open only when needed)
 
 | File | Open when |
 | --- | --- |
-| `references/dialogue.md` | Step 0 (Listen) and step 8 (Reflect), hand-overs |
 | `references/functions.md` | Choosing tools and their parameters (every analysis) |
 | `references/question-recipes.md` | Classifying the question and choosing a recipe (every analysis) |
 | `references/sensors.md` | Explaining measurements and sensors to residents |
 | `references/sensor-quality.md` | Every analysis: sensor checks, background, uncertainty |
 | `assets/answer-template.md` | Writing the final answer |
-| `assets/schemas/` | The JSON format of every hand-off (context, request, plan, results, answer, check, reflection) |
+| `assets/schemas/` | The JSON format of every hand-off (request, plan, results, answer, check) |
 | `assets/example-run.md` | Unsure what a step should hand to the next |
