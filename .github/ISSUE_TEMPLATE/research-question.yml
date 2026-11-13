@@ -1,5 +1,5 @@
 name: Research question
-description: A resident's air-quality question in plain words. An agent turns it into an analysis request with a plan (step 1–2 of the skill).
+description: A resident's air-quality question in plain words. After a collaborator adds the "approved" label, an agent posts a plan here and the analysis runs automatically (steps 1–2 of the skill).
 title: "[Research question] "
 labels: ["research-question"]
 body:

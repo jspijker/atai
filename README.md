@@ -100,9 +100,13 @@ human can step in.
    `plan-ready`, `results-ready`, `answer-ready` and `needs-attention` (the
    answerer creates `answer-ready` automatically if it is missing).
 3. Set up the **app orchestrator**: a scheduled session in the Copilot app that
-   polls for `approved` and `results-ready` issues and starts the planner /
-   answerer agents in plan mode (see
-   [`docs/automated-workflow.md`](docs/automated-workflow.md)).
+   polls for `approved` and `results-ready` issues, adds the `app-working` claim,
+   and starts the planner / answerer agents in plan mode. It lives **outside this
+   repository** — it is Copilot app state (a scheduled session automation), not a
+   committed workflow — so nothing here adds the `app-working` label; the agents
+   and `run-analysis.yml` only ever remove it. See
+   [`docs/automated-workflow.md`](docs/automated-workflow.md) (section 5) for how
+   it is configured.
 4. Connect each tool in `scripts/run_analysis.R` to the real Samen Analyseren or
    openair function, and add the data source (the stub only logs
    "not implemented").

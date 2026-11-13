@@ -115,6 +115,12 @@ not yet trust unattended.
 
 The orchestrator is a scheduled session in the app that, on each tick:
 
+> **Where it lives:** the orchestrator is **Copilot app state, not a file in this
+> repository** — a scheduled session automation that runs the dispatch logic
+> below. That is why `app-working` is only ever *removed* inside the repo (by the
+> agents and `run-analysis.yml`) and never added here: the orchestrator adds it
+> when it claims an issue.
+
 1. Finds issues labeled `approved` that still need a plan, and issues labeled
    `results-ready` that still need an answer.
 2. Claims each with the `app-working` label (so overlapping ticks do not double
