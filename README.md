@@ -102,7 +102,7 @@ step in.
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | The *Research question* issue template residents fill in. |
 | `.github/copilot-instructions.md` | Repository-wide instructions for Copilot. |
 | [`scripts/`](scripts/) | Helper scripts: `run_analysis.R` (the R analysis entry point), `check_run.py` (the number check / schema validation) and `postcode_to_latlon.py` (resolves a postcode to coordinates). |
-| [`docs/`](docs/) | Design documentation, notably [`automated-workflow.md`](docs/automated-workflow.md) explaining the human-in-the-loop workflow. |
+| [`docs/`](docs/) | Design documentation: [`automated-workflow.md`](docs/automated-workflow.md) explains the human-in-the-loop workflow, and [`run-lifecycle.md`](docs/run-lifecycle.md) details the files and hand-offs of a single run. |
 | [`examples/`](examples/) | A worked example: a sample issue body, a plan and a complete checked run folder (`P-2026-11-13-0001`). |
 | [`data/`](data/) | The committed datasets. See the [Data](#data) section below for a full description. |
 
@@ -134,27 +134,17 @@ All of it is open data.
 Because the data is committed, the sensor tables are explicitly un-ignored in
 `.gitignore` while everything else under `data/` stays ignored by default.
 
-## Agreed output files (one folder per run)
+## Output files (one set per run)
 
-Every question becomes one folder `runs/<run_id>/`. Each step writes one file;
-the next step reads it. Schemas are in `.github/skills/air-quality-analyst/assets/schemas/`.
+Every question is processed as one **run** — a small set of files (`01_request`
+… `05_check`, `audit.jsonl` and the rendered `answer.md`), each written by one
+step and read by the next, so the whole analysis is reproducible and every
+number is traceable. A run folder is created on demand (locally, or as the CI
+`out/` artifact) and is **not** committed; the only committed run is the worked
+example in [`examples/P-2026-11-13-0001/`](examples/P-2026-11-13-0001).
 
-| File | Step | Written by | Read by | Schema |
-| --- | --- | --- | --- | --- |
-| `01_request.json` | 1 Understand | AI | AI (step 2) | `request.schema.json` |
-| `02_plan.json` | 2 Plan (approved) | AI + resident | R | `plan.schema.json` |
-| `03_results.json` | 3 data check, 4 sensor check and background, 5 analysis | R only | AI (step 6), checker | `results.schema.json` |
-| `04_answer.json` | 6 Explain | AI | checker, app | `answer.schema.json` |
-| `05_check.json` | 7 Number check | checker | app, team | `check.schema.json` |
-| `audit.jsonl` | every step | R | team, jury | one JSON object per line |
-| `chart_*.svg/png`, `*.csv` | 5 | R | answer, team | – |
-
-Rules:
-- `run_id` is the same in every file (`P-YYYY-MM-DD-NNNN`).
-- Only R writes `03_results.json`. Every number the AI may use is a `values`
-  entry with `id`, `label`, `value` and `unit`.
-- The AI lists every number in its answer in `numbers_cited` with the value id.
-- Concentrations 1 decimal; dates ISO (`2025-01-20`) in files; times in UTC.
+See [`docs/run-lifecycle.md`](docs/run-lifecycle.md) for the full description of
+each file, what every step reads and writes, and the rules the files obey.
 
 ## Run locally
 
@@ -169,10 +159,10 @@ sees it). Exit code 0 = pass. `examples/P-2026-11-13-0001/` is a checked-in
 example run (the Beverwijk prototype, Dec 2024 vs Jan 2025); its numbers come
 from an early stand-in rather than a full production run.
 
-To produce `03_results.json` with R:
+To produce `03_results.json` with R (into an output folder of your choice):
 
 ```bash
-Rscript scripts/run_analysis.R runs/<id>/02_plan.json runs/<id>
+Rscript scripts/run_analysis.R <plan>.json <out_dir>
 ```
 
 The analysis in `run_analysis.R` is largely implemented (sensor selection by
