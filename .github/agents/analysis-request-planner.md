@@ -31,10 +31,16 @@ The person invoking you gives a research-question issue number (e.g. "turn issue
    - Classify the `question_type` and `recipe` (R1–R10).
    - Pick the `pollutant` (default `pm25` when "Not sure"). This dataset has no
      NO2 and no PM1, and only raw PM10. See *Scope guards* below.
-   - Apply sensible defaults and record them in `assumptions`:
+   - Apply sensible defaults where the resident did not specify:
      - pollutant: PM2.5
      - period: the last full calendar month
      - area: sensors within 1 km of the given postcode/address
+
+     Record each default you applied in `assumptions`, which is a list of
+     plain-text sentences (not `key: value` pairs) — e.g.
+     `"radius 1 km around postcode 1941 (52.49 N, 4.66 E)"`,
+     `"period: last full calendar month (December 2024)"`. See
+     `examples/beverwijk-plan.json` for the exact shape.
 
 3. **Stop early for questions that need no analysis.**
    - **Education (R1)** and **Forecast (R10)** produce no plan. Do **not** open an
