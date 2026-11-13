@@ -27,18 +27,18 @@ def allowed_numbers(results, request):
     """Every number the answer may contain, mapped to the value id it comes from."""
     allowed = {}
     for step in results["steps"]:
-        for v in step["values"]:
-            if v["unit"] == "date":
-                d = datetime.fromisoformat(v["value"])
-                for n in (d.day, d.year):
-                    allowed.setdefault(float(n), v["id"])
+        for value_entry in step["values"]:
+            if value_entry["unit"] == "date":
+                date_value = datetime.fromisoformat(value_entry["value"])
+                for digit in (date_value.day, date_value.year):
+                    allowed.setdefault(float(digit), value_entry["id"])
             else:
-                allowed.setdefault(float(v["value"]), v["id"])
+                allowed.setdefault(float(value_entry["value"]), value_entry["id"])
     # inputs the resident chose or approved (radius, years of the periods) may also be quoted
     allowed.setdefault(float(request["area"]["radius_km"]), "request.radius_km")
-    for p in request["periods"]:
+    for period in request["periods"]:
         for key in ("start", "end"):
-            allowed.setdefault(float(p[key][:4]), "request.period_year")
+            allowed.setdefault(float(period[key][:4]), "request.period_year")
     return allowed
 
 
@@ -66,17 +66,17 @@ def main(run_dir):
         sys.exit(1)
 
     allowed = allowed_numbers(docs["results"], docs["request"])
-    value_ids = {v["id"] for s in docs["results"]["steps"] for v in s["values"]}
+    value_ids = {value_entry["id"] for step in docs["results"]["steps"] for value_entry in step["values"]}
     answer = docs["answer"]
     text = " ".join([answer["short_answer"], answer["what_it_means"], answer["how_sure"]])
 
     found, missing = [], []
-    for m in NUM.finditer(text):
-        n = float(m.group().replace(",", "."))
-        if n in allowed:
-            found.append({"text": m.group(), "value_id": allowed[n]})
+    for match in NUM.finditer(text):
+        number = float(match.group().replace(",", "."))
+        if number in allowed:
+            found.append({"text": match.group(), "value_id": allowed[number]})
         else:
-            missing.append(m.group())
+            missing.append(match.group())
     bad_ids = [c["value_id"] for c in answer["numbers_cited"] if c["value_id"] not in value_ids]
     missing += [f"numbers_cited refers to unknown id '{i}'" for i in bad_ids]
 
@@ -95,14 +95,14 @@ def main(run_dir):
         md += [f"![chart]({answer['chart']})", ""]
     md += ["### What this means", answer["what_it_means"], "", "### How sure are we?", answer["how_sure"], ""]
     if answer.get("how_we_got_this"):
-        md += ["### How we got this"] + [f"- {s}" for s in answer["how_we_got_this"]] + [f"- Run: {answer['run_id']}", ""]
+        md += ["### How we got this"] + [f"- {line}" for line in answer["how_we_got_this"]] + [f"- Run: {answer['run_id']}", ""]
     if answer.get("follow_ups"):
-        md += ["**You could also ask:**"] + [f"- {s}" for s in answer["follow_ups"]]
+        md += ["**You could also ask:**"] + [f"- {line}" for line in answer["follow_ups"]]
     (run / "answer.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 
     print(f"{check['status'].upper()}: {len(found)} numbers found, {len(missing)} missing")
-    for x in missing:
-        print("  not in results:", x)
+    for missing_item in missing:
+        print("  not in results:", missing_item)
     sys.exit(0 if check["status"] == "pass" else 1)
 
 

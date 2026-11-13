@@ -71,7 +71,7 @@ To R (validated against `schemas/plan.schema.json`):
 }
 ```
 
-## Step 3b – Sensor check and background (R → AI)
+## Step 4 – Sensor check and background (R → AI)
 
 ```json
 {
@@ -83,7 +83,7 @@ To R (validated against `schemas/plan.schema.json`):
 }
 ```
 
-## Step 4 – Analysis (R, openair → Interpreter)
+## Step 5 – Analysis (R, openair → Interpreter)
 
 ```json
 {
@@ -107,7 +107,7 @@ To R (validated against `schemas/plan.schema.json`):
 0042 | 11:42:09 | average_over_time | T2 | openair [version]        | avg=month, data.thresh=75
 ```
 
-## Step 5 – Interpreter (AI) writes the answer
+## Step 6 – Interpreter (AI) writes the answer
 
 > **In January, fine dust near your postcode was lower than in December: 9.8
 > versus 12.4 micrograms per cubic metre.** The regional background was also lower
@@ -119,8 +119,8 @@ To R (validated against `schemas/plan.schema.json`):
 > two days, which points to a fault. Another had data for only 68% of January. On
 > 18% of the hours the air was very damp, when these sensors tend to read too high.
 
-## Step 6 – Number check (R)
+## Step 7 – Number check (R)
 
-Numbers in the answer: 9.8, 12.4, 8.6, 10.9, 68, 18 → all found in steps 3–4;
+Numbers in the answer: 9.8, 12.4, 8.6, 10.9, 68, 18 → all found in steps 3–5;
 dates (31 December, 1 January) → found in `highest_days` → **pass**. Any number not found blocks the answer and sends it back to the
 Interpreter.

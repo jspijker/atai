@@ -73,7 +73,7 @@ The bridge tool `to_openair_format` converts Tier 1 output into this format.
 - **Limitations**: real peaks (e.g. New Year's Eve) can look like outliers; report
   when more than 5% is removed.
 
-### Sensor-quality tools (step 3b, see `sensor-quality.md`)
+### Sensor-quality tools (step 4, see `sensor-quality.md`)
 Use the Samen Analyseren function if one exists; otherwise these are small new
 R helpers, documented and tested by the team.
 

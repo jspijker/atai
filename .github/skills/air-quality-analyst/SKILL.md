@@ -68,22 +68,29 @@ Call `check_data_coverage` first. If coverage is below the threshold in
 `references/sensors.md`, tell the resident and propose an alternative (longer
 period, more sensors, nearby reference station). Do not run a weak analysis.
 
-### Step 3b – Check sensor quality and get the background
+### Step 4 – Check sensor quality and get the background
 Always run the fixed sensor check in `references/sensor-quality.md` section 2:
 faulty sensors, humidity, drift, neighbour comparison. Exclude faulty sensors and
 log why. Then call `get_background` for the same period (regional background
 station first). Use the results in the analysis and in "How sure are we?".
 
-### Step 4 – Run the analysis
+### Step 5 – Run the analysis
 Call the tools in the order of the plan. Do not change parameters without telling
 the resident. Every call is logged automatically; you do not write the audit log.
 
-### Step 5 – Explain the result
+### Step 6 – Explain the result
 Use the layout in `assets/answer-template.md` exactly, and write it as
 `04_answer.json` (`assets/schemas/answer.schema.json`). Use only numbers from
 `03_results.json`, and list each one in `numbers_cited` with its value id. Include the uncertainty section every time.
 
-### Step 6 – Offer follow-ups
+### Step 7 – Number check (automated)
+The number check runs for you: R (`scripts/check_run.py`) confirms that every
+number in `04_answer.json` appears in `03_results.json` and writes the verdict to
+`05_check.json` (`assets/schemas/check.schema.json`). You do not write this file.
+If the check fails, fix the answer so every number traces back to a value id
+before continuing.
+
+### Step 8 – Offer follow-ups
 Suggest one or two logical next questions, for example a comparison with the
 nearest official reference station.
 

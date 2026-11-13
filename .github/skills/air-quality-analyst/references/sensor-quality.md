@@ -21,7 +21,7 @@ Therefore:
 - Prefer **daily or longer averages** over hourly values.
 - Always compare with the **background** (section 4) before drawing conclusions.
 
-## 2. Fixed sensor check (workflow step 3b)
+## 2. Fixed sensor check (workflow step 4)
 
 Run these checks after `check_data_coverage` and before any analysis. Each is a
 tool; R does the detection, the AI only reads and reports the outcome.

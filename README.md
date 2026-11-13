@@ -30,13 +30,15 @@ Rules:
 
 ```bash
 pip install jsonschema
-python scripts/check_run.py runs/P-2026-11-13-0001
+python scripts/check_run.py examples/P-2026-11-13-0001
 ```
 
 This validates all files against their schemas, runs the number check, writes
 `05_check.json`, and writes `answer.md` (the answer as the resident sees it).
-Exit code 0 = pass. The example run is the Beverwijk prototype (Dec 2024 vs
-Jan 2025); its numbers come from a Python stand-in, not yet the validated tools.
+Exit code 0 = pass. `examples/P-2026-11-13-0001/` is a checked-in example run (the
+Beverwijk prototype, Dec 2024 vs Jan 2025) kept alongside the other sample files;
+its numbers come from a Python stand-in, not yet the validated tools. Real runs
+live in `runs/<run_id>/`, which is created when a plan is run.
 
 To produce `03_results.json` with R: `Rscript scripts/run_analysis.R runs/<id>/02_plan.json runs/<id>`
 (stub: tools still report `not_available` until they are connected).
