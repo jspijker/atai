@@ -102,7 +102,7 @@ step in.
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | The *Research question* issue template residents fill in. |
 | `.github/copilot-instructions.md` | Repository-wide instructions for Copilot. |
 | [`scripts/`](scripts/) | Helper scripts: `run_analysis.R` (the R analysis entry point), `check_run.py` (the number check / schema validation) and `postcode_to_latlon.py` (resolves a postcode to coordinates). |
-| [`docs/`](docs/) | Design documentation: [`automated-workflow.md`](docs/automated-workflow.md) explains the human-in-the-loop workflow, and [`run-lifecycle.md`](docs/run-lifecycle.md) details the files and hand-offs of a single run. |
+| [`docs/`](docs/) | Design documentation: [`automated-workflow.md`](docs/automated-workflow.md) (the human-in-the-loop workflow), [`run-lifecycle.md`](docs/run-lifecycle.md) (the files and hand-offs of a run), [`skill-overview.md`](docs/skill-overview.md) (the skill's structure), [`tool-status.md`](docs/tool-status.md) (which analysis tools are implemented) and [`limitations.md`](docs/limitations.md) (known limitations and validation status). |
 | [`examples/`](examples/) | A worked example: a sample issue body, a plan and a complete checked run folder (`P-2026-11-13-0001`). |
 | [`data/`](data/) | The committed datasets. See the [Data](#data) section below for a full description. |
 
@@ -166,8 +166,10 @@ Rscript scripts/run_analysis.R <plan>.json <out_dir>
 ```
 
 The analysis in `run_analysis.R` is largely implemented (sensor selection by
-distance, the Tier 1 / Tier 2 functions); a few tools (for example the
-regional background) still report `not_available` until they are connected.
+distance, sensor-quality checks, outlier filtering, regional background and
+daily averages); some optional tools (neighbour comparison, time-series and
+wind-direction plots, pollution rose) are not yet implemented. See
+[`docs/tool-status.md`](docs/tool-status.md) for the full status.
 
 The plan selects sensors by distance, so `area` needs a centre (`lat`/`lon`),
 not just a postcode. Resolve a resident's postcode to coordinates with
@@ -218,3 +220,12 @@ workflow, add a comment holding a `### Analysis plan (JSON)` block (see
 - The issue text is never passed through the shell; the plan is read in a
   script and validated against the schema.
 - `run_analysis.R` refuses any tool that is not on its allowed list.
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0** — see
+[`LICENSE`](LICENSE). This is consistent with the
+[Analyse-Together / Samen Analyseren](https://github.com/rivm-syso/Analyse-Together)
+functions (GPL-3) that the analysis builds on. The analysis also uses the
+[`openair`](https://davidcarslaw.github.io/openair/) R package (GPL-2/GPL-3). The
+datasets in `data/` are open data (see the [Data](#data) section for sources).
