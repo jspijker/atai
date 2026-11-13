@@ -62,9 +62,14 @@ The bridge tool `to_openair_format` converts Tier 1 output into this format.
 ### get_sensor_data
 - **Wraps**: `[real data-selection function]`
 - **Purpose**: Retrieve hourly measurements, calibrated where available.
-- **Inputs**: `sensor_ids` or `area` (postcode + radius km), dates, `parameter`,
-  `calibrated` (default yes)
+- **Inputs**: `sensor_ids`, or `area` as `lat`/`lon` + `radius_km`, dates,
+  `parameter`, `calibrated` (default yes)
 - **Output**: dataset ID + count of sensors and measurements.
+- **Note**: R selects sensors by distance, so it needs a centre as `lat`/`lon`,
+  not a postcode. A postcode alone is rejected. When the resident gives a
+  postcode, resolve it to a centre point **when you write the plan** and put
+  `lat`/`lon` in `area` (keep `postcode` for the reader). Use the helper:
+  `python scripts/postcode_to_latlon.py "<postcode>"` (PDOK Locatieserver).
 
 ### get_reference_data
 - **Wraps**: `[real function for official network data]`

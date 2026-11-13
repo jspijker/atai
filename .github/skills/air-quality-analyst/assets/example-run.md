@@ -30,6 +30,9 @@ December and January. I'll first check that the sensors work properly and leave
 out obvious measurement errors. I'll also compare with the regional background
 station. Shall I go ahead?" → **Go ahead**
 
+Resolve the postcode to a centre point first:
+`python scripts/postcode_to_latlon.py 1971` → `52.458304 4.624960`.
+
 To R (validated against `schemas/plan.schema.json`):
 
 ```json
@@ -38,7 +41,7 @@ To R (validated against `schemas/plan.schema.json`):
   "question_type": "temporal_comparison",
   "recipe": "R2",
   "pollutant": "pm25",
-  "area": {"postcode": "1971", "radius_km": 1},
+  "area": {"postcode": "1971", "lat": 52.458304, "lon": 4.624960, "radius_km": 1},
   "periods": [
     {"label": "December", "start": "2025-12-01", "end": "2025-12-31"},
     {"label": "January",  "start": "2026-01-01", "end": "2026-01-31"}
