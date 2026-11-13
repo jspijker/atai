@@ -30,6 +30,68 @@ complete audit trail of the data, choices and methods used.
 Our take on this challenge turns every resident question into a GitHub issue
 that doubles as a transparent, public audit trail of the analysis.
 
+## Goal
+
+The goal of this project is to create a reusable **skill**
+([`.github/skills/air-quality-analyst/SKILL.md`](.github/skills/air-quality-analyst/SKILL.md))
+and its associated files — reference material, schemas and helper scripts — that
+anyone can drop into their own AI agent or application. The skill encodes how a
+domain expert approaches air-quality data: which validated functions to use,
+how to check sensor quality, how to express uncertainty, and how to explain
+results in plain language.
+
+With this skill, a layman user is assisted in making sense of large and complex
+datasets and can answer their own questions about local air quality, without
+needing to be a data analyst. It does **not** replace the knowledge of the
+experts. Instead, it helps the user reach a first, transparent interpretation of
+the data and gives them a well-documented starting point to discuss the meaning
+and interpretation of that data with an expert.
+
+The GitHub-issue workflow in this repository is one concrete demonstration of
+the skill in action, but the skill itself is the reusable deliverable.
+
+## How it works
+
+Every resident question lives on **one GitHub issue**, which doubles as the
+public audit trail. A single human approval starts the pipeline, and each stage
+posts its result as a comment on that same issue. Progress is tracked with
+labels, so the flow is resumable and every transition is visible.
+
+The work is split into three stages. The two stages that use a Copilot agent
+run **inside the Copilot app in plan mode**, so a human reviews exactly what the
+agent will post before it touches the issue. The deterministic analysis runs
+unattended in GitHub Actions. See
+[`docs/automated-workflow.md`](docs/automated-workflow.md) for the full design
+and the reasoning behind this split.
+
+```mermaid
+flowchart TD
+  A[Resident opens a Research question issue] --> B{Collaborator adds label 'approved'}
+  B --> C[Planner agent — plan mode in the Copilot app<br/>turns the question into an analysis plan]
+  C -->|human approves| D[CI: run-analysis.yml<br/>R runs the validated analysis, no AI]
+  D --> E[Answerer agent — plan mode in the Copilot app<br/>writes the resident-facing answer]
+  E -->|human approves + number check passes| F[Answer posted back to the issue]
+```
+
+1. **Ask.** A resident opens a *Research question* issue with their question in
+   plain language.
+2. **Approve.** A maintainer or collaborator adds the `approved` label — the
+   single gate that starts the run (only triage/write users can add labels).
+3. **Plan.** The `analysis-request-planner` agent interprets the question,
+   chooses sensors, period and validated functions, and — after a human
+   approves in the app — posts the plan as a comment and adds `plan-ready`.
+4. **Analyse.** `run-analysis.yml` runs `scripts/run_analysis.R` over the
+   committed sensor data, posts `03_results.json` and the audit log, and adds
+   `results-ready`. No AI is involved: every number comes from the validated R
+   functions.
+5. **Answer.** The `analysis-answerer` agent explains the result in accessible
+   language, runs the automated number check (`scripts/check_run.py`, which
+   confirms every number traces back to `03_results.json`), and — after a human
+   approves — posts the answer and adds `answer-ready`.
+
+Any stage that fails adds `needs-attention` and a short comment so a human can
+step in.
+
 Each resident question becomes a GitHub issue. The issue holds the approved
 analysis plan (step 2). A workflow runs the plan and posts the results and the
 audit log back to the issue (steps 3–5: data check, sensor check and
