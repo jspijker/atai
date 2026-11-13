@@ -61,6 +61,11 @@ just a postcode. Resolve a resident's postcode to coordinates with
    `scripts/run_analysis.R`.
 4. Results, audit log and a link to the run appear as a comment; the label
    `results-ready` is added. All outputs are kept as a downloadable artifact.
+5. The `analysis-answerer` agent (`.github/agents/`) reads the results-ready
+   issue, does steps 6–8 of the skill: it writes `04_answer.json`, assembles the
+   run folder and runs `scripts/check_run.py` (step 7, the number check), and
+   posts `answer.md` — the resident-facing answer with follow-ups — back to the
+   issue. The label `answer-ready` is added once the number check passes.
 
 ## What your partner needs
 
@@ -77,8 +82,9 @@ just a postcode. Resolve a resident's postcode to coordinates with
 1. Copy this folder into the root of your repository.
    In repository Settings › Actions › General, set workflow permissions to
    "Read and write" if the comment step fails with a permissions error.
-2. Create the labels `research-question`, `analysis-request`, `run-analysis` and
-   `results-ready`.
+2. Create the labels `research-question`, `analysis-request`, `run-analysis`,
+   `results-ready` and `answer-ready` (the answerer creates `answer-ready`
+   automatically if it is missing).
 3. Connect each tool in `scripts/run_analysis.R` to the real Samen Analyseren or
    openair function, and add the data source (the stub only logs
    "not implemented").
