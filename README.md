@@ -1,5 +1,15 @@
 # Air-quality analysis via GitHub issues
 
+> [!CAUTION]
+> **Experimental hackathon project — do not use for real purposes.**
+>
+> This repository is **highly experimental**. It was created during a hackathon
+> for demonstration purposes only. Everything here is vibe-coded, and the
+> code's validation and review were also done with AI. While the answers to the
+> questions may look trustworthy, **the authors made no effort to validate the
+> answers**. **No one should use this code, or rely on its output, for any
+> real-life purpose.**
+
 Each resident question becomes a GitHub issue. The issue holds the approved
 analysis plan (step 2). A workflow runs the plan and posts the results and the
 audit log back to the issue (steps 3–5: data check, sensor check and
