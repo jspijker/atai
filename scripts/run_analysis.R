@@ -487,7 +487,10 @@ tools <- list(
   get_background          = tool_get_background,
   to_openair_format       = tool_to_openair_format,
   plot_over_time          = not_impl("analysis"),
-  average_over_time       = tool_average_over_time
+  average_over_time       = tool_average_over_time,
+  source_direction        = not_impl("analysis"),
+  pollution_rose          = not_impl("analysis"),
+  high_values_by_direction = not_impl("analysis")
 )
 
 results <- list(
