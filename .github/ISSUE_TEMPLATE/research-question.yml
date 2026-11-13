@@ -1,5 +1,5 @@
 name: Research question
-description: A resident's air-quality question in plain words. An agent turns it into an analysis request with a plan (step 1–2 of the skill).
+description: A resident's air-quality question in plain words. After a collaborator adds the "approved" label, an agent posts a plan here and the analysis runs automatically (steps 1–2 of the skill).
 title: "[Research question] "
 labels: ["research-question"]
 body:
@@ -7,9 +7,10 @@ body:
     attributes:
       value: |
         Ask your air-quality question in your own words. You do **not** need to
-        write a plan: the `analysis-request-planner` agent reads this issue and
-        opens a matching **Analysis request** issue with the plan JSON for a
-        maintainer and you to approve.
+        write a plan. After a maintainer or collaborator approves your question
+        (by adding the `approved` label), the `analysis-request-planner` agent
+        posts a plan here, the analysis runs automatically, and each step is added
+        as a comment on this issue.
   - type: textarea
     id: question
     attributes:

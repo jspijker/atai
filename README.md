@@ -50,22 +50,36 @@ just a postcode. Resolve a resident's postcode to coordinates with
 
 ## Flow on GitHub
 
+Everything happens on **one issue** — the resident's **Research question**. One
+approval starts the whole pipeline, and each stage posts its result as a comment
+on that same issue. The two stages that use a Copilot agent run **inside the
+Copilot app with a human checkpoint** (plan mode), not in CI; only the
+deterministic R analysis runs unattended in Actions. See
+[`docs/automated-workflow.md`](docs/automated-workflow.md) for the design and the
+risks behind that choice.
+
 0. A resident opens a **Research question** issue (just their question, no plan).
-   The `analysis-request-planner` agent (`.github/agents/`) reads it, does steps
-   1–2 of the skill, and opens the matching **Analysis request** issue below.
-1. Someone opens an issue with the **Analysis request** form and pastes the
-   resident's question and the plan JSON (or the agent opens it from step 0).
-2. A maintainer checks it and adds the label `run-analysis`.
-3. The workflow extracts the plan, checks it against
+1. A maintainer or collaborator **approves** it by adding the `approved` label
+   (the single gate — only triage/write users can add labels).
+2. An **app orchestrator** (a scheduled session in the Copilot app) sees the
+   approved issue and starts the `analysis-request-planner` agent in **plan
+   mode**. A human reviews it in the app; on approval the agent posts the plan as
+   a comment (steps 1–2) and adds the `plan-ready` label.
+3. The workflow (`run-analysis.yml`, triggered by `plan-ready`) extracts the plan
+   from the comment, checks it against
    `.github/skills/air-quality-analyst/assets/schemas/plan.schema.json`, and runs
    `scripts/run_analysis.R`.
-4. Results, audit log and a link to the run appear as a comment; the label
-   `results-ready` is added. All outputs are kept as a downloadable artifact.
-5. The `analysis-answerer` agent (`.github/agents/`) reads the results-ready
-   issue, does steps 6–8 of the skill: it writes `04_answer.json`, assembles the
-   run folder and runs `scripts/check_run.py` (step 7, the number check), and
-   posts `answer.md` — the resident-facing answer with follow-ups — back to the
-   issue. The label `answer-ready` is added once the number check passes.
+4. A per-step status table, `03_results.json` and the audit log appear as a
+   comment (steps 3–5); the label `results-ready` is added. All outputs are kept
+   as a downloadable artifact.
+5. The orchestrator sees `results-ready` and starts the `analysis-answerer` agent
+   in **plan mode**. On approval it writes `04_answer.json`, assembles the run
+   folder and runs `scripts/check_run.py` (step 7, the number check), and posts
+   `answer.md` — the resident-facing answer with follow-ups — back to the issue
+   (steps 6, 8). The label `answer-ready` is added once the number check passes.
+
+Any stage that fails adds the `needs-attention` label and a short comment so a
+human can step in.
 
 ## What your partner needs
 
@@ -82,21 +96,35 @@ just a postcode. Resolve a resident's postcode to coordinates with
 1. Copy this folder into the root of your repository.
    In repository Settings › Actions › General, set workflow permissions to
    "Read and write" if the comment step fails with a permissions error.
-2. Create the labels `research-question`, `analysis-request`, `run-analysis`,
-   `results-ready` and `answer-ready` (the answerer creates `answer-ready`
-   automatically if it is missing).
-3. Connect each tool in `scripts/run_analysis.R` to the real Samen Analyseren or
+2. Create the labels `research-question`, `approved`, `app-working`,
+   `plan-ready`, `results-ready`, `answer-ready` and `needs-attention` (the
+   answerer creates `answer-ready` automatically if it is missing).
+3. Set up the **app orchestrator**: a scheduled session in the Copilot app that
+   polls for `approved` and `results-ready` issues, adds the `app-working` claim,
+   and starts the planner / answerer agents in plan mode. It lives **outside this
+   repository** — it is Copilot app state (a scheduled session automation), not a
+   committed workflow — so nothing here adds the `app-working` label; the agents
+   and `run-analysis.yml` only ever remove it. See
+   [`docs/automated-workflow.md`](docs/automated-workflow.md) (section 5) for how
+   it is configured.
+4. Connect each tool in `scripts/run_analysis.R` to the real Samen Analyseren or
    openair function, and add the data source (the stub only logs
    "not implemented").
 
 ## Try it
 
-Open a new issue with the form and use `examples/beverwijk-issue-body.md` as the
-content (or paste `examples/beverwijk-plan.json` into the plan field).
+Open a new **Research question** issue with your question, then add the
+`approved` label. The orchestrator plans it (with your approval in the app), the
+analysis runs, and the answer is posted back. To exercise just the analysis
+workflow, add a comment holding a `### Analysis plan (JSON)` block (see
+`examples/beverwijk-issue-body.md` or `examples/beverwijk-plan.json`) and add the
+`plan-ready` label, or dispatch it manually:
+`gh workflow run run-analysis.yml -f issue_number=<N>`.
 
 ## Safety
 
-- Nothing runs until someone with triage rights adds `run-analysis`.
+- Nothing runs until someone with triage rights adds `approved`, and each
+  Copilot stage pauses in the app for a human to approve before it posts.
 - The issue text is never passed through the shell; the plan is read in a
   script and validated against the schema.
 - `run_analysis.R` refuses any tool that is not on its allowed list.
