@@ -1,15 +1,22 @@
 ---
 name: analysis-request-planner
-description: Reads a "Research question" issue (a resident's air-quality question) and opens a matching "Analysis request" issue containing the step-2 plan JSON, ready for a maintainer to approve and label run-analysis. Use when someone asks to turn a research question into an analysis request.
+description: Reads an approved "Research question" issue (a resident's air-quality question) and posts the step-2 plan JSON as a comment on that same issue, then adds the plan-ready label so the analysis workflow runs. Use when someone asks to plan an approved research question.
 ---
 
 # Analysis request planner
 
-You turn a **Research question** issue into an **Analysis request** issue. You do
-steps 1 and 2 of the `air-quality-analyst` skill (understand the question, make a
-plan) and nothing more. You do **not** run the analysis and you **never** state or
-calculate any air-quality number — only R produces numbers. Postcode geocoding is
-allowed (it is a lookup, not a calculation).
+You turn an **approved Research question** issue into a posted analysis plan. You
+do steps 1 and 2 of the `air-quality-analyst` skill (understand the question, make
+a plan) and nothing more. Everything happens on the **same issue**: you post the
+plan as a comment and add the `plan-ready` label — you do **not** open a second
+issue. You do **not** run the analysis and you **never** state or calculate any
+air-quality number — only R produces numbers. Postcode geocoding is allowed (it
+is a lookup, not a calculation).
+
+The single approval gate is the `approved` label, which a maintainer or
+collaborator adds to authorise the whole run. Only act on an issue that already
+has the `approved` label; if it does not, stop and say the question has not been
+approved yet.
 
 Always load and follow the `air-quality-analyst` skill in
 `.github/skills/air-quality-analyst/`. The schemas, recipes and tool list there
@@ -17,8 +24,8 @@ are owned by domain experts: do not change them.
 
 ## Input
 
-The person invoking you gives a research-question issue number (e.g. "turn issue
-#12 into an analysis request"). If none is given, ask for it.
+The person (or the orchestrator) invoking you gives an approved research-question
+issue number (e.g. "plan issue #12"). If none is given, ask for it.
 
 ## Steps
 
@@ -43,11 +50,12 @@ The person invoking you gives a research-question issue number (e.g. "turn issue
      `examples/beverwijk-plan.json` for the exact shape.
 
 3. **Stop early for questions that need no analysis.**
-   - **Education (R1)** and **Forecast (R10)** produce no plan. Do **not** open an
-     analysis request. Instead post a comment on the research-question issue that
-     answers from `references/sensors.md` (education) or points to official
-     forecasts such as luchtmeetnet.nl (forecast), and offer the closest question
-     you *can* analyse. Then stop.
+   - **Education (R1)** and **Forecast (R10)** produce no plan. Do **not** write a
+     plan. Instead post a comment on the issue that answers from
+     `references/sensors.md` (education) or points to official forecasts such as
+     luchtmeetnet.nl (forecast), and offer the closest question you *can* analyse.
+     Then mark the issue done and stop:
+     `gh issue edit <N> --add-label answer-ready --remove-label app-working`.
 
 4. **Resolve the location to coordinates.**
    The plan selects sensors by distance, so `area` needs `lat`/`lon`. When the
@@ -55,8 +63,9 @@ The person invoking you gives a research-question issue number (e.g. "turn issue
    `python scripts/postcode_to_latlon.py "<postcode>"` → put the returned
    `lat`/`lon` in `area`, keep `postcode`, and set `radius_km` (default 1).
    - If **no** location is given and you cannot derive one, do not guess. Post a
-     short comment on the research-question issue asking for a postcode or street,
-     and stop.
+     short comment on the issue asking for a postcode or street, flag it for a
+     human, and stop:
+     `gh issue edit <N> --add-label needs-attention --remove-label app-working`.
 
 5. **Write the plan JSON** following
    `.github/skills/air-quality-analyst/assets/schemas/plan.schema.json`.
@@ -67,37 +76,36 @@ The person invoking you gives a research-question issue number (e.g. "turn issue
      and `steps`. Choose tools and tiers from `references/functions.md` following
      the recipe (standard preparation first, Tier 1 for data selection/calibration/
      outliers, Tier 2 only when Tier 1 has no equivalent).
-   - Set `approved_by_resident` to `false`. The resident has not approved this plan
-     yet; a maintainer gets approval before adding the `run-analysis` label.
+   - Set `approved_by_resident` to `true`. Approval is the `approved` label a
+     maintainer/collaborator added to authorise the run (the single gate stands in
+     for the resident's approval); record how approval was given in `assumptions`,
+     e.g. `"approved via the 'approved' label (single-gate authorisation)"`.
 
-6. **Validate the plan against the schema** before opening the issue:
+6. **Validate the plan against the schema** before posting it:
    `check-jsonschema --schemafile .github/skills/air-quality-analyst/assets/schemas/plan.schema.json plan.json`
    (if `check-jsonschema` is missing, use
    `python -c "import json,jsonschema,sys;jsonschema.validate(json.load(open('plan.json')),json.load(open('.github/skills/air-quality-analyst/assets/schemas/plan.schema.json')))"`).
    Fix the plan until validation passes.
 
-7. **Open the Analysis request issue.** Build the body in the exact rendered form
-   of the Analysis request template (see `examples/beverwijk-issue-body.md`), so
-   the `run-analysis` workflow can extract the plan. The body must contain these
-   headings exactly:
+7. **Post the plan as a comment on the same issue.** Do **not** open a second
+   issue. Write the comment body to a temp file and post it with
+   `gh issue comment <N> --body-file <file>` (never pass the plan through the
+   shell inline). The comment must contain these headings exactly so the
+   `run-analysis` workflow can extract the plan:
 
    - `### Resident question` followed by the question verbatim.
    - `### Analysis plan (JSON)` followed by a ` ```json ` fenced block with the
      validated plan JSON.
-   - `### Approval` followed by `- [ ] The resident approved this plan`.
 
-   Also add a plain-words plan (max 3 sentences, skill step 2) and a line linking
-   back to the source: `From research question #<N>`.
+   Also add a plain-words plan (max 3 sentences, skill step 2) above the JSON so
+   the resident can follow it. See `examples/beverwijk-issue-body.md` for the
+   heading shape.
 
-   Create it with the `analysis-request` label and a clear title:
-   `gh issue create --title "[Analysis] <short summary>" --label analysis-request --body-file <file>`
-   Write the body to a temp file and use `--body-file`; never pass the plan
-   through the shell inline.
-
-8. **Link the two issues.** Comment on the original research-question issue with a
-   link to the new analysis-request issue, and note that a maintainer must confirm
-   the resident approves the plan, tick the approval box, and add the
-   `run-analysis` label to start the run.
+8. **Hand off to the analysis.** Add the `plan-ready` label (which triggers
+   `run-analysis.yml`) and clear the working claim:
+   `gh issue edit <N> --add-label plan-ready --remove-label app-working`.
+   The R analysis then runs automatically and posts its results back to this same
+   issue; you do not run it.
 
 ## Scope guards (reject or re-scope, do not invent data)
 

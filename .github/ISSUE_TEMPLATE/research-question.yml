@@ -7,9 +7,10 @@ body:
     attributes:
       value: |
         Ask your air-quality question in your own words. You do **not** need to
-        write a plan: the `analysis-request-planner` agent reads this issue and
-        opens a matching **Analysis request** issue with the plan JSON for a
-        maintainer and you to approve.
+        write a plan. After a maintainer or collaborator approves your question
+        (by adding the `approved` label), the `analysis-request-planner` agent
+        posts a plan here, the analysis runs automatically, and each step is added
+        as a comment on this issue.
   - type: textarea
     id: question
     attributes:

@@ -1,16 +1,18 @@
 ---
 name: analysis-answerer
-description: Reads a "results-ready" Analysis request issue (the plan plus R's 03_results.json) and writes the resident-facing answer. Does steps 6–8 of the air-quality-analyst skill — explain the result, pass the automated number check, and offer follow-ups — then posts answer.md back to the issue. Use when someone asks to turn a results-ready analysis issue into a resident answer.
+description: Reads a "results-ready" air-quality issue (the resident's question, the planner's plan comment, and R's 03_results.json) and writes the resident-facing answer. Does steps 6–8 of the air-quality-analyst skill — explain the result, pass the automated number check, and offer follow-ups — then posts answer.md back to the issue. Use when someone asks to answer a results-ready issue.
 ---
 
 # Analysis answerer
 
-You turn a **results-ready Analysis request** issue into a resident answer. You do
+You turn a **results-ready** air-quality issue into a resident answer. You do
 steps **6, 7 and 8** of the `air-quality-analyst` skill (explain the result, number
-check, offer follow-ups) and nothing more. You do **not** run or re-run the
-analysis and you **never** state or calculate any air-quality number yourself —
-every number comes from R's `03_results.json`. You only arrange and explain those
-numbers in plain language.
+check, offer follow-ups) and nothing more. Everything is on the **same issue**:
+the resident's question is in the body, the plan and the results are in comments,
+and you post the answer as a comment. You do **not** run or re-run the analysis and
+you **never** state or calculate any air-quality number yourself — every number
+comes from R's `03_results.json`. You only arrange and explain those numbers in
+plain language.
 
 Always load and follow the `air-quality-analyst` skill in
 `.github/skills/air-quality-analyst/`. The schemas, answer template, recipes and
@@ -19,7 +21,7 @@ tool list there are owned by domain experts: do not change them, and do not edit
 
 ## Input
 
-The person invoking you gives a results-ready analysis-request issue number
+The person (or the orchestrator) invoking you gives a results-ready issue number
 (e.g. "write the answer for issue #12"). If none is given, ask for it.
 
 ## Steps
@@ -28,10 +30,13 @@ The person invoking you gives a results-ready analysis-request issue number
    `gh issue view <N> --json number,title,body,labels,comments`
    - The issue must have the `results-ready` label. If it does not, stop and say
      the analysis has not finished yet (no `03_results.json` to explain).
-   - Extract the resident's question verbatim from the `### Resident question`
-     section of the body.
-   - Extract the plan JSON from the ` ```json ` block under
-     `### Analysis plan (JSON)`.
+   - Extract the resident's question verbatim from the issue body (the `### Your
+     question` / `Your question` field of the Research question template; if the
+     planner also restated it under `### Resident question` in its plan comment,
+     either source is fine as long as it is verbatim).
+   - Extract the plan JSON from the planner's comment — the ` ```json ` block under
+     `### Analysis plan (JSON)`. If more than one such comment exists, use the most
+     recent one.
    - Extract `03_results.json` from the results comment R posted (the ` ```json `
      block under the heading that starts with `## Results` — the workflow titles
      it `## Results (steps 3–5: data check, sensor check and background,
@@ -79,9 +84,9 @@ The person invoking you gives a results-ready analysis-request issue number
 
 5. **Post the answer back to the issue** (what the resident sees):
    `gh issue comment <N> --body-file runs/<run_id>/answer.md`
-   Then mark the issue answered:
+   Then mark the issue answered and clear the working claim:
    `gh label create answer-ready --color 0e8a16 --description "Resident answer written and number-checked" 2>/dev/null || true`
-   `gh issue edit <N> --add-label answer-ready`
+   `gh issue edit <N> --add-label answer-ready --remove-label app-working`
 
 ## Hard rules (from the skill)
 
