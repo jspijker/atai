@@ -1,0 +1,37 @@
+device_id;category;key;value;context
+286;meta;submitted_at;2026-08-24T19:55:40.687Z;
+286;vraag;sensor_thuis;Ja;Hangt of staat deze sensor bij jou thuis?
+286;vraag;hoe_opgehangen;Hij hangt aan een regenpijp vlak onder een dakgoot op ca 2 m hoogte.;Hoe heb je de sensor opgehangen?(Hoe hoog, waaraan, waaronder, ...)
+286;vraag;bekijken_metingen;Iedere week;Hoe vaak kijk je ongeveer naar de data van je sensor?
+286;vraag;redenen_foutieve_metingen;Zodra de gemiddelde gemeten waarde continu 10-20% afwijkt van die van opnemers in de omgeving is er wat mis.;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+286;vraag;foutieve_metingen;Nee;Denk je dat jouw sensor foutieve metingen heeft gedaan de afgelopen twee weken?
+286;vraag;ervaring_beoordelen;Heel makkelijk;Hoe makkelijk of moeilijk vond je het om te beoordelen of de meetwaarden klopten?
+286;vraag;vertrouwen_algoritme;Helemaal niet;In hoeverre vertrouw je op het algoritme om meetfouten te vinden?
+286;vraag;toelichting_beoordeling;Mijn opnemer acht ik volledig betrouwbaar. Ook als er een piek gemeten wordt. Hij gedraagt zich volledig normaal. Ik zie geen enkele reden om hieraan te twijfelen.;Wil je nog iets toelichten over het beoordelen van mogelijke meetwaarden? (optioneel)
+286;vraag;verbeterpunten;"Omdat ik ervan uitgegaan ben dat mijn opnemer betrouwbaar is, was ik snel klaar. Ik zie geen fouten. Er wordt te veel naar kleine afwijkingen gezocht. Kijk naar echt grote afwijkingen/uitschieters, kijk naar het gemiddelde van een opnemer en kijk of dat niet te veel (10-20%) afwijkt van de opnemers er omheen. Als een meter niets aanwijst is er wat mis met deze opnemer of met het systeem.
+Mijn mening: jullie zitten met dit systeem op het verkeerde spoor.";Wat zou dit proces makkelijker of beter maken voor jou? (optioneel)
+286;algoritme_beoordeling;1;onterecht;Lokale uitschieter | 1 Aug 08:00 – 09:00 | 1.7 µg/m³
+286;algoritme_beoordeling;2;onterecht;Lokale uitschieter | 1 Aug 16:00 – 17:00 | 2.0 µg/m³
+286;algoritme_beoordeling;3;onterecht;Statistische sprong | 1 Aug 19:00 – 20:00 | 11.3 µg/m³
+286;algoritme_beoordeling;4;onterecht;Lokale uitschieter | 2 Aug 19:00 – 20:00 | 5.1 µg/m³
+286;algoritme_beoordeling;5;onterecht;Lokale uitschieter | 4 Aug 07:00 – 08:00 | 14.8 µg/m³
+286;algoritme_beoordeling;6;onterecht;Lage variatie | 5 Aug 19:00 – 6 Aug 02:00 | 2.6 – 6.6 µg/m³
+286;algoritme_beoordeling;7;onterecht;Lage variatie | 7 Aug 10:00 – 11:00 | 3.7 µg/m³
+286;algoritme_beoordeling;8;onterecht;Lage variatie | 7 Aug 13:00 – 21:00 | 2.3 – 4.2 µg/m³
+286;algoritme_beoordeling;9;onterecht;Statistische sprong | 7 Aug 22:00 – 23:00 | 9.2 µg/m³
+286;algoritme_beoordeling;10;onterecht;Lokale uitschieter | 7 Aug 22:00 – 23:00 | 9.2 µg/m³
+286;algoritme_beoordeling;11;onterecht;Statistische sprong | 8 Aug 05:00 – 06:00 | 13.0 µg/m³
+286;algoritme_beoordeling;12;onterecht;Statistische sprong | 8 Aug 14:00 – 15:00 | 23.7 µg/m³
+286;algoritme_beoordeling;13;onterecht;Lokale uitschieter | 8 Aug 14:00 – 15:00 | 23.7 µg/m³
+286;algoritme_beoordeling;14;onterecht;Trend-afwijking | 8 Aug 14:00 – 15:00 | 23.7 µg/m³
+286;algoritme_beoordeling;15;onterecht;Statistische sprong | 9 Aug 18:00 – 19:00 | 18.5 µg/m³
+286;algoritme_beoordeling;16;onterecht;Lokale uitschieter | 9 Aug 18:00 – 19:00 | 18.5 µg/m³
+286;algoritme_beoordeling;17;onterecht;Statistische sprong | 10 Aug 05:00 – 06:00 | 20.5 µg/m³
+286;algoritme_beoordeling;18;onterecht;Lokale uitschieter | 10 Aug 05:00 – 07:00 | 17.9 – 20.5 µg/m³
+286;algoritme_beoordeling;19;onterecht;Lage variatie | 11 Aug 11:00 – 12 Aug 10:00 | 2.1 – 5.1 µg/m³
+286;algoritme_beoordeling;20;onterecht;Statistische sprong | 13 Aug 01:00 – 02:00 | 9.2 µg/m³
+286;algoritme_beoordeling;21;onterecht;Lokale uitschieter | 13 Aug 07:00 – 08:00 | 12.6 µg/m³
+286;algoritme_beoordeling;22;onterecht;Lokale uitschieter | 13 Aug 16:00 – 17:00 | 9.7 µg/m³
+286;algoritme_beoordeling;23;onterecht;Lokale uitschieter | 14 Aug 10:00 – 13:00 | 6.5 – 8.3 µg/m³
+286;algoritme_beoordeling;24;onterecht;Lokale uitschieter | 14 Aug 18:00 – 20:00 | 16.5 – 19.6 µg/m³
+286;algoritme_toelichting;24;Ik heb mijn opnemer specifiek met opn. 530 vergeleken. Ik zie nergens een reden om aan de meetdata te twijfelen.;Lokale uitschieter | 14 Aug 18:00 – 20:00 | 16.5 – 19.6 µg/m³

@@ -1,0 +1,28 @@
+device_id;category;key;value;context
+306;meta;submitted_at;2026-09-04T11:25:32.326Z;
+306;vraag;sensor_thuis;Ja;Hangt of staat deze sensor bij jou thuis?
+306;vraag;hoe_opgehangen;Ca. 2 meter hoog. Aan regenpijp. Onder kap van de eerste lichting HL sensoren.;Hoe heb je de sensor opgehangen?(Hoe hoog, waaraan, waaronder, ...)
+306;vraag;bekijken_metingen;Iedere week;Hoe vaak kijk je ongeveer naar de data van je sensor?
+306;vraag;redenen_foutieve_metingen;Technische storingen.;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+306;vraag;foutieve_metingen;Nee;Denk je dat jouw sensor foutieve metingen heeft gedaan de afgelopen twee weken?
+306;vraag;ervaring_beoordelen;Neutraal;Hoe makkelijk of moeilijk vond je het om te beoordelen of de meetwaarden klopten?
+306;vraag;vertrouwen_algoritme;Grotendeels;In hoeverre vertrouw je op het algoritme om meetfouten te vinden?
+306;vraag;verbeterpunten;Ik denk minder 'false positives' als beter gekeken wordt naar de trend van de sensoren in de buurt. Vaak is daar hetzelfde te zien.;Wat zou dit proces makkelijker of beter maken voor jou? (optioneel)
+306;algoritme_beoordeling;1;onterecht;Statistische sprong | 4 Aug 00:00 – 01:00 | 15.6 µg/m³
+306;algoritme_beoordeling;2;weet-niet;Statistische sprong | 4 Aug 03:00 – 04:00 | 23.2 µg/m³
+306;algoritme_beoordeling;3;weet-niet;Lokale uitschieter | 4 Aug 03:00 – 04:00 | 23.2 µg/m³
+306;algoritme_beoordeling;4;onterecht;Lokale uitschieter | 5 Aug 21:00 – 23:00 | 7.7 – 8.2 µg/m³
+306;algoritme_beoordeling;5;onterecht;Lage variatie | 7 Aug 07:00 – 13:00 | 1.5 – 3.5 µg/m³
+306;algoritme_beoordeling;6;onterecht;Lage variatie | 7 Aug 15:00 – 23:00 | 1.5 – 4.8 µg/m³
+306;algoritme_beoordeling;7;onterecht;Statistische sprong | 8 Aug 02:00 – 03:00 | 9.4 µg/m³
+306;algoritme_beoordeling;8;weet-niet;Statistische sprong | 9 Aug 17:00 – 18:00 | 42.3 µg/m³
+306;algoritme_beoordeling;9;terecht;Lokale uitschieter | 9 Aug 17:00 – 18:00 | 42.3 µg/m³
+306;algoritme_beoordeling;10;terecht;Trend-afwijking | 9 Aug 17:00 – 18:00 | 42.3 µg/m³
+306;algoritme_beoordeling;11;onterecht;Lokale uitschieter | 10 Aug 05:00 – 07:00 | 18.1 – 18.6 µg/m³
+306;algoritme_beoordeling;12;onterecht;Lage variatie | 11 Aug 07:00 – 10:00 | 2.6 – 3.5 µg/m³
+306;algoritme_beoordeling;13;onterecht;Lage variatie | 11 Aug 20:00 – 12 Aug 06:00 | 2.7 – 4.1 µg/m³
+306;algoritme_beoordeling;14;weet-niet;Statistische sprong | 12 Aug 21:00 – 22:00 | 17.7 µg/m³
+306;algoritme_beoordeling;15;weet-niet;Lokale uitschieter | 12 Aug 21:00 – 22:00 | 17.7 µg/m³
+306;algoritme_toelichting;5;Windrichting rond  het huis?;Lage variatie | 7 Aug 07:00 – 13:00 | 1.5 – 3.5 µg/m³
+306;algoritme_toelichting;11;Overige sensoren in de buurt hebben ook een piek.;Lokale uitschieter | 10 Aug 05:00 – 07:00 | 18.1 – 18.6 µg/m³
+306;algoritme_toelichting;13;Trend gelijk aan andere sensoren in de buurt.;Lage variatie | 11 Aug 20:00 – 12 Aug 06:00 | 2.7 – 4.1 µg/m³

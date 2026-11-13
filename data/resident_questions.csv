@@ -1,0 +1,175 @@
+﻿id,datum,latitude,longitude,titel,beschrijving
+4578,2023-01-18,52.253032,5.2605109,Hoe gezond zijn onze openbare ruimtes?,"Fijnstof per uur bij de Minnehof, HVE, Werf, BEL-kantoor. Onderzoeken of de omgeving gezond is voor bezoekers, we verwachten dat het fijnstof afneemt naarmate je van de snelweg af bent."
+4580,2023-01-18,52.256877,5.224119,Wat zijn de gezondste woongebieden in Laren?,"De verschillende gebieden vergelijken. Hoe groot is de invloed van de windrichting, en lokale factoren, zoals de A1?"
+4757,2023-02-02,52.4726472,4.8204449,Hoe verhouden de fijnstof of NO2-niveau’s rondom de Zaanse Schans zich tot de normen?,"Ik ben benieuwd of uitbreiding van de bezoekersaantallen in 2023 invloed heeft op deze niveau’s.
+Antwoord:
+Conclusie: We zien dat de Zaanse Schans voldoet aan de advieswaarde uit 2005, wat tegelijkertijd ook de grenswaarden gesteld door de EU is voor 2030. De Hollandse Luchten sensoren laten zien dat er wel momenten zijn gedurende het jaar waar de grenswaarde wordt overschreden. Tevens voldoet de locatie nog niet aan de nieuwste waarde van 2021. 
+Verder lijkt het met de beschikbare data niet zo dat de verwachtte uitbreiding van bezoekers de fijnstof concentratie heeft beïnvloed. In een verdere verdieping kunnen verkeers- en bezoekersgegevens toegevoegd worden aan de analyse. 
+Dit antwoord berust vooral op jaargemiddelden. 
+ 
+Analyse: 
+De Atlasleefomgeving geeft de volgende gemiddelde concentraties aan:
+In 2021 – tussen de 8,2 en 9 µg/m3
+In 2022 – tussen de 8,6 en 9,1 µg/m3
+In 2023 – tussen de  7 en 7,4 µg/m3
+De Grootschalige Concentratie- en Depositiekaarten Nederland geeft de volgende gemiddelde concentraties aan:
+In 2024 – 8,1 µg/m3
+In 2025 – 8,1 µg/m3 (deze gegevens zullen nog worden gevalideerd met metingen over het jaar.) 
+Kijk zeker ook zelf op deze kaarten en klik rond in het Zaanse Schans gebied.  
+ 
+De Hollandse Luchten sensoren 378 en 415 die het dichtbij staan, zijn pas geplaatst in 2023. Idealiter zou je ook metingen met deze sensoren hebben van voor 2023 om deze vraag volledig te beantwoorden. 
+De sensoren hebben niet voor de gehele periode consistente en betrouwbare metingen gedaan, maar het lijkt erop dat ze dezelfde trends aangeven voor de PM2,5 tussen 2023-2025. 
+Hierbij geeft sensor 415 wel consistent wat hogere concentraties aan dan 378. Maar, belangrijk om te vermelden is dat sensor 378 in verschillende intervallen eruit lag en de jaargemiddelden van deze sensor dus niet uit een zelfde aantal metingen komt als die van 415. 
+ 
+Sensor 378
+Sensor 415
+2023
+11,67 µg/m3
+10,87 µg/m3
+2024
+5,98 µg/m3
+9,79 µg/m3
+2025
+5,4 µg/m3
+10,35 µg/m3
+Tabel waarden gehaald uit CSV bestanden van de sensoren. 
+ 
+In 2021 heeft de World Health Organization (WHO) nieuwe advieswaarden voor de luchtkwaliteit uitgebracht.
+Afbeelding via het Schoneluchtakkoord
+ 
+Conclusie: We zien dat de Zaanse Schans voldoet aan de advieswaarde uit 2005, wat tegelijkertijd ook de grenswaarden gesteld door de EU is voor 2030. De Hollandse Luchten sensoren laten zien dat er wel momenten zijn gedurende het jaar waar de grenswaarde wordt overschreden. 
+Tevens voldoet de locatie nog niet aan de nieuwste waarde van 2021. 
+Verder lijkt het met de beschikbare data niet zo dat de verwachtte uitbreiding van bezoekers de fijnstof concentratie heeft beïnvloed. In een verdere verdieping kunnen verkeers- en bezoekersgegevens toegevoegd worden aan de analyse. 
+Dit antwoord berust vooral op jaargemiddelden."
+4754,2023-02-02,52.4658513,4.8095873,Hoe verhoudt de luchtkwaliteit zich rond de fabrieken in Zaanstad met de WHO-waarde gedurende een jaar?,"Ik wil industrie-uitstoot meten, omdat ik tussen de fabrieken met ook nog veel vrachtverkeer woon, ik maak me zorgen over de luchtkwaliteit.
+Antwoord: Uit het onderzoek blijkt dat de fijnstof gemiddelden in Zaanstad onder de huidige EU-normen vallen, maar boven de WHO-advieswaarden uit 2021. Dit is op bijna alle plekken in Nederland zo.
+Deze vraag is tijdens de data-analyse bijeenkomst van de meetgroep Zaanstad op 31 oktober 2023 behandeld (slide 13), door de steller zelf en door een grondige analyse van een ander lid met data-analyse ervaring. Lees hier het verslag van die bijeenkomst terug en bekijk de presentatie. 
+Op Atlas leefomgeving kan je fijnstof kaarten zien van heel Nederland met de WHO en EU grenswaarden. 
+Op emissieregistratie kun je met wat zoeken de gegevens vinden van grote bedrijven in Nederland."
+4752,2023-02-02,52.4639897,4.7665187,Wat is de impact van de vliegbewegingen boven Zaanstreek-Noord (Westzaan) qua luchtkwaliteit?,"Ik wil luchtkwaliteit meten omdat ik me zorgen maak over de invloed van het vliegverkeer
+Antwoord: Om deze vraag te beantwoorden is meer nodig dan onze SODAQ luchtsensoren. De emissie van vliegtuigen wanneer zij eenmaal op enkele honderden meters hoogte vliegen (dus ook op zogenaamde laagvliegroutes), heeft geen directe invloed op de concentraties op leefniveau in de onderliggende gebieden. Er is wel al wat bekend over de impact van vliegverkeer op de luchtkwaliteit in het algemeen. Kijk voor meer informatie naar de volgende rapporten: 
+RIVM Gezondheidseffecten van ultrafijn stof van vliegverkeer rond Schiphol.
+Richtlijnen"
+4750,2023-02-02,52.4970481,4.7555237,Wat is de invloed van verkeer op de luchtkwaliteit in Krommenie?,"Ik wil de invloed van verkeer op luchtkwaliteit op de provinciale weg in Krommenie meten, omdat ik me zorgen maak over de gezondheid van de leerlingen en personeel van de scholen in Krommenie (SMART: verschil van tijden en dagen)
+Antwoord: De invloed is dat er meer fijnstof zal zijn als gevolg van menselijke oorzaak. De invloed van bronnen zoals verkeer op de luchtkwaliteit kun je via verschillende website bekijken (zie onderstaand). Voor verkeer kun je het beste kijken naar Fijnstof (PM2.5, PM10), stikstofdioxide (NO2) en roet (EC).  
+GCN-Tool: geeft inzicht in hoeveel uitstoot de verschillende bronnen bijdragen aan de totale luchtvervuiling
+Emissiekaart: geeft inzicht in de hoeveelheid verontreinigende stoffen die uit een bron komt  
+Samen meten RIVM: laat actuele (sensor)metingen van de leefomgeving zien.
+De meetgroep onderzoekt nog wat de inwoners van deze bron ervaren."
+4748,2023-02-02,52.463638,4.815217,"Bestaat er een correlatie tussen geur, fijnstof en luchtkwaliteitsbeleving?","Ik wil geur registreren en fijnstof meten, omdat ik mensen wil informeren of hun beleving van luchtkwaliteit correct is.
+Antwoord: Er is hier nog beperkt onderzoek naar, er zijn enkele studies uitgevoerd naar de samenhang tussen geur en roet & geur en ammoniak. Daarbij was het lastig om de beleving van geur overlast te koppelen aan verhogingen in concentraties van roet of ammoniak. De chemische eigenschappen van fijnstof kunnen verschillend zijn, waarmee ook de geur verschilt. Zie hieronder meer informatie: 
+Samen meten geur informatie 
+Geurhinder 
+Wetenschappelijk artikel over het meten van geur overlast"
+4746,2023-02-02,52.4530730563215,4.8182863044326325,Wat is de fijnstofuitstoot van scheepvaart langs de Zaan?,"Ik wil fijnstof van schepen meten, omdat goede plek aan de Zaan, en ik ben benieuwd wie of wat de grootste impact heeft op fijnstof (afname)."
+4744,2023-02-02,52.460482921281255,4.808777760137048,"Is er een lineair verband tussen de afstand tot de snelweg en de hoeveelheid fijnstof (PM2,5)?","Ik wil PM2,5 meten omdat mijn vermoeden is dat mijn huis in het gebied ligt waar de grootste depositie is en de meeste geluidshinder.
+Antwoord: Er is nog volop onderzoek gaande naar de hoeveelheid fijnstof en het uitwaaien hiervan over een bepaalde afstand. En of dit lineair is zal vermoedelijk afhangen van veel factoren. Wel is er al aangetoond dat zowel NO2 als PM10 in hogere concentraties aangetoond wordt dichter bij de bron dan 200 meter verderop. Zie dit rapport voor meer toelichting.  
+Figuur: Relatie tussen de concentratie PM10, NO 2 en Zwarte Rook in de buitenlucht en de afstand tot de snelweg. De met “BG” aangegeven concentratie is de achtergrondconcentratie. Figuur afkomstig uit dit rapport."
+4741,2023-02-02,52.471425825795365,4.813456980350708,"Heeft windrichting en frequentie van vrachtverkeer invloed op de hoeveelheid fijnstof (PM2,5)?","Ik wil fijnstof meten omdat ik dichtbij een schoolplein woon met spelende kinderen, waar verder heel veel vrachtauto’s rijden (zwaar verkeer!), en dichtbij de provinciale weg.
+Antwoord: Bij dit soort vraagstukken is de lokale context enorm belangrijk. De windrichting heeft zeker effect op de hoeveelheid PM2,5 en NO2. Echter is het daarmee nog niet direct te bepalen waar deze fijnstof vandaan komt. De wind kan grote fijnstof wolken dragen, vaak komen die zelfs vanuit het buitenland. De impact van verkeersfrequentie is nog in onderzoek."
+4791,2023-02-06,52.24059452058938,5.215850651169092,Hoeveel fijnstof is afkomstig van lokale bronnen?,"Kun je de (lokale) bron achterhalen? Zo ja, hoe kan dit impact maken op beleid?"
+4794,2023-02-06,52.24095905660852,5.215991004190272,"Hoeveel fijnstof komt er van lokale bronnen, zoals houtskool of verkeer op de A27?",Vastleggen van de situatie en om op te maken beleid actie te kunnen nemen.
+4798,2023-02-06,52.25028040737331,5.2131447443289005,Hoeveel korter is de levensverwachting voor mensen die specifiek naast de A1/A27 wonen?,
+4801,2023-02-06,52.248580348300294,5.21403823917592,Wat is het verschil in stikstof uitstoot tussen de links en rechts van de A1 onder Laren?,
+4803,2023-02-06,52.27454890598597,5.238891075113884,Hoeveel fijnstof is er in het buitengebied van Blaricum?,
+4805,2023-02-06,52.27276430990344,5.247077645394285,Hoeveel fijnstof is er in het centrum van Blaricum in de buurt van houtstokerij en verkeer?,
+4807,2023-02-06,52.2470529963972,5.262459356652585,Wat is de fijnstof uitstoot in een nieuwbouw wijk met veel energie neutrale woningen?,
+4813,2023-02-06,52.27425648293436,5.177775488121625,"In de wijken waar veel houtkachels zijn, hoe hoog is daar de fijnstof uitstoot en hoe schadelijk is dit?","Om de gemeente te vragen gerichte voorlichting te geven c.q.te handhaven aan de hand van de APL.
+Antwoord: De Hollandse luchten sensoren meten niet waaruit de fijnstof opgebouwd is, dus  aan de hand van deze sensoren alleen is niet te zeggen welk gedeelte precies houtrook is.        Er is in 2023-2024 wel een houtstook pilot opgezet door TNO, waarbij roet als indicator is genomen om de aanwezigheid van houtrook aan te tonen. 
+23% van Nederlandse fijnstofuitstoot is houtstook.
+De stof levoglucosan is geïdentificeerd als houtrook marker.
+Door toe te werken naar houtrook op wijkconcentratie niveau te vergelijken met WHO norm, zal maatwerk mogelijk maken."
+4815,2023-02-06,52.270120281968275,5.155563108836532,Met de gestegen energieprijzen: wat is de impact van het gebruik van openhaarden op de luchtkwaliteit van de bebouwde omgeving?,
+4817,2023-02-06,52.28890017757777,5.1808774406051725,Wat is de milieubelasting als gevolg van de snelweg?,
+4819,2023-02-06,52.31790634171992,5.098558910659335,Wat is de PM waarde op 150 meter aan de noordzijde van de A1?,
+4821,2023-02-06,52.32875976284316,5.069839088277206,Wat is de PM 2.5 waarde in de kern van Muiden?,
+4823,2023-02-06,52.32871548233285,5.106749985432913,Wat is de PM 2.5 waarde afkomstig vanuit de A6?,
+4826,2023-02-06,52.32294127292229,5.122985556694431,Wat is de PM 2.5 waarde bij een school in een woonwijk in Muiderberg?,
+4833,2023-02-06,52.245505697729186,5.216120507140943,Hoe groot is de fijnstof uitstoot van de snelwegen in Laren?,
+4835,2023-02-06,52.251409,5.230652,Hoeveel fijnstof uitstoot is er in het gebied tussen de A1 en A27? En hoe verspreidt de fijnstof zich over Gooi- en Eemland?,"Inzicht
+Tijdens de data-analyse bijeenkomst op dinsdag 14 maar hebben we samen met Taoufik van TNO gekeken naar de data die tot dan toe was opgehaald. Deze vraag kunnen we nog niet beantwoorden met de huidige hoeveelheid meetgegevens. Daarnaast blijft het heel lastig om de effecten van het verkeer op deze snelwegen te bepalen. Wat er precies besproken is lees je terug in het verslag. Wat de berekende uitstoot is van verkeer in verhouding tot de totale uitstoot binnen een gemeente, kun je vinden in de GCN-tool."
+4837,2023-02-06,52.32865613497323,5.019255233285222,Kunnen we de fijnstof uitstoot van de scheepvaart meten?,
+4853,2023-02-07,52.460005,4.620055,Wat is de invloed van de windrichting op de PM 2.5 waarde?,"Ik zou graag willen weten bij welke windrichting de vervuiling het grootst is. 
+Antwoord: Bij dit soort vraagstukken is de lokale context enorm belangrijk. De windrichting heeft zeker effect op de hoeveelheid PM2,5 en NO2. Echter is het daarmee nog niet direct te bepalen waar deze fijnstof vandaan komt. De wind kan grote fijnstof wolken dragen, vaak komen die zelfs vanuit het buitenland."
+4855,2023-02-07,52.49589206954292,4.6556012641005395,Is er minder fijnstof uitstoot bij 30 km per uur?,"Ik wil de fijnstof uitstoot meten omdat we een 30 km zonde willen in het Vondelkwartier zodat er minder uitstoot is en het tegelijkertijd veiliger wordt. Ook ben ik benieuwd naar de relatie tot gezondheidsklachten (chronische verkoudheid, schommelingen per dag). 
+Antwoord: De GGD heeft hier samen met het AMC een literatuuronderzoek over gedaan. In het kort zou 30km zowel goed als slecht kunnen zijn voor de luchtkwaliteit. Als mensen veel moeten remmen en opstarten (bijvoorbeeld omdat er veel drempels zijn toegevoegd) zal de uitstoot hoger zijn. Als de doorstroming goed geregeld is, zou de uitstoot juist lager kunnen worden bij 30 km. Dit heeft dus veel te maken met hoe de weg wordt ingericht."
+4857,2023-02-07,52.49150036850378,4.696083931691589,Heeft de uitstoot van fijnstof invloed op de gezondheidsklachten van iemand met astma?,Wij wonen vlakbij de A9 dus ik ben benieuwd wat de uitstoot van het verkeer op die weg voor invloed heeft op de luchtkwaliteit.
+4859,2023-02-07,52.491262,4.644407,Waar komt fijnstof vandaan en wat is de bron?,"Ik wil fijnstof meten omdat daarmee bekend wordt wat aangepakt moet worden. Is het scheepvaart, is het Tata Steel, is het Schiphol luchtvaart: wat is de bron? Ik ben ook benieuwd naar de resultaten bij verschillende windrichtingen. 
+Antwoord: Het is met luchtmetingen erg moeilijk om te bepalen hoe veel fijnstof van een specifieke bron komt. Met windrichtingen kan je bepalen uit welke richting gemiddeld het meeste fijnstof komt. Dit geeft alleen geen specifieke bron, want er zijn altijd meerdere bronnen die bijdragen aan de concentratie. Industrie is een veel voorkomende bron van luchtverontreiniging die mensen willen meten. Denk voornamelijk aan verbranding in de fabrieken, slijtage van wegen / apparatuur en een hoge mate van (boot) verkeer. Hoe dichter je bij een bron van luchtverontreiniging bent hoe hoger de concentratie van die vervuiling in de lucht, gemiddeld gezien. Ook wordt de luchtverontreiniging van een industriegebied door de windrichting niet gelijk over de nabijgelegen omgeving verdeeld. Per gemeente in Nederland is uitgerekend hoeveel verschillende bronnen bijdragen aan de lokale fijnstof concentratie. Dus ook zonder meetpunt kan je een beeld krijgen waar het fijnstof in de buurt vandaan komt. Dit kan je opzoeken met de GCN tool van het RIVM."
+4861,2023-02-07,52.4736008825474,4.6415275045397095,Wat is de PM 2.5 uitstoot?,"Ik wil luchtkwaliteit meten omdat ik mij zorgen maak over de luchtkwaliteit van speelplekken, de basisschool en het woongebied."
+4863,2023-02-07,52.44718667554213,4.590839814075167,Kan mijn sensor bijdragen aan het luchtmeetnetwerk in IJmuiden?,Ik wil graag bijdragen aan het opvullen an de blinde vlek in IJmuiden door op een locatie te meten waar nog niet gemeten wordt.
+4865,2023-02-07,52.42759549110045,4.656740124719249,Welke basisconcentratie van fijnstof is aanwezig in de lucht in Velserbroek?,
+4867,2023-02-07,52.444192,4.634228,Kan ik de fijnstof uitstoot inzichtelijk maken in dit gebied?,"Ik hoop inzichtelijk te maken welke invloed de fijnstof uitstoot heeft met als bron Tata Steel maar ook het crematorium in Driehuis. Dit grenst aan natura 2000 gebied, wat kwetsbaar is. Tevens zijn er ook sportvelden en scholen in dit gebied."
+4869,2023-02-07,52.45695044710686,4.6267677433852725,Wat is de PM 2.5 waarde bij de speeltuin en de Boekenier en St Franciscus scholen?,"Antwoord: Op elke plaats in Nederland is de gemiddelde luchtkwaliteit op te zoeken via de Atlas Leefomgeving kaart. Als je dit met metingen wil uitzoeken moet je op meerdere speelplaatsen en scholen meten, in samenwerking met die scholen en de gemeente."
+4871,2023-02-07,52.46344057991831,4.593087759892427,Hoeveel fijnstof daalt er neer langs het Noordzeekanaal?,"Ik wil graag weten hoeveel fijnstof er neerdaalt langs het Noordzeekanaal en uiteindelijk ook de bronnen vaststellen. 
+Antwoord: Het neerdalen (of depositie) van fijnstof is alleen te meten door het stof te verzamelen en in een lab te analyseren. Uit fijnstof metingen in de buitenlucht zoals met sensoren kan je dit dus niet meten. Ook kan je meestal niet bepalen wat de exacte bron was van het fijnstof, alleen uit welke richting het kwam."
+4873,2023-02-07,52.48789063602686,4.692666801379602,Wat is het verschil in fijnstof metingen bij westen- en oostenwind?,Ik ben benieuwd naar de fijnstof uitstoot van wegverkeer.
+4936,2023-02-09,52.494880,4.603525,Wat is de PM 2.5 waarde rondom de sportvelden van SV Wijk aan Zee?,Ik wil hier de fijnstof uitstoot meten omdat ik benieuwd ben naar de luchtverontreiniging in en rondom de sportvelden waar een hoop kinderen komen.
+4938,2023-02-09,52.495435,4.595706,Wat is de luchtverontreiniging rondom deze kinderspeelplaats?,"Ik wil de fijnstof uitstoot meten omdat deze kinderspeelplaats aan de Relweg dagelijks schoongemaakt wordt, maar ik ook benieuwd ben naar de vuile lucht."
+4940,2023-02-09,52.49194728316877,4.59013190537533,Hoe verspreidt fijnstof zich over Wijk aan Zee?,Ik wil weten welke invloed de windrichting heeft op de verstoring van PM 2.5 over het dorp.
+4942,2023-02-09,52.49259240631281,4.600905029565439,Is de Verlengde Voorstraat een gezonde route om te fietsen?,Ik wil de fijnstof uitstoot meten omdat ik benieuwd ben naar de luchtkwaliteit in relatie tot woon-werk en recreatief verkeer.
+4944,2023-02-09,52.39506073991183,4.646165424289251,Is het mogelijk om de invloed van houtstook terug te zien in de PM 2.5 waarde?,"Antwoord: Ja, maar nog wel alleen met speciale apparatuur. TNO heeft een pilot geleid om houtrook te meten in de IJmond regio, waarbij ook de Hollandse Luchten sensoren zijn gebruikt. Levoglucosan is aangewezen als marker voor de verbranding van hout(skool) Lees meer over het onderzoek hier."
+4949,2023-02-09,52.366446,4.663294,Wat is de hoeveelheid fijnstof in de lucht en hoe schadelijk is dit voor de longcapaciteit van kinderen?,"Ik wil dit meten omdat er mogelijk potentiële maatregelen genomen kunnen worden om de gezondheid/longcapaciteit van kinderen te beschermen. Ik wil dat kinderen een gezonde longcapaciteit kunnen opbouwen, wellicht kan er een verband worden gezocht met ziekenhuisgegevens en meetgegevens."
+5295,2023-03-01,52.298791705996024,5.2396179039134845,Hoeveel fijnstof is er in het centrum van Huizen in de buurt van houtstokerij?,
+5298,2023-03-01,52.26128819462787,5.144885803895414,Wat doet nieuwe bebouwing met de luchtkwaliteit in een door natuurgebieden omgeven gebied?,"Graag zou ik u een nul meting maken van stikstof/CO2 en fijnstof om te zien wat de bouw en daarna de bewoning van zo veel bedrijvigheid doet op de luchtkwaliteit om daar bij toekomstige bouwplannen rekening te kunnen houden.
+Aan de Fransche kamp weg ligt het Hocrasterrein, ingeklemd tussen twee natuurgebieden.Komende jaren zal het terrein ontwikkeld worden. Op 4,3 hectare zijn 160 woningen, 10 kleinschalige bedrijven en een grote middelbareschool van 1200 leerlingen komen."
+5300,2023-03-01,52.2699740131991,5.136787270622325,Wat is de invloed van windsnelheid en richting op de luchtkwaliteit?,"De hypothese is dat bij storm uit b.v. het noordwesten de lucht schoner is. Je wilt dus in eerste instantie dit in kaart gaan brengen door te meten. Vanaf welke windkracht neemt de luchtkwaliteit erg toe en speelt richting nog een rol? Kijkend naar effecten van windrichtingen als het wat harder waait,  moet dan lage windsnelheden buiten beschouwing laten.
+Aanvullend hierop moet je onderzoek doen bij lage windsnelheden. Luchtverbeteringen door maatregelen, (bronbeperking) heeft waarschijlijk met name nut bij weinig wind als de vervuiling blijft hangen. Als er dan weinig wind staat is het voor mijn sensor belangrijk hoeverre richting een rol speelt. De vraag moet dus in tweeen gesplitst worden. Hogere snelheden en lagere windsnelheden. Ik stel windkracht 3 voor, maar misschien is een andere windkracht relevanter.
+ 
+Antwoord: Bij dit soort vraagstukken is de lokale context enorm belangrijk. De windrichting heeft zeker effect op de hoeveelheid fijnstof. En de snelheid o.a. op hoe snel of langzaam de fijnstof weer wordt verspreid. Echter, is het daarmee nog niet direct te bepalen waar deze fijnstof vandaan komt. De wind kan grote fijnstof wolken dragen, vaak komen die zelfs vanuit het buitenland.
+De impact van welke windrichting de meeste fijnstof meebrengt zal voor een deel altijd afhangen van de lokale situatie."
+6262,2023-08-01,52.330204,5.106410,Wat is de NO2 uitstoot bij Sportpark de Negen Morgen in Muiderberg?,De stikstofmetingen die gedaan worden met dit Palmesbuisje dienen als achtergrondmeting. Het verschil tussen plekken vlak langs de snelweg (A1) en deze sportlocatie kunnen zo onderzocht worden.
+6264,2023-08-01,52.317369,5.093537,Wat is het verschil in NO2 uitstoot tussen de noord- en zuidzijde van de A1?,"Langs dit deel van de A1 staan geen (geluid)schermen aan zowel de noord- als zuidzijde van de A1. De interesse is het verschil in stikstofuitstoot tussen de noord- en zuidzijde. Een stuk verderop, richting Muiden, staan deze (geluid)schermen er wel. Het is dus ook interessant om de metingen van de Palmesbuisjes die zich daar bevinden te vergelijken met de metingen op deze locatie."
+6266,2023-08-01,52.318925,5.100327,Wat is het verschil in NO2 uitstoot tussen de noord- en zuidzijde van de A1?,"Langs dit deel van de A1 staan geen (geluid)schermen aan zowel de noord- als zuidzijde van de A1. De interesse is het verschil in stikstofuitstoot tussen de noord- en zuidzijde. Een stuk verderop, richting Muiden, staan deze (geluid)schermen er wel. Het is dus ook interessant om de metingen van de Palmesbuisjes die zich daar bevinden te vergelijken met de metingen op deze locatie."
+6268,2023-08-01,52.328277,5.050753,Wat is het verschil in NO2 uitstoot tussen de noord- en zuidzijde van de A1?,"Langs dit deel van de A1 staan (geluid)schermen aan zowel de noord- als zuidzijde van de A1. De interesse in het verschil in stikstofuitstoot tussen noord- en zuidzijde. Een stuk verderop, richting Muiderberg, staan deze (geluid)schermen er niet. Het is dus ook interessant om de metingen van de Palmesbuisjes die zich daar bevinden te vergelijken met de metingen op deze locatie."
+6270,2023-08-01,52.327090,5.048293,Wat is het verschil in NO2 uitstoot tussen de noord- en zuidzijde van de A1?,"Langs dit deel van de A1 staan (geluid)schermen aan zowel de noord- als zuidzijde van de A1. De interesse is het verschil in stikstofuitstoot tussen de noord- en zuidzijde. Een stuk verderop, richting Muiderberg, staan deze (geluid)schermen er niet. Het is dus ook interessant om de metingen van de Palmesbuisjes die zich daar bevinden te vergelijken met de metingen op deze locatie."
+10974,2025-09-25,52.361501,4.653094,Wat is het effect van de bouw Stadscentrum Schalkwijk in samenhang met het afwaarderen van de Europaweg?,"De plannen voor het nieuwe stadscentrum in Schalkwijk en de veranderingen aan de Europaweg grijpen waarschijnlijk op elkaar in. Het nieuwe centrum trekt straks meer bezoekers en bewoners, wat extra verkeer kan opleveren. Tegelijk wordt de Europaweg aangepast om minder als doorgaande autoweg te functioneren. Dat kan betekenen dat er op sommige plekken minder verkeer komt, maar dat verkeer zich ook kan verplaatsen naar andere routes in de wijk. Wat dit precies betekent voor de PM2.5 fijnstofmeting is vooraf lastig te voorspellen. Het kan zijn dat er langs de Europaweg een verbetering merkbaar is, terwijl juist rondom drukke kruispunten of in woonstraten een toename plaatsvindt. Door nu al met sensoren fijnstof in beeld te brengen, kunnen we straks vergelijken of er veranderingen optreden tijdens en na de bouw. Op die manier ontstaat meer inzicht in de effecten op de leefomgeving.
+Waar sensoren plaatsen?
+– Langs de Europaweg zelf: om te zien of verkeer en luchtkwaliteit daar veranderen.
+– Rondom het nieuwe stadscentrum: bij drukke kruispunten of ingangen, waar extra verkeer verwacht wordt.
+– In omliggende woonstraten: om te volgen of verkeer zich verplaatst naar alternatieve routes.
+– Op een rustige referentielocatie"
+10977,2025-09-25,52.386702,4.639331,Kun je in fijnstofmetingen het effect zien van adviezen van de stookwijzer?,"Antwoord: De Stookwijzer geeft per postcodegebied advies of het verstandig is om hout te stoken. Dit gebeurt op basis van de windkracht en de luchtkwaliteitsindex voor fijnstof (PM2.5). Bij code rood luidt het advies: stook geen hout, omdat rook dan langer blijft hangen en de luchtkwaliteit (en gezondheid) sneller verslechtert.
+In de houtstookpilot van Hollandse Luchten, uitgevoerd door TNO samen met bewoners en Waag Futurelab, is onderzocht of houtstook meetbaar is in fijnstofdata:
+Tijdens de pilot waren duidelijke pieken zichtbaar in roetmetingen wanneer een vuurkorf werd aangestoken. Deze pieken kwamen overeen met verhogingen in SODAQ sensor PM2.5-metingen.
+Sensoren dichtbij de stookplek registreerden hogere waarden dan sensoren verder weg.
+Het doel van de pilot is te bepalen of je met een netwerk van fijnstof en roetsensoren kwantitatieve uitspraken kunt doen over de bijdrage van houtstook aan luchtvervuiling en mogelijke overschrijding van de WHO-norm (15 µg/m³ per 24 uur).
+In een voorbeeld bleek het 24-uurs gemiddelde boven die norm uit te komen, waarschijnlijk door houtstook.
+Dit laat zien dat houtstook zichtbaar is in fijnstofmetingen. Om het effect van de adviezen van de Stookwijzer te onderzoeken moet je het volgende weten:
+1. hoe vaak zijn de adviezen bekeken voor een bepaald gebied?
+2. hoe vaak is het opgevolgd? (en deze data heb je niet / kun je niet analyseren). Dit is dus een erg lastige opzet en praktisch lastig uitvoerbaar."
+10979,2025-09-25,52.413691,4.656727,Wat is de luchtkwaliteit bij huizen die dwars staan op de Vondelweg?,"Antwoord: Huizen die dwars op een drukke weg staan, zoals de Vondelweg, krijgen vaak verkeersemissies zowel aan de voor- als achterkant mee. Aan de voorzijde komt luchtvervuiling direct van het langsrijdende verkeer. Aan de achterzijde kan vervuilde lucht door de straat waaien of via luchtstromen rond de bebouwing blijven hangen.
+Met sensoren kun je dit verschil zichtbaar maken via de volgende methode:
+Hang een sensor aan de gevel aan de wegzijde.
+Hang een tweede sensor aan de achterzijde van hetzelfde huis.
+Vergelijk de waarden, vooral tijdens spitsuren of drukke verkeersmomenten.
+Zo krijg je inzicht of de luchtkwaliteit voor en achter de woningen inderdaad evenveel beïnvloed wordt door de verkeersdrukte."
+10982,2025-09-25,52.372643,4.655904,"Wat is het effect van de polderbaan, verkeer en de snelweg op de luchtkwaliteit in Parkwijk en de Boerhavewijk?","We hebben de volgende data nodig met een zeer gerichte opzet:
+1. Luchtkwaliteit metingen NO2 + PM2.5/10 hoge frequentie.
+2. Bronactiviteit en context: vluchtactiviteit, wegverkeer intensiteit, achtergrondconcentraties (om regionale variatie weg te nemen).
+3. Windrichting data.
+Bronnen kunnen samenvallen en zijn daardoor moeilijk te onderscheiden."
+10984,2025-09-25,52.402029,4.641875,Kan ik de luchtkwaliteit vergelijken tussen GOW en 30-km gebied?,"Antwoord: Ja, dat kan. Een gebiedsontsluitingsweg (GOW) heeft meestal meer en sneller rijdend verkeer dan een 30-km-gebied, waardoor de fijnstofmeting kan verschillen. Door sensoren in beide zones te plaatsen, kun je die verschillen goed volgen."
+10986,2025-09-25,52.368234,4.627244,Wat is het effect van vergroening van de leefomgeving rondom de Haarlemmerhout (herinrichting Kleine Hout) op de fijnstofmetingen?,"In 2025 en in 2027 vinden belangrijke veranderingen plaats rondom de Haarlemmerhout, waarvoor nu nulmetingen van belang zijn om de verschillen te gaan meten. Door ook tijdens en na de herinrichtingen te meten kunnen we zien of vergroening en verkeersaanpassingen daadwerkelijk leiden tot een meetbaar verschil in fijnstof rondom de Haarlemmerhout en in de wijk."
+10988,2025-09-25,52.407304,4.644028,Wat is het effect van bouwwerkzaamheden rondom de Orionweg en Sportweg op de fijnstofbelasting?,"Antwoord: Bouwwerkzaamheden kunnen tijdelijk zorgen voor extra fijnstof, bijvoorbeeld door bouwverkeer, grondverzet en het gebruik van machines. Omdat er al een sensor in de buurt staat, kan goed worden gevolgd of de concentraties veranderen zodra de werkzaamheden eind 2025 starten.
+Met een nulmeting vooraf, metingen tijdens de bouw en een evaluatie achteraf ontstaat inzicht in hoe groot dit effect werkelijk is. Dat de projectontwikkelaar en gemeente willen meedoen, biedt de kans om samen duidelijke afspraken te maken en de resultaten ook te gebruiken voor toekomstige bouwprojecten."
+10990,2025-09-25,52.389040,4.627408,"Kunnen we de effecten van houtstook op de fijnstofbelasting meten door fijnstofdata te combineren met stikstofdata, wind, temperatuur, luchtvochtigheid en dit vervolgens afzetten tegen de stookwijzer?","Antwoord: Alleen fijnstofmetingen zeggen vaak niet genoeg. Door meerdere datasets te combineren kun je beter inschatten of pieken waarschijnlijk door houtstook komen en of het opvolgen van Stookwijzer-adviezen (rood/oranje/groen) terug te zien is in de metingen. Door fijnstofdata te combineren met stikstof, weersomstandigheden en windrichting kun je beter inschatten of pieken waarschijnlijk met houtstook samenhangen. De Stookwijzer kan daarbij een referentie zijn: op dagen met code rood zou stoken eerder tot merkbare verhogingen leiden.
+Voor meer specialistische kennis en methoden kun je op de website van Atlas Leefomgeving kijken."
+11300,2025-11-27,52.461720,4.588925,Wat is de blootstelling aan NO2 voor bewoners die dichtbij de haven van IJmuiden wonen?,
+11303,2025-11-27,52.462652,4.584498,Wat is de invloed van de DFDS Veerboot op fijnstof uitstoot tussen dag en nacht?,
+11305,2025-11-27,52.491309,4.674560,Verandert de NO2 uitstoot als de afstelling van het stoplicht veranderd bij Italiëlaan & Laan der NL,
+11307,2025-11-27,52.485731,4.690538,Wat is de invloed van de A9 en A22 op het NO2 en fijnstofgehalte in de lucht?,
+11310,2025-11-27,52.463227,4.653953,"Als de Velsertunnel dicht is door een te hoge vrachtwagen die vast zit, hoeveel extra uitstoot ontstaat er dan door de file?",
+11396,2025-12-10,52.383056,4.648972,"Hoe verhouden de fijnstofwaarden zich tussen de drie sensoren die staan in de driehoek Oudweg, Gedempte Oostersingelgracht en Amsterdamsevaart?","Binnen deze driehoek van sensoren bevindt zich een grote werkplaats van de NS Treinmodernisering Haarlem (NSTM). Ik wil weten wat het effect is van de werkzaamheden die daar plaatsvinden op de luchtkwaliteit in de omgeving. 
+Antwoord: Om met deze sensoren te bepalen of de werkzaamheden op het NSTM terrein effect hebben op de luchtkwaliteit in de omgeving, is gebruik gemaakt van zogenaamde pollutierozen. Dit is een visuele manier om te laten zien uit welke richting hoeveel vervuiling afkomstig is van een sensor. De afbeeldingen combineren informatie over de windrichting met de fijnstofconcentratie. Met meerdere pollutierozen die zich rondom een driehoek bevinden, kun je vervolgens de informatie combineren. Als alle rozen naar het midden van de driehoek zouden wijzen, zou dit een indicatie van een mogelijke bron in het midden zijn. Mogelijk het NSTM terrein.
+Pollutierozen meetlocaties rond NSTM
+Echter, de resultaten wezen bij alle sensoren naar het oosten als richting waaruit fijnstof afkomstig was. Blauwe cirkels geven aan waar je de hoogste fijnstofwaarden zou verwachten als er een bron midden tussen de sensoren zou zijn. Dit betekent dat uit deze analyse niet geconcludeerd kan worden dat de bouwwerkzaamheden op het NSTM terrein tijdelijk voor meer fijnstof hebben gezorgd. 
+Deze meetvraag werd beantwoord tijdens de bijeenkomst Aan de slag met data in Haarlem op 9 juli 2026."
+11402,2025-12-10,52.3826438,4.6357356,Wat is het effect van uitgaand publiek (dat buiten rookt) op de luchtkwaliteit en daarmee mijn gezondheid?,Motivatie: ik wil aantonen dat de daarbij vrijkomende fijnstof een negatief effect heeft op mijn leefomgeving en slecht is voor mijn gezondheid. Benieuwd naar de onderzoeksresultaten? Lees hier meer.
+11731,2026-02-17,52.485692935146204,4.804548215132144,Wat is de invloed van de n.203 op de luchtkwaliteit in Zaanstad?,
+11734,2026-02-17,52.4941956355195,4.7655170551581705,Wat is de invloed van de A8/9 op de luchtkwaliteit in Zaanstad (krommenie)?,
+11736,2026-02-17,52.50225650176233,4.7473000237853,Kunnen we de fijnstof overlast van het bouwproject Eilanden van Hain monitoren?,
+11738,2026-02-17,52.494335957964154,4.787251180896078,Is het mogelijk de bronnen te bepalen voor het vuil afkomstig van fijnstof neerslag in de omgeving?,
+11741,2026-02-17,52.25073852209957,5.251335185128028,"Kunnen we de luchtkwaliteit bij de Zuidersingel, het nieuwe kruispunt, meten?",Maak me zorgen om de luchtkwaliteit hier voor mens en natuur. Ook vanwegen recent kappen van veel bomen
+11743,2026-02-17,52.22443523731957,5.182830070052148,Is de NO2 uitstoot bij tunnels van verschillende lengtes even hoog?,
+11746,2026-02-17,52.29282737095059,5.177297897777635,Hoeveel invloed heeft de afstand tot de snelweg op de NO2 concentratie?,

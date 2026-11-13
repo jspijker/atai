@@ -1,0 +1,29 @@
+device_id;category;key;value;context
+286;meta;submitted_at;2026-07-16T22:26:18.122Z;
+286;vraag;sensor_thuis;Ja;Hangt of staat deze sensor bij jou thuis?
+286;vraag;hoe_opgehangen;Ca. 2 m hoog aan een regenpijp onder een dakgoot.;Hoe heb je de sensor opgehangen?(Hoe hoog, waaraan, waaronder, ...)
+286;vraag;bekijken_metingen;Iedere week;Hoe vaak kijk je ongeveer naar de data van je sensor?
+286;vraag;redenen_foutieve_metingen;Mijn metingen zijn volgens mij goed.;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+286;vraag;foutieve_metingen;Nee;Denk je dat jouw sensor foutieve metingen heeft gedaan de afgelopen twee weken?
+286;vraag;ervaring_beoordelen;Moeilijk;Hoe makkelijk of moeilijk vond je het om te beoordelen of de meetwaarden klopten?
+286;vraag;vertrouwen_algoritme;Nauwelijks;In hoeverre vertrouw je op het algoritme om meetfouten te vinden?
+286;vraag;toelichting_beoordeling;De meetwaarden zijn altijd wel enigszins grillig. Ik heb relatief veel vertrouwen in de betrouwbaarheid van de meter. Een plotselinge piek kan een verstoring zijn, maar net zo goed iets in de atmosfeer.;Wil je nog iets toelichten over het beoordelen van mogelijke meetwaarden? (optioneel)
+286;vraag;verbeterpunten;Geen idee. Ik denk dat je elke meetplek als uniek moet benaderen. Natuurkijk kijk je naar opnemers in de directe omgeving. Maar je weet nooit wat er op die plek gebeurt is.;Wat zou dit proces makkelijker of beter maken voor jou? (optioneel)
+286;algoritme_beoordeling;1;onterecht;Lage variatie | 30 Jun 11:00 – 15:00 | 3.0 – 5.6 µg/m³
+286;algoritme_beoordeling;2;weet-niet;Statistische piek | 30 Jun 20:00 – 21:00 | 22.1 µg/m³
+286;algoritme_beoordeling;3;weet-niet;Lokale uitschieter | 30 Jun 20:00 – 21:00 | 22.1 µg/m³
+286;algoritme_beoordeling;4;weet-niet;Trend-afwijking | 30 Jun 20:00 – 21:00 | 22.1 µg/m³
+286;algoritme_beoordeling;5;onterecht;Lage variatie | 3 Jul 04:00 – 4 Jul 05:00 | 1.7 – 3.7 µg/m³
+286;algoritme_beoordeling;6;onterecht;Constante meting | 3 Jul 14:00 – 4 Jul 05:00 | 1.7 – 3.7 µg/m³
+286;algoritme_beoordeling;7;onterecht;Lage variatie | 4 Jul 08:00 – 14:00 | 2.8 – 3.3 µg/m³
+286;algoritme_beoordeling;8;onterecht;Lage variatie | 4 Jul 15:00 – 17:00 | 3.3 – 4.3 µg/m³
+286;algoritme_beoordeling;9;onterecht;Lokale uitschieter | 4 Jul 18:00 – 19:00 | 7.0 µg/m³
+286;algoritme_beoordeling;10;onterecht;Lage variatie | 5 Jul 18:00 – 6 Jul 01:00 | 0.8 – 2.2 µg/m³
+286;algoritme_beoordeling;11;onterecht;Constante meting | 6 Jul 00:00 – 01:00 | 2.2 µg/m³
+286;algoritme_beoordeling;12;weet-niet;Statistische piek | 6 Jul 15:00 – 16:00 | 11.2 µg/m³
+286;algoritme_beoordeling;13;weet-niet;Lokale uitschieter | 6 Jul 15:00 – 16:00 | 11.2 µg/m³
+286;algoritme_beoordeling;14;onterecht;Statistische piek | 8 Jul 19:00 – 20:00 | 6.6 µg/m³
+286;algoritme_beoordeling;15;onterecht;Lokale uitschieter | 8 Jul 21:00 – 22:00 | 6.0 µg/m³
+286;algoritme_beoordeling;16;onterecht;Lokale uitschieter | 9 Jul 16:00 – 17:00 | 6.9 µg/m³
+286;algoritme_beoordeling;17;onterecht;Lage variatie | 13 Jul 03:00 – 11:00 | 6.8 – 9.6 µg/m³
+286;algoritme_beoordeling;18;onterecht;Lokale uitschieter | 13 Jul 11:00 – 12:00 | 10.6 µg/m³

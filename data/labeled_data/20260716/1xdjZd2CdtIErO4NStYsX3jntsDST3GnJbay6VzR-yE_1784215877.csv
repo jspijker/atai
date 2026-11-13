@@ -1,0 +1,30 @@
+device_id;category;key;value;context
+480;meta;submitted_at;2026-07-16T15:31:17.055Z;
+480;vraag;sensor_thuis;Ja;Hangt of staat deze sensor bij jou thuis?
+480;vraag;hoe_opgehangen;Staat op een plankje in de tuin. Ca. 1.50 meter hoogte.;Hoe heb je de sensor opgehangen?(Hoe hoog, waaraan, waaronder, ...)
+480;vraag;bekijken_metingen;Iedere week;Hoe vaak kijk je ongeveer naar de data van je sensor?
+480;vraag;redenen_foutieve_metingen;Technische defect, communicatie onderbreking, vervuiling door stof of insecten. Corrosie van contacten.;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+480;vraag;foutieve_metingen;Weet niet;Denk je dat jouw sensor foutieve metingen heeft gedaan de afgelopen twee weken?
+480;vraag;ervaring_beoordelen;Makkelijk;Hoe makkelijk of moeilijk vond je het om te beoordelen of de meetwaarden klopten?
+480;vraag;vertrouwen_algoritme;Grotendeels;In hoeverre vertrouw je op het algoritme om meetfouten te vinden?
+480;vraag;toelichting_beoordeling;"De legenda met kleuren en toelichting beter in beeld zetten.
+Het is niet altijd makkelijk een een lokale uitschieter te beoordelen. Bijv. te lang geleden. En is een piek door lokale BBQ, houtvuur niet gewoon een goed meetwaarde? Of is dat juist een ongewenste piek? Maw. de meetwaarde kan getalsmatig goed zijn maar een anomalie door de omstandigheden. En welke zaken wil je als afwijking noteren als de meetwaarde op zich juist is? Je zou een oorzaak erbij moeten kunnen labelen. Bijv. brand is de buurt oid.";Wil je nog iets toelichten over het beoordelen van mogelijke meetwaarden? (optioneel)
+480;vraag;verbeterpunten;"- de labeling terecht/omterecht kan onduidelijk zijn. Op zich is het wel goed uitgelegd maar ook verwarrend als je veel moet labelen. Je vergist je gauw tussen ""meting terecht"" en ""beoorddeling terecht"". Idem voor ontrecht.
+- Als je klaar bent verschijnt twee keer de knop ""Verzonden v"". Moet dat niet verzenden (met e) en daarna verzonden (met o) zijn?- Het is daarom ook niet duidelijk wanneer de pagina afgesloten mag worden. Er zou moeten staan: uw gegevens zijn correct ontvangen. U mag de pagina nu sluiten"".
+- Het lijkt alsof je na verzenden nog steeds aanpassingen kunt doen. Worden die dan ook nog opgeslagen als je weer op verzenden klikt?";Wat zou dit proces makkelijker of beter maken voor jou? (optioneel)
+480;algoritme_beoordeling;1;onterecht;Lokale uitschieter | 30 Jun 01:00 – 02:00 | 3.3 µg/m³
+480;algoritme_beoordeling;2;onterecht;Lokale uitschieter | 30 Jun 03:00 – 04:00 | 3.3 µg/m³
+480;algoritme_beoordeling;3;onterecht;Lokale uitschieter | 30 Jun 18:00 – 19:00 | 9.6 µg/m³
+480;algoritme_beoordeling;4;onterecht;Statistische piek | 2 Jul 01:00 – 02:00 | 14.9 µg/m³
+480;algoritme_beoordeling;5;onterecht;Lokale uitschieter | 2 Jul 01:00 – 03:00 | 12.5 – 14.9 µg/m³
+480;algoritme_beoordeling;6;onterecht;Lage variatie | 3 Jul 05:00 – 5 Jul 02:00 | 1.8 – 6.4 µg/m³
+480;algoritme_beoordeling;7;onterecht;Constante meting | 3 Jul 13:00 – 4 Jul 03:00 | 1.8 – 3.9 µg/m³
+480;algoritme_beoordeling;8;onterecht;Lage variatie | 5 Jul 08:00 – 16:00 | 2.0 – 3.1 µg/m³
+480;algoritme_beoordeling;9;onterecht;Lage variatie | 5 Jul 18:00 – 6 Jul 03:00 | 1.0 – 5.1 µg/m³
+480;algoritme_beoordeling;10;onterecht;Statistische piek | 6 Jul 02:00 – 05:00 | 5.1 – 9.2 µg/m³
+480;algoritme_beoordeling;11;onterecht;Lage variatie | 6 Jul 16:00 – 19:00 | 3.9 – 5.2 µg/m³
+480;algoritme_beoordeling;12;onterecht;Lage variatie | 7 Jul 04:00 – 8 Jul 04:00 | 1.9 – 7.8 µg/m³
+480;algoritme_beoordeling;13;onterecht;Lage variatie | 8 Jul 19:00 – 20:00 | 4.2 µg/m³
+480;algoritme_beoordeling;14;onterecht;Statistische piek | 8 Jul 21:00 – 22:00 | 7.5 µg/m³
+480;algoritme_beoordeling;15;onterecht;Lokale uitschieter | 12 Jul 15:00 – 16:00 | 6.7 µg/m³
+480;algoritme_beoordeling;16;onterecht;Statistische piek | 13 Jul 15:00 – 16:00 | 22.1 µg/m³

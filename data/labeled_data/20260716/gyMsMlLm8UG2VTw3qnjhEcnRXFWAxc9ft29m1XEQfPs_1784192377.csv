@@ -1,0 +1,28 @@
+device_id;category;key;value;context
+LTD_90916;meta;submitted_at;2026-07-16T08:59:37.729Z;
+LTD_90916;vraag;sensor_thuis;Ja;Hangt of staat deze sensor bij jou thuis?
+LTD_90916;vraag;hoe_opgehangen;Ca. 6m hoog, aan de bovenkant van een dakkapel, aan de straatzijde, richting het noorden.;Hoe heb je de sensor opgehangen?(Hoe hoog, waaraan, waaronder, ...)
+LTD_90916;vraag;bekijken_metingen;Iedere week;Hoe vaak kijk je ongeveer naar de data van je sensor?
+LTD_90916;vraag;redenen_foutieve_metingen;Mist;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+LTD_90916;vraag;redenen_foutieve_metingen;Insect;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+LTD_90916;vraag;redenen_foutieve_metingen;Apparaat storing (electronica);Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+LTD_90916;vraag;foutieve_metingen;Nee;Denk je dat jouw sensor foutieve metingen heeft gedaan de afgelopen twee weken?
+LTD_90916;vraag;ervaring_beoordelen;Moeilijk;Hoe makkelijk of moeilijk vond je het om te beoordelen of de meetwaarden klopten?
+LTD_90916;vraag;vertrouwen_algoritme;Grotendeels;In hoeverre vertrouw je op het algoritme om meetfouten te vinden?
+LTD_90916;vraag;toelichting_beoordeling;Bij incidentele verschillen lijken mij de locatie van de meetstations mede bepalend te zijn. Zo is soms het patroon wel vergelijkbaar maar enigszins verschoven.De referentiewaarden zijn niet altijd continue en laten soms geruime tijd geen waarde (= 0 ?) zien, wat de vraag oproept wat daar aan de hand is.;Wil je nog iets toelichten over het beoordelen van mogelijke meetwaarden? (optioneel)
+LTD_90916;vraag;verbeterpunten;Voor mij geeft de vergelijking met een enkele referentie waarde onvoldoende zekerheid over het functioneren van de sensor. Wellicht zou een sensor gelijk aan de referentie op mijn locatie ook afwijkingen laten zien. Ik heb geen inzicht in gebruikte statistische algoritmes voor het bepalen van significantie en hoe die zijn gemotiveerd. Dit heeft wel mijn interesse.;Wat zou dit proces makkelijker of beter maken voor jou? (optioneel)
+LTD_90916;algoritme_beoordeling;1;weet-niet;Lokale uitschieter | 30 Jun 04:00 – 05:00 | 3.7 µg/m³
+LTD_90916;algoritme_beoordeling;2;weet-niet;Lage variatie | 30 Jun 11:00 – 13:00 | 4.5 – 5.5 µg/m³
+LTD_90916;algoritme_beoordeling;3;onterecht;Statistische piek | 30 Jun 13:00 – 14:00 | 10.6 µg/m³
+LTD_90916;algoritme_beoordeling;4;onterecht;Lokale uitschieter | 30 Jun 13:00 – 14:00 | 10.6 µg/m³
+LTD_90916;algoritme_beoordeling;5;onterecht;Lokale uitschieter | 1 Jul 05:00 – 07:00 | 9.2 – 11.7 µg/m³
+LTD_90916;algoritme_beoordeling;6;weet-niet;Lokale uitschieter | 2 Jul 02:00 – 03:00 | 11.3 µg/m³
+LTD_90916;algoritme_beoordeling;7;terecht;Lage variatie | 3 Jul 04:00 – 5 Jul 11:00 | 1.4 – 4.9 µg/m³
+LTD_90916;algoritme_beoordeling;8;terecht;Constante meting | 3 Jul 09:00 – 4 Jul 04:00 | 1.7 – 2.9 µg/m³
+LTD_90916;algoritme_beoordeling;9;terecht;Lage variatie | 5 Jul 20:00 – 6 Jul 03:00 | 1.5 – 5.8 µg/m³
+LTD_90916;algoritme_beoordeling;10;weet-niet;Statistische piek | 6 Jul 02:00 – 05:00 | 5.8 – 9.0 µg/m³
+LTD_90916;algoritme_beoordeling;11;onterecht;Lage variatie | 9 Jul 10:00 – 10 Jul 04:00 | 6.2 – 8.8 µg/m³
+LTD_90916;algoritme_beoordeling;12;onterecht;Lokale uitschieter | 13 Jul 00:00 – 02:00 | 7.8 – 8.0 µg/m³
+LTD_90916;algoritme_beoordeling;13;weet-niet;Lokale uitschieter | 13 Jul 14:00 – 16:00 | 9.9 – 12.4 µg/m³
+LTD_90916;eigen_markering;1;Over een langere periode sterk afwijkende waarden zijn m.i. verdacht. Wellicht is hier eenhoge luchtvochtigheid debet aan.;2 Jul 22:00 – 4 Jul 13:00
+LTD_90916;eigen_markering;2;Ook hier over een langere periode afwijkende waarden, waar ik geen verklaring voor heb. Ik ben benieuwd hoe andere sensoren hier in de buurt het gedaan hebben.;7 Jul 00:00 – 9 Jul 03:00

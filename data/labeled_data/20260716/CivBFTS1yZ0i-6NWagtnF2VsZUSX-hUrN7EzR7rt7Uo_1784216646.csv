@@ -1,0 +1,81 @@
+device_id;category;key;value;context
+306;meta;submitted_at;2026-07-16T15:44:05.803Z;
+306;vraag;sensor_thuis;Ja;Hangt of staat deze sensor bij jou thuis?
+306;vraag;hoe_opgehangen;2 meter hoog. Sodaq Gemonteerd in een oude HoLu gen 1 behuizing aan een regenpijp. Hierdoor goed lucht doorstroming.;Hoe heb je de sensor opgehangen?(Hoe hoog, waaraan, waaronder, ...)
+306;vraag;bekijken_metingen;Iedere week;Hoe vaak kijk je ongeveer naar de data van je sensor?
+306;vraag;redenen_foutieve_metingen;Defecte sensor, communicatiefout, vervuiling door stof of insecten. Corrosie van contacten.;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+306;vraag;foutieve_metingen;Ja;Denk je dat jouw sensor foutieve metingen heeft gedaan de afgelopen twee weken?
+306;vraag;ervaring_beoordelen;Makkelijk;Hoe makkelijk of moeilijk vond je het om te beoordelen of de meetwaarden klopten?
+306;vraag;vertrouwen_algoritme;Grotendeels;In hoeverre vertrouw je op het algoritme om meetfouten te vinden?
+306;vraag;toelichting_beoordeling;"Verwarring over terecht/onterecht. Het staat goed uitgelegd maar blijft gevoelig voor label fouten. ""Terechte labeling door algoritme"" vs ""terechte meetwaarde"". Misschien dit duidelijker op de knoppen zetten?
+Bij mijn eerdere beoordeling van 306 zelf deze fout gemaakt. Vandaar het formulier voor 306 opnieuw ingevuld.";Wil je nog iets toelichten over het beoordelen van mogelijke meetwaarden? (optioneel)
+306;vraag;verbeterpunten;"De kleurenlegenda beter in beeld zetten.
+Onduidelijk wanneer de data is verzonden. Je kunt nog editen en op de knop ""verzonden"" drukken. Worden die wijzigingen dan meegenomen?
+Iets toevoegen wanneer de gebruiker de pagina mag sluiten.";Wat zou dit proces makkelijker of beter maken voor jou? (optioneel)
+306;algoritme_beoordeling;1;terecht;Waarde buiten bereik | 30 Jun 00:00 – 1 Jul 15:00 | 224.3 – 2924.2 µg/m³
+306;algoritme_beoordeling;2;terecht;Plotselinge sprong | 30 Jun 01:00 – 05:00 | 1621.7 – 1768.0 µg/m³
+306;algoritme_beoordeling;3;terecht;Plotselinge sprong | 30 Jun 06:00 – 08:00 | 2406.3 – 2528.6 µg/m³
+306;algoritme_beoordeling;4;terecht;Plotselinge sprong | 30 Jun 09:00 – 1 Jul 02:00 | 680.7 – 2810.0 µg/m³
+306;algoritme_beoordeling;5;terecht;Lokale uitschieter | 30 Jun 11:00 – 13:00 | 680.7 – 863.4 µg/m³
+306;algoritme_beoordeling;6;terecht;Lokale uitschieter | 30 Jun 14:00 – 16:00 | 1292.1 – 1733.0 µg/m³
+306;algoritme_beoordeling;7;terecht;Lokale uitschieter | 30 Jun 18:00 – 20:00 | 1600.4 – 2225.5 µg/m³
+306;algoritme_beoordeling;8;terecht;Plotselinge sprong | 1 Jul 03:00 – 04:00 | 1282.2 µg/m³
+306;algoritme_beoordeling;9;terecht;Plotselinge sprong | 1 Jul 05:00 – 06:00 | 1552.1 µg/m³
+306;algoritme_beoordeling;10;terecht;Plotselinge sprong | 1 Jul 07:00 – 08:00 | 1788.8 µg/m³
+306;algoritme_beoordeling;11;terecht;Plotselinge sprong | 1 Jul 09:00 – 2 Jul 18:00 | 165.4 – 2924.2 µg/m³
+306;algoritme_beoordeling;12;terecht;Lokale uitschieter | 1 Jul 10:00 – 11:00 | 2924.2 µg/m³
+306;algoritme_beoordeling;13;terecht;Waarde buiten bereik | 1 Jul 16:00 – 5 Jul 01:00 | 233.4 – 2425.5 µg/m³
+306;algoritme_beoordeling;14;terecht;Plotselinge sprong | 2 Jul 19:00 – 3 Jul 01:00 | 291.6 – 2317.1 µg/m³
+306;algoritme_beoordeling;15;terecht;Lokale uitschieter | 2 Jul 20:00 – 21:00 | 989.7 µg/m³
+306;algoritme_beoordeling;16;terecht;Lokale uitschieter | 2 Jul 22:00 – 23:00 | 2317.1 µg/m³
+306;algoritme_beoordeling;17;terecht;Plotselinge sprong | 3 Jul 06:00 – 4 Jul 00:00 | 233.4 – 1775.7 µg/m³
+306;algoritme_beoordeling;18;terecht;Lokale uitschieter | 3 Jul 06:00 – 07:00 | 1380.0 µg/m³
+306;algoritme_beoordeling;19;terecht;Lokale uitschieter | 3 Jul 09:00 – 10:00 | 1775.7 µg/m³
+306;algoritme_beoordeling;20;terecht;Lokale uitschieter | 3 Jul 11:00 – 13:00 | 979.1 – 1234.7 µg/m³
+306;algoritme_beoordeling;21;terecht;Lokale uitschieter | 3 Jul 14:00 – 15:00 | 233.4 µg/m³
+306;algoritme_beoordeling;22;terecht;Lokale uitschieter | 3 Jul 20:00 – 22:00 | 812.7 – 1772.9 µg/m³
+306;algoritme_beoordeling;23;terecht;Plotselinge sprong | 4 Jul 05:00 – 10:00 | 962.3 – 1556.7 µg/m³
+306;algoritme_beoordeling;24;terecht;Plotselinge sprong | 4 Jul 11:00 – 13:00 | 1269.9 – 1629.1 µg/m³
+306;algoritme_beoordeling;25;terecht;Plotselinge sprong | 4 Jul 14:00 – 17:00 | 842.9 – 1126.5 µg/m³
+306;algoritme_beoordeling;26;terecht;Lokale uitschieter | 4 Jul 17:00 – 18:00 | 1081.0 µg/m³
+306;algoritme_beoordeling;27;terecht;Plotselinge sprong | 4 Jul 18:00 – 19:00 | 895.1 µg/m³
+306;algoritme_beoordeling;28;terecht;Plotselinge sprong | 4 Jul 20:00 – 23:00 | 829.9 – 1131.9 µg/m³
+306;algoritme_beoordeling;29;terecht;Waarde buiten bereik | 5 Jul 02:00 – 6 Jul 06:00 | 360.6 – 1949.2 µg/m³
+306;algoritme_beoordeling;30;terecht;Plotselinge sprong | 5 Jul 09:00 – 11:00 | 1114.8 – 1201.1 µg/m³
+306;algoritme_beoordeling;31;terecht;Plotselinge sprong | 5 Jul 12:00 – 20:00 | 360.6 – 1494.8 µg/m³
+306;algoritme_beoordeling;32;terecht;Lokale uitschieter | 5 Jul 13:00 – 15:00 | 942.1 – 1455.7 µg/m³
+306;algoritme_beoordeling;33;terecht;Lokale uitschieter | 5 Jul 19:00 – 20:00 | 1494.8 µg/m³
+306;algoritme_beoordeling;34;terecht;Plotselinge sprong | 5 Jul 21:00 – 23:00 | 740.8 – 809.4 µg/m³
+306;algoritme_beoordeling;35;terecht;Plotselinge sprong | 6 Jul 02:00 – 06:00 | 1080.2 – 1949.2 µg/m³
+306;algoritme_beoordeling;36;terecht;Lokale uitschieter | 6 Jul 03:00 – 04:00 | 1754.2 µg/m³
+306;algoritme_beoordeling;37;terecht;Waarde buiten bereik | 6 Jul 10:00 – 16:00 | 307.9 – 720.1 µg/m³
+306;algoritme_beoordeling;38;terecht;Plotselinge sprong | 6 Jul 11:00 – 12:00 | 501.1 µg/m³
+306;algoritme_beoordeling;39;terecht;Plotselinge sprong | 6 Jul 13:00 – 14:00 | 609.7 µg/m³
+306;algoritme_beoordeling;40;terecht;Plotselinge sprong | 6 Jul 15:00 – 17:00 | 98.9 – 307.9 µg/m³
+306;algoritme_beoordeling;41;terecht;Lokale uitschieter | 6 Jul 16:00 – 17:00 | 98.9 µg/m³
+306;algoritme_beoordeling;42;terecht;Waarde buiten bereik | 6 Jul 18:00 – 8 Jul 07:00 | 236.2 – 2323.3 µg/m³
+306;algoritme_beoordeling;43;terecht;Plotselinge sprong | 6 Jul 18:00 – 20:00 | 356.7 – 543.4 µg/m³
+306;algoritme_beoordeling;44;terecht;Lokale uitschieter | 6 Jul 18:00 – 19:00 | 356.7 µg/m³
+306;algoritme_beoordeling;45;terecht;Plotselinge sprong | 7 Jul 00:00 – 01:00 | 440.8 µg/m³
+306;algoritme_beoordeling;46;terecht;Plotselinge sprong | 7 Jul 02:00 – 03:00 | 458.7 µg/m³
+306;algoritme_beoordeling;47;terecht;Plotselinge sprong | 7 Jul 04:00 – 06:00 | 547.1 – 614.8 µg/m³
+306;algoritme_beoordeling;48;terecht;Plotselinge sprong | 7 Jul 09:00 – 18:00 | 472.6 – 1973.0 µg/m³
+306;algoritme_beoordeling;49;terecht;Statistische piek | 7 Jul 12:00 – 13:00 | 1334.6 µg/m³
+306;algoritme_beoordeling;50;terecht;Statistische piek | 7 Jul 14:00 – 15:00 | 1973.0 µg/m³
+306;algoritme_beoordeling;51;terecht;Plotselinge sprong | 7 Jul 19:00 – 21:00 | 1643.3 – 2323.3 µg/m³
+306;algoritme_beoordeling;52;terecht;Plotselinge sprong | 7 Jul 22:00 – 8 Jul 06:00 | 240.4 – 1659.4 µg/m³
+306;algoritme_beoordeling;53;terecht;Lokale uitschieter | 8 Jul 06:00 – 11:00 | 125.1 – 249.5 µg/m³
+306;algoritme_beoordeling;54;terecht;Waarde buiten bereik | 8 Jul 08:00 – 09:00 | 249.5 µg/m³
+306;algoritme_beoordeling;55;terecht;Plotselinge sprong | 8 Jul 08:00 – 10:00 | 168.4 – 249.5 µg/m³
+306;algoritme_beoordeling;56;terecht;Waarde buiten bereik | 8 Jul 11:00 – 12:00 | 254.7 µg/m³
+306;algoritme_beoordeling;57;terecht;Plotselinge sprong | 8 Jul 11:00 – 14:00 | 195.3 – 303.5 µg/m³
+306;algoritme_beoordeling;58;terecht;Waarde buiten bereik | 8 Jul 13:00 – 17:00 | 299.1 – 348.0 µg/m³
+306;algoritme_beoordeling;59;terecht;Plotselinge sprong | 8 Jul 17:00 – 19:00 | 64.9 – 580.4 µg/m³
+306;algoritme_beoordeling;60;terecht;Waarde buiten bereik | 8 Jul 18:00 – 20:00 | 545.9 – 580.4 µg/m³
+306;algoritme_beoordeling;61;onterecht;Lokale uitschieter | 8 Jul 20:00 – 23:00
+306;algoritme_beoordeling;62;onterecht;Lage variatie | 9 Jul 22:00 – 10 Jul 00:00 | 6.7 – 7.2 µg/m³
+306;algoritme_beoordeling;63;onterecht;Lokale uitschieter | 10 Jul 18:00 – 19:00 | 5.5 µg/m³
+306;algoritme_beoordeling;64;onterecht;Statistische piek | 11 Jul 17:00 – 18:00 | 30.6 µg/m³
+306;algoritme_beoordeling;65;onterecht;Lokale uitschieter | 11 Jul 17:00 – 19:00 | 9.3 – 30.6 µg/m³
+306;algoritme_beoordeling;66;onterecht;Lokale uitschieter | 13 Jul 18:00 – 19:00 | 5.8 µg/m³
+306;eigen_markering;1;Te hoge meetwaarden door defecte SPS30. Op 8 juli de SPS30 in de Sodaq vervangen.;30 Jun 00:00 – 8 Jul 19:00

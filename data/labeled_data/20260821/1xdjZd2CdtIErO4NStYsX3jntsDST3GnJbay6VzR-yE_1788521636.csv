@@ -1,0 +1,45 @@
+device_id;category;key;value;context
+480;meta;submitted_at;2026-09-04T11:33:56.053Z;
+480;vraag;sensor_thuis;Ja;Hangt of staat deze sensor bij jou thuis?
+480;vraag;hoe_opgehangen;Ca. 200 cm hoog. Onder een afdakje aan de muur.;Hoe heb je de sensor opgehangen?(Hoe hoog, waaraan, waaronder, ...)
+480;vraag;bekijken_metingen;Iedere week;Hoe vaak kijk je ongeveer naar de data van je sensor?
+480;vraag;redenen_foutieve_metingen;Technische oorzaken. Zeer lokale afwijkingen maar dat zijn ook gedane, correcte metingen. Een super lokale meting die afwijkt, hoeft niet per se fout te zijn.;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+480;vraag;foutieve_metingen;Nee;Denk je dat jouw sensor foutieve metingen heeft gedaan de afgelopen twee weken?
+480;vraag;ervaring_beoordelen;Makkelijk;Hoe makkelijk of moeilijk vond je het om te beoordelen of de meetwaarden klopten?
+480;vraag;vertrouwen_algoritme;Grotendeels;In hoeverre vertrouw je op het algoritme om meetfouten te vinden?
+480;vraag;toelichting_beoordeling;Gaat makkelijk dan de vorige keer.;Wil je nog iets toelichten over het beoordelen van mogelijke meetwaarden? (optioneel)
+480;vraag;verbeterpunten;Meer kijken naar trends in de buurt. Vaak zijn die hetzelfde alleen wat eerder of later (wind?).;Wat zou dit proces makkelijker of beter maken voor jou? (optioneel)
+480;algoritme_beoordeling;1;onterecht;Statistische sprong | 1 Aug 23:00 – 2 Aug 00:00 | 11.2 µg/m³
+480;algoritme_beoordeling;2;onterecht;Lokale uitschieter | 2 Aug 05:00 – 06:00 | 13.2 µg/m³
+480;algoritme_beoordeling;3;onterecht;Lokale uitschieter | 2 Aug 23:00 – 3 Aug 00:00 | 5.7 µg/m³
+480;algoritme_beoordeling;4;onterecht;Lokale uitschieter | 3 Aug 01:00 – 02:00 | 5.2 µg/m³
+480;algoritme_beoordeling;5;onterecht;Lokale uitschieter | 3 Aug 04:00 – 05:00 | 6.5 µg/m³
+480;algoritme_beoordeling;6;onterecht;Statistische sprong | 4 Aug 03:00 – 04:00 | 25.2 µg/m³
+480;algoritme_beoordeling;7;onterecht;Lokale uitschieter | 4 Aug 03:00 – 04:00 | 25.2 µg/m³
+480;algoritme_beoordeling;8;onterecht;Lokale uitschieter | 4 Aug 06:00 – 07:00 | 25.0 µg/m³
+480;algoritme_beoordeling;9;onterecht;Lokale uitschieter | 5 Aug 04:00 – 05:00 | 2.7 µg/m³
+480;algoritme_beoordeling;10;onterecht;Lage variatie | 7 Aug 07:00 – 8 Aug 01:00 | 1.7 – 5.1 µg/m³
+480;algoritme_beoordeling;11;onterecht;Statistische sprong | 8 Aug 02:00 – 03:00 | 11.0 µg/m³
+480;algoritme_beoordeling;12;weet-niet;Statistische sprong | 8 Aug 07:00 – 08:00 | 18.5 µg/m³
+480;algoritme_beoordeling;13;weet-niet;Lokale uitschieter | 8 Aug 07:00 – 08:00 | 18.5 µg/m³
+480;algoritme_beoordeling;14;weet-niet;Lokale uitschieter | 9 Aug 17:00 – 18:00 | 11.8 µg/m³
+480;algoritme_beoordeling;15;onterecht;Statistische sprong | 10 Aug 05:00 – 06:00 | 22.2 µg/m³
+480;algoritme_beoordeling;16;onterecht;Lokale uitschieter | 10 Aug 05:00 – 07:00 | 21.3 – 22.2 µg/m³
+480;algoritme_beoordeling;17;onterecht;Lage variatie | 11 Aug 06:00 – 18:00 | 3.0 – 5.0 µg/m³
+480;algoritme_beoordeling;18;onterecht;Lage variatie | 11 Aug 19:00 – 12 Aug 06:00 | 3.4 – 4.7 µg/m³
+480;algoritme_beoordeling;19;onterecht;Statistische sprong | 14 Aug 07:00 – 08:00 | 23.2 µg/m³
+480;algoritme_beoordeling;20;onterecht;Lokale uitschieter | 14 Aug 11:00 – 13:00 | 7.4 – 7.5 µg/m³
+480;algoritme_toelichting;1;Gelijk aan trend in de buurt.;Statistische sprong | 1 Aug 23:00 – 2 Aug 00:00 | 11.2 µg/m³
+480;algoritme_toelichting;2;Gelijk aan trend in de buurt.;Lokale uitschieter | 2 Aug 05:00 – 06:00 | 13.2 µg/m³
+480;algoritme_toelichting;4;Gelijk aan trend in de buurt.;Lokale uitschieter | 3 Aug 01:00 – 02:00 | 5.2 µg/m³
+480;algoritme_toelichting;5;Gelijk aan trend in de buurt.;Lokale uitschieter | 3 Aug 04:00 – 05:00 | 6.5 µg/m³
+480;algoritme_toelichting;6;Gelijk aan trend in de buurt hoewel uitschuit groter.;Statistische sprong | 4 Aug 03:00 – 04:00 | 25.2 µg/m³
+480;algoritme_toelichting;9;Gelijk aan trend in de buurt.;Lokale uitschieter | 5 Aug 04:00 – 05:00 | 2.7 µg/m³
+480;algoritme_toelichting;10;Gelijk aan trend in de buurt.;Lage variatie | 7 Aug 07:00 – 8 Aug 01:00 | 1.7 – 5.1 µg/m³
+480;algoritme_toelichting;11;Grotendeels gelijk aan trend in de buurt.;Statistische sprong | 8 Aug 02:00 – 03:00 | 11.0 µg/m³
+480;algoritme_toelichting;15;Gelijk aan trend in de buurt.;Statistische sprong | 10 Aug 05:00 – 06:00 | 22.2 µg/m³
+480;algoritme_toelichting;16;Gelijk aan trend in de buurt.;Lokale uitschieter | 10 Aug 05:00 – 07:00 | 21.3 – 22.2 µg/m³
+480;algoritme_toelichting;17;Gelijk aan trend in de buurt.;Lage variatie | 11 Aug 06:00 – 18:00 | 3.0 – 5.0 µg/m³
+480;algoritme_toelichting;18;Gelijk aan trend in de buurt.;Lage variatie | 11 Aug 19:00 – 12 Aug 06:00 | 3.4 – 4.7 µg/m³
+480;algoritme_toelichting;19;Gelijk aan trend in de buurt.;Statistische sprong | 14 Aug 07:00 – 08:00 | 23.2 µg/m³
+480;algoritme_toelichting;20;Gelijk aan trend in de buurt.;Lokale uitschieter | 14 Aug 11:00 – 13:00 | 7.4 – 7.5 µg/m³

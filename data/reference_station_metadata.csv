@@ -1,0 +1,97 @@
+meetlocatie_id,meetlocatie_naam,meetlocatie_plaatsnaam,breedtegraad,lengtegraad,hoogte,meetlocatie_begindatumtijd,meetlocatie_einddatumtijd,gebiedstype,stationstype
+NL01908,Alblasserdam-De Helling,Alblasserdam,51.857928,4.660089,7.0,2013-12-21T00:00:00+01:00,,stad,verkeer
+NL49680,Almere-Boomgaardweg,Almere,52.373572,5.239257,0.0,2024-04-22T00:00:00+01:00,,regionaal,achtergrond
+NL49007,Amsterdam-Einsteinweg,Amsterdam,52.381331,4.845233,2.0,1998-01-01T00:00:00+01:00,,stad,verkeer
+NL49704,Amsterdam-Hoogtij,Amsterdam,52.428063,4.773219,1.0,2009-01-01T00:00:00+01:00,,stad,industrie
+NL49020,Amsterdam-Jan van Galenstraat,Amsterdam,52.374786,4.860319,1.0,2007-01-01T00:00:00+01:00,,stad,verkeer
+NL49703,Amsterdam-Spaarnwoude,Halfweg NH,52.39857,4.728589,-1.0,2009-01-01T00:00:00+01:00,,regionaal,achtergrond
+NL49017,Amsterdam-Stadhouderskade,Amsterdam,52.358039,4.8997,5.0,1998-01-01T00:00:00+01:00,,stad,verkeer
+NL49012,Amsterdam-Van Diemenstraat,Amsterdam,52.389983,4.887811,3.0,2003-01-01T00:00:00+01:00,,stad,verkeer
+NL49014,Amsterdam-Vondelpark,Amsterdam,52.359714,4.866208,2.0,1998-01-01T00:00:00+01:00,,stad,achtergrond
+NL49016,Amsterdam-Westerpark,Amsterdam,52.393972,4.870157,3.0,1999-01-01T00:00:00+01:00,,stad,achtergrond
+NL54010,Arnhem-Pleijroute GelreDome,Arnhem,51.962287,5.897375,11.0,2016-04-01T00:00:00+01:00,,stad,verkeer
+NL54004,Arnhem-Pleijroute Velperbroek,Arnhem,51.978328,5.969485,11.0,2010-01-01T00:00:00+01:00,,stad,verkeer
+NL49980,Baamsum- Oude Ae,Termunten,53.29032,7.03889,0.0,2025-07-01T00:00:00+01:00,,regionaal,achtergrond
+NL49561,Badhoevedorp-Sloterweg,Badhoevedorp,52.333617,4.773469,-2.0,1998-01-01T00:00:00+01:00,,stad,achtergrond
+NL10918,Balk-Trophornsterweg,Balk,52.916938,5.573538,1.0,1976-04-03T00:00:00+01:00,,regionaal,achtergrond
+NL10818,Barsbeek-De Veenen,Barsbeek,52.654154,6.017606,3.0,1986-11-25T00:00:00+01:00,,regionaal,achtergrond
+NL49570,Beverwijk West-Creutzberglaan,Beverwijk,52.489271,4.640536,6.0,2007-01-01T00:00:00+01:00,,stad,achtergrond
+NL10617,Biddinghuizen-Kuilweg,Biddinghuizen,52.423214,5.593378,-1.0,1977-04-29T00:00:00+01:00,,regionaal,achtergrond
+NL10230,Biest Houtakker-Biestsestraat,Houtakker,51.518388,5.14845,15.0,1984-03-31T00:00:00+01:00,,regionaal,achtergrond
+NL10241,Breda-Bastenakenstraat,Breda,51.60308,4.781016,1.0,2005-02-01T00:00:00+01:00,,stad,achtergrond
+NL10240,Breda-Tilburgseweg,Breda,51.59354,4.824988,8.0,2005-04-01T00:00:00+01:00,,stad,verkeer
+NL10641,Breukelen-Snelweg,Nieuwersluis,52.201506,4.987367,1.0,1993-09-01T00:00:00+01:00,,regionaal,verkeer
+NL10644,Cabauw-Wielsekade,Cabauw,51.974489,4.923301,0.0,2011-03-24T00:00:00+01:00,,regionaal,achtergrond
+NL49556,De Rijp-Oostdijkje,De Rijp,52.563643,4.861641,3.0,2002-01-01T00:00:00+01:00,,regionaal,achtergrond
+NL10444,De Zilk-Vogelaarsdreef,De Zilk,52.296556,4.510817,4.0,1994-01-01T00:00:00+01:00,,regionaal,achtergrond
+NL10446,Den Haag-Bleriotlaan,Den Haag,52.039023,4.359376,0.0,2005-11-01T00:00:00+01:00,,stad,achtergrond
+NL10450,Den Haag-Neherkade,Den Haag,52.062537,4.318551,1.0,2022-09-29T00:00:00+01:00,,stad,verkeer
+NL10404,Den Haag-Rebecquestraat,Den Haag,52.077148,4.289185,4.0,1976-01-02T00:00:00+01:00,,stad,achtergrond
+NL10445,Den Haag-Veerkade,Den Haag,52.075071,4.315872,0.0,2003-09-01T00:00:00+01:00,,stad,verkeer
+NL10442,Dordrecht-Bamendaweg,Dordrecht,51.800658,4.708239,1.0,2010-11-01T00:00:00+01:00,,stad,achtergrond
+NL10722,Eibergen-Lintveldseweg,Eibergen,52.091742,6.605352,20.0,1984-03-31T00:00:00+01:00,,regionaal,achtergrond
+NL50012,Eijsden Trichterweg,Eijsden,50.78366,5.703113,49.0,2024-07-01T00:00:00+01:00,,regionaal,achtergrond
+NL10236,Eindhoven-Genovevalaan,Eindhoven,51.468631,5.472313,20.0,1989-01-26T00:00:00+01:00,,stad,verkeer
+NL10237,Eindhoven-Noordbrabantlaan,Eindhoven,51.444157,5.444833,21.0,1989-01-19T00:00:00+01:00,,stad,verkeer
+NL10821,Enschede-Winkelhorst,Enschede,52.234532,6.919452,58.0,2010-06-01T00:00:00+01:00,,stad,achtergrond
+NL10246,Fijnaart-Zwingelspaansedijk,Fijnaart,51.653715,4.515295,2.0,2007-09-01T00:00:00+01:00,,regionaal,achtergrond
+NL50003,Geleen-Asterstraat,Geleen,50.984447,5.822233,67.0,2010-01-01T00:00:00+01:00,,stad,industrie
+NL10937,Groningen-Europaweg,Groningen,53.217826,6.578889,5.0,2003-05-01T00:00:00+01:00,,stad,verkeer
+NL10938,Groningen-Nijensteinheerd,Groningen,53.246505,6.609042,0.0,2005-04-25T00:00:00+01:00,,stad,achtergrond
+NL10552,Haarlem-Freddie Oversteegenstraat ,Haarlem,52.37029,4.651789,0.0,2026-07-01T00:00:00+01:00,,stad,verkeer
+NL10550,Haarlem-Schipholweg,Haarlem,52.370518,4.642309,2.0,2014-12-15T00:00:00+01:00,2026-03-04T00:00:00+01:00,stad,verkeer
+NL10138,Heerlen-Jamboreepad,Heerlen,50.900317,5.986853,99.0,2013-11-01T00:00:00+01:00,,stad,achtergrond
+NL10136,Heerlen-Looierstraat,Heerlen,50.887951,5.970529,112.0,2004-08-01T00:00:00+01:00,,stad,verkeer
+NL10807,Hellendoorn-Luttenbergerweg,Hellendoorn,52.388291,6.4029,10.0,1976-04-02T00:00:00+01:00,,regionaal,achtergrond
+NL01496,Hoek v. Holland-Berghaven,Hoek v. Holland,51.97783,4.121903,6.0,2007-01-01T00:00:00+01:00,,stad,industrie
+NL49564,Hoofddorp-Hoofdweg,Hoofddorp,52.327464,4.715008,-4.0,1998-01-01T00:00:00+01:00,,regionaal,achtergrond
+NL01485,Hoogvliet-Leemkuil,Hoogvliet,51.867411,4.355242,3.0,2003-01-01T00:00:00+01:00,,stad,achtergrond
+NL50006,Horst a/d Maas-Hoogheide,Lottum,51.454001,6.108217,26.0,2011-01-01T00:00:00+01:00,,regionaal,achtergrond
+NL10235,Huijbergen-Vennekenstraat,Huijbergen,51.434434,4.359769,21.0,1986-08-22T00:00:00+01:00,,regionaal,achtergrond
+NL49551,IJmuiden-Kanaaldijk,IJmuiden,52.46304,4.601776,10.0,1998-01-01T00:00:00+01:00,,stad,industrie
+NL53015,Klundert Kerkweg,Moerdijk,51.66883,4.541563,1.0,2013-01-01T00:00:00+01:00,,regionaal,industrie
+NL10934,Kollumerwaard-Hooge Zuidwal,Kollumerwaard,53.330425,6.276942,1.0,1989-01-01T00:00:00+01:00,,regionaal,achtergrond
+NL01495,Maassluis-Kwartellaan,Maassluis,51.932039,4.228025,4.0,2003-01-01T00:00:00+01:00,,stad,achtergrond
+NL50010,Maastricht Philipsweg,Maastricht,50.84105,5.718977,47.0,2019-06-01T00:00:00+01:00,,stad,verkeer
+NL50009,Maastricht-A2 Kasteel Hillenraadweg,Maastricht,50.85981,5.71381,49.0,2015-06-01T00:00:00+01:00,2023-05-17T00:00:00+01:00,stad,verkeer
+NL50004,Maastricht-A2 Nassaulaan,Maastricht,50.845941,5.714745,50.0,2004-01-01T00:00:00+01:00,,stad,verkeer
+NL50007,Maastricht-Hoge Fronten,Maastricht,50.852049,5.675796,69.0,2013-01-01T00:00:00+01:00,,stad,achtergrond
+NL01497,Maasvlakte,Rotterdam,51.933517,3.99972,21.0,2021-12-01T00:00:00+01:00,,regionaal,achtergrond
+NL53004,Moerdijk Julianastraat,Moerdijk,51.699409,4.623713,0.0,2013-01-01T00:00:00+01:00,,regionaal,industrie
+NL50011,Nederweert Kuilstraat,Nederweert,51.303331,5.771363,32.0,2024-01-01T00:00:00+01:00,,regionaal,achtergrond
+NL10741,Nijmegen-Graafseweg,Nijmegen,51.84138,5.857772,31.0,2003-05-01T00:00:00+01:00,,stad,verkeer
+NL10742,Nijmegen-Ruyterstraat,Nijmegen,51.838221,5.856938,31.0,2003-05-13T00:00:00+01:00,,stad,achtergrond
+NL10248,Nistelrode-Gagelstraat,Nistelrode,51.698161,5.543321,8.0,2022-12-01T00:00:00+01:00,,regionaal,achtergrond
+NL53001,Ossendrecht Burgermeester Voetenstraat,Ossendrecht,51.393261,4.320237,7.0,2012-01-01T00:00:00+01:00,,regionaal,industrie
+NL49565,Oude Meer-Aalsmeerderdijk,Schiphol-Rijk,52.279949,4.77067,2.0,2010-09-13T00:00:00+01:00,,regionaal,achtergrond
+NL10318,Philippine-Stelleweg,Braakman,51.294466,3.749409,5.0,1986-03-31T00:00:00+01:00,,regionaal,achtergrond
+NL01489,Ridderkerk-Hogeweg,Ridderkerk,51.869431,4.580058,2.0,2001-06-17T00:00:00+01:00,,stad,verkeer
+NL01912,Ridderkerk-Voorweg,Ridderkerk,51.861687,4.563767,2.0,2018-06-13T00:00:00+01:00,,stad,achtergrond
+NL01493,Rotterdam Noord-Statenweg,Rotterdam,51.927111,4.461344,2.0,2005-03-01T00:00:00+01:00,,stad,verkeer
+NL01487,Rotterdam Zuid-Pleinweg,Rotterdam,51.891147,4.48069,3.0,2009-07-01T00:00:00+01:00,,stad,verkeer
+NL01488,Rotterdam Zuid-Zwartewaalstraat,Rotterdam,51.893627,4.487583,2.0,2009-07-01T00:00:00+01:00,,stad,achtergrond
+NL10448,Rotterdam-Bentinckplein,Rotterdam,51.92711,4.46134,2.0,2005-03-01T00:00:00+01:00,2023-01-01T00:00:00+01:00,stad,verkeer
+NL01491,Rotterdam-Oost Sidelinge A13,Rotterdam,51.938593,4.430711,-1.0,2001-01-16T00:00:00+01:00,,stad,verkeer
+NL10418,Rotterdam-Schiedamsevest,Rotterdam,51.914233,4.479998,1.0,1976-01-02T00:00:00+01:00,,stad,achtergrond
+NL01494,Schiedam-Alphons Arienstraat,Schiedam,51.921389,4.401389,3.0,2003-01-01T00:00:00+01:00,,stad,achtergrond
+NL01913,Sluiskil-Stroodorpestraat,Sluiskil,51.27938,3.83859,2.0,2020-12-10T00:00:00+01:00,,regionaal,industrie
+NL53020,Strijensas Buitendijk,Moerdijk,51.713395,4.585334,4.0,2016-01-01T00:00:00+01:00,,regionaal,industrie
+NL10639,Utrecht-Constant Erzeijstraat,Utrecht,52.067748,5.120507,4.0,1987-10-01T00:00:00+01:00,,stad,verkeer
+NL10643,Utrecht-Griftpark,Utrecht,52.101327,5.128211,5.0,2008-09-01T00:00:00+01:00,,stad,achtergrond
+NL10636,Utrecht-Kardinaal de Jongweg,Utrecht,52.105063,5.124435,3.0,1987-10-29T00:00:00+01:00,,stad,verkeer
+NL10929,Valthermond-Noorderdiep,Valthermond,52.875717,6.932693,11.0,2000-02-01T00:00:00+01:00,,regionaal,achtergrond
+NL10247,Veldhoven-Europalaan,Veldhoven,51.407365,5.393328,26.0,2009-04-01T00:00:00+01:00,,stad,achtergrond
+NL49573,Velsen-Reijndersweg,Velsen-Noord,52.477999,4.578774,11.0,2011-01-01T00:00:00+01:00,,regionaal,industrie
+NL49572,Velsen-Staalstraat,Velsen-Noord,52.474402,4.628525,4.0,2011-01-01T00:00:00+01:00,,stad,industrie
+NL10449,Vlaardingen-Riouwlaan,Vlaardingen,51.91488,4.32943,0.0,2019-03-27T00:00:00+01:00,,stad,verkeer
+NL10131,Vredepeel-Vredeweg,Vredepeel,51.54048,5.85309,30.0,1984-03-31T00:00:00+01:00,,regionaal,achtergrond
+NL10738,Wekerom-Riemterdijk,Wekerom,52.111621,5.708419,22.0,1994-04-01T00:00:00+01:00,,regionaal,achtergrond
+NL10437,Westmaas-Groeneweg,Westmaas,51.78658,4.450454,0.0,1988-09-21T00:00:00+01:00,,regionaal,achtergrond
+NL10538,Wieringerwerf-Medemblikkerweg,Wieringerwerf,52.803419,5.048987,-2.0,1986-03-31T00:00:00+01:00,,regionaal,achtergrond
+NL49557,Wijk aan Zee-Bosweg,Wijk aan Zee,52.490052,4.599313,22.0,2020-12-01T00:00:00+01:00,,regionaal,industrie
+NL49553,Wijk aan Zee-Burgemeester Rothestraat,Wijk aan Zee,52.494,4.602383,11.0,1997-01-01T00:00:00+01:00,,stad,industrie
+NL10133,Wijnandsrade-Opfergeltstraat,Wijnandsrade,50.902325,5.881695,91.0,1987-04-30T00:00:00+01:00,,regionaal,achtergrond
+NL49701,Zaandam-Wagenschotpad,Zaandam,52.448011,4.816706,2.0,2006-01-01T00:00:00+01:00,,stad,achtergrond
+NL49546,Zaanstad-Hemkade,Zaandam,52.42023,4.83206,4.0,2012-01-01T00:00:00+01:00,,stad,industrie
+NL10633,Zegveld-Oude Meije,Zegveld,52.13795,4.83819,-2.0,1987-05-12T00:00:00+01:00,,regionaal,achtergrond
+NL53016,Zevenbergen Galgenweg,Moerdijk,51.652791,4.594485,0.0,2013-01-01T00:00:00+01:00,,regionaal,industrie

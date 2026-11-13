@@ -1,0 +1,28 @@
+device_id;category;key;value;context
+LTD_90916;meta;submitted_at;2026-08-22T15:12:53.105Z;
+LTD_90916;vraag;sensor_thuis;Ja;Hangt of staat deze sensor bij jou thuis?
+LTD_90916;vraag;hoe_opgehangen;Aan de voorzijde van het boeideel van de dakkapel, ca. 7.5 m hoog, aan de wegzijde (Noord).;Hoe heb je de sensor opgehangen?(Hoe hoog, waaraan, waaronder, ...)
+LTD_90916;vraag;bekijken_metingen;Iedere week;Hoe vaak kijk je ongeveer naar de data van je sensor?
+LTD_90916;vraag;redenen_foutieve_metingen;regen;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+LTD_90916;vraag;redenen_foutieve_metingen;mist;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+LTD_90916;vraag;redenen_foutieve_metingen;wind;Om welke redenen zouden volgens jou metingen foutief/irrelevant kunnen zijn en daarom niet zouden moeten worden meegenomen in data-analyses?
+LTD_90916;vraag;foutieve_metingen;Nee;Denk je dat jouw sensor foutieve metingen heeft gedaan de afgelopen twee weken?
+LTD_90916;vraag;ervaring_beoordelen;Neutraal;Hoe makkelijk of moeilijk vond je het om te beoordelen of de meetwaarden klopten?
+LTD_90916;vraag;vertrouwen_algoritme;Nauwelijks;In hoeverre vertrouw je op het algoritme om meetfouten te vinden?
+LTD_90916;vraag;toelichting_beoordeling;"Als ik naar meetstations in de directe omgeving kijk dan zie variatie die vergelijkbaar is met het verschil met de referentiewaarde. Ik vraag mij daarom af of de referentiewaarde niet teveel gewicht krijgt, en er naast een verschil met de referentiewaarde ook gekeken zou moeten worden naar nabijgelegen meetstations.
+Mij lijken de detectieregels veel te gevoelig ingesteld.";Wil je nog iets toelichten over het beoordelen van mogelijke meetwaarden? (optioneel)
+LTD_90916;vraag;verbeterpunten;Ik zou graag inzicht hebben in de toegepaste detectie regels en de validatie hiervan voor een referentiestation wat zover weg ligt van de sensor.;Wat zou dit proces makkelijker of beter maken voor jou? (optioneel)
+LTD_90916;algoritme_beoordeling;1;onterecht;Lokale uitschieter | 3 Aug 02:00 – 03:00 | 4.9 µg/m³
+LTD_90916;algoritme_beoordeling;2;onterecht;Lokale uitschieter | 4 Aug 03:00 – 04:00 | 19.2 µg/m³
+LTD_90916;algoritme_beoordeling;3;onterecht;Lokale uitschieter | 5 Aug 02:00 – 03:00 | 2.1 µg/m³
+LTD_90916;algoritme_beoordeling;4;onterecht;Lokale uitschieter | 5 Aug 04:00 – 07:00 | 1.4 – 2.0 µg/m³
+LTD_90916;algoritme_beoordeling;5;onterecht;Lokale uitschieter | 6 Aug 01:00 – 02:00 | 8.1 µg/m³
+LTD_90916;algoritme_beoordeling;6;onterecht;Lokale uitschieter | 6 Aug 03:00 – 04:00 | 7.1 µg/m³
+LTD_90916;algoritme_beoordeling;7;onterecht;Lokale uitschieter | 7 Aug 05:00 – 07:00 | 2.5 – 2.7 µg/m³
+LTD_90916;algoritme_beoordeling;8;onterecht;Statistische sprong | 7 Aug 22:00 – 23:00 | 8.1 µg/m³
+LTD_90916;algoritme_beoordeling;9;onterecht;Statistische sprong | 10 Aug 07:00 – 09:00 | 19.0 – 23.9 µg/m³
+LTD_90916;algoritme_beoordeling;10;onterecht;Lokale uitschieter | 10 Aug 07:00 – 09:00 | 19.0 – 23.9 µg/m³
+LTD_90916;algoritme_beoordeling;11;onterecht;Trend-afwijking | 10 Aug 08:00 – 09:00 | 23.9 µg/m³
+LTD_90916;algoritme_beoordeling;12;onterecht;Statistische sprong | 11 Aug 10:00 – 11:00 | 6.4 µg/m³
+LTD_90916;algoritme_beoordeling;13;onterecht;Statistische sprong | 13 Aug 00:00 – 01:00 | 9.3 µg/m³
+LTD_90916;algoritme_toelichting;13;Mij lijken alle verschillen marginaal, ten opzichte van een referentie die die redelijk ver weg is.;Statistische sprong | 13 Aug 00:00 – 01:00 | 9.3 µg/m³
