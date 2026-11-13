@@ -33,7 +33,9 @@ The person invoking you gives a results-ready analysis-request issue number
    - Extract the plan JSON from the ` ```json ` block under
      `### Analysis plan (JSON)`.
    - Extract `03_results.json` from the results comment R posted (the ` ```json `
-     block under the `## Results` heading). This is the only source of numbers.
+     block under the heading that starts with `## Results` — the workflow titles
+     it `## Results (steps 3–5: data check, sensor check and background,
+     analysis)`). This is the only source of numbers.
 
 2. **Assemble the run folder** `runs/<run_id>/`, where `run_id` is the plan's
    `plan_id`. Write three files first (schemas in
