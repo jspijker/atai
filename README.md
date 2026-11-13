@@ -92,6 +92,20 @@ flowchart TD
 Any stage that fails adds `needs-attention` and a short comment so a human can
 step in.
 
+## Repository layout
+
+| Path | What it is |
+| --- | --- |
+| [`.github/skills/air-quality-analyst/`](.github/skills/air-quality-analyst/) | **The core deliverable: the reusable skill.** Contains `SKILL.md` (the workflow and hard rules), `references/` (domain knowledge: functions, question recipes, sensors and sensor-quality rules) and `assets/` (the answer template, an example run and the JSON `schemas/` for every hand-off). |
+| [`.github/agents/`](.github/agents/) | The two Copilot agents that drive the issue workflow: `analysis-request-planner.md` (turns a question into a plan) and `analysis-answerer.md` (writes the resident-facing answer). |
+| [`.github/workflows/`](.github/workflows/) | GitHub Actions. `run-analysis.yml` runs the deterministic R analysis when an issue is labelled `plan-ready`. |
+| [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | The *Research question* issue template residents fill in. |
+| `.github/copilot-instructions.md` | Repository-wide instructions for Copilot. |
+| [`scripts/`](scripts/) | Helper scripts: `run_analysis.R` (the R analysis entry point), `check_run.py` (the number check / schema validation) and `postcode_to_latlon.py` (resolves a postcode to coordinates). |
+| [`docs/`](docs/) | Design documentation, notably [`automated-workflow.md`](docs/automated-workflow.md) explaining the human-in-the-loop workflow. |
+| [`examples/`](examples/) | A worked example: a sample issue body, a plan and a complete checked run folder (`P-2026-11-13-0001`). |
+| [`data/`](data/) | The committed datasets. See the [Data](#data) section below for a full description. |
+
 ## Data
 
 This repository contains **large datasets in `data/`** (~130 MB in total). Data
