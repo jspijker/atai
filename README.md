@@ -175,6 +175,44 @@ The plan selects sensors by distance, so `area` needs a centre (`lat`/`lon`),
 not just a postcode. Resolve a resident's postcode to coordinates with
 `python scripts/postcode_to_latlon.py "1941"` (uses the free PDOK Locatieserver).
 
+## Reproduce a result yourself (no approval needed)
+
+The sensor data and the worked example are in this repository, so anyone can
+re-run the analysis and get the same numbers — no GitHub Actions, Copilot
+licence or approval step required.
+
+```bash
+# one-off: install the R packages the analysis needs
+Rscript -e 'install.packages(c("jsonlite","nanoparquet","dplyr","lubridate","openair"))'
+
+# run the worked example end to end
+mkdir -p run
+cp examples/beverwijk-plan.json run/plan.json
+Rscript scripts/run_analysis.R run/plan.json run data
+```
+
+It takes about half a minute and writes `run/03_results.json` (the numbers) and
+`run/audit.jsonl` (which tool, tier and software produced each step). For the
+Beverwijk example (PM2.5, December 2024 vs January 2025, 2 km around 52.49 N,
+4.66 E) you should see:
+
+| What | December 2024 | January 2025 |
+| --- | --- | --- |
+| Sensors in the area | 54 (52 SPS30, 2 SDS011) | |
+| Broken sensors removed | 5 | |
+| Sensors with enough daily data | 48 | |
+| Typical day (median of daily values) | 12.66 µg/m³ | 9.48 µg/m³ |
+| Average of all days (mean) | 16.42 µg/m³ | 18.01 µg/m³ |
+| Regional background (Beverwijk West-Creutzberglaan, 1.3 km) | 13.84 µg/m³ | 15.31 µg/m³ |
+
+> The committed example run in
+> [`examples/P-2026-11-13-0001/`](examples/P-2026-11-13-0001) was produced by an
+> early stand-in and shows slightly different numbers (e.g. 12.0 → 9.4 and no
+> background); the R run above is the authoritative pipeline.
+
+Reproduced on 13 November 2026 with R 4.5 and openair 3.1; any recent R 4.x with
+openair 3.x should give the same numbers.
+
 ## Deploy it yourself
 
 To run this workflow in your own repository you need:
@@ -183,7 +221,7 @@ To run this workflow in your own repository you need:
 2. The contents of this repository in the root (the skill lives in
    `.github/skills/air-quality-analyst/`, where Copilot looks for skills).
 3. Python 3 with `pip install jsonschema` for the number check, and R with
-   `jsonlite`, `nanoparquet`, `dplyr` and `lubridate` for the analysis.
+   `jsonlite`, `nanoparquet`, `dplyr`, `lubridate` and `openair` for the analysis.
 
 The sensor data is already committed under `data/` (see [Data](#data)), so no
 download is needed.
