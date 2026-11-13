@@ -52,6 +52,9 @@ period_label_for <- function(dates, periods) {
 }
 
 round2 <- function(x) if (is.finite(x)) round(x, 2) else NA
+# Turn a human period label (e.g. "October 2024") into a value id that matches
+# the results schema pattern ^[a-z0-9_]+$.
+slug <- function(s) gsub("^_+|_+$", "", gsub("[^a-z0-9]+", "_", tolower(s)))
 val <- function(id, label, value, unit, period = NULL) {
   v <- list(id = id, label = label, value = value, unit = unit)
   if (!is.null(period)) v$period <- period
@@ -174,7 +177,7 @@ tool_check_data_coverage <- function(p) {
     below75 <- sum(cov$pct < 75)
     below75_total <- below75_total + below75
     values[[length(values) + 1]] <- val(
-      paste0("coverage_median_", tolower(per$label)),
+      paste0("coverage_median_", slug(per$label)),
       "Median data coverage", med, "%", per$label)
   }
   values[[length(values) + 1]] <- val(
@@ -349,7 +352,7 @@ tool_get_background <- function(p) {
     chosen <- sid; chosen_name <- bg$meetlocatie_naam[i]
     for (per in st$periods) {
       values[[length(values) + 1]] <- val(
-        paste0("background_", tolower(per$label)),
+        paste0("background_", slug(per$label)),
         paste0("Regional background (", chosen_name, ")"),
         per_vals[[per$label]], "\u00b5g/m\u00b3", per$label)
     }
@@ -437,7 +440,7 @@ tool_average_over_time <- function(p) {
   means <- c()
   for (per in st$periods) {
     sub <- st$daily[st$daily$date >= per$start & st$daily$date < per$end, ]
-    lab <- tolower(per$label)
+    lab <- slug(per$label)
     if ("mean" %in% stats) {
       m <- round2(mean(sub$value))
       means[per$label] <- m
