@@ -17,13 +17,11 @@ calculations and writes the audit log.
 4. **Every step logs its tier, package and version**, so the jury and the resident
    can see which steps used validated RIVM functions and which used openair.
 
-> **For the R developer:** Tier 1 names are **placeholders**; replace them with the
-> real functions from github.com/rivm-syso/Analyse-Together (see `global.R`).
-> Check whether Analyse-Together already uses openair internally; if so, note it.
-> Tier 2 names are real openair functions; confirm arguments against the
-> installed version.
+> **For the R developer:** Tier 1 tools are implemented in `scripts/run_analysis.R`,
+> adapting the data-handling logic from github.com/rivm-syso/Analyse-Together
+> (GPL-3). Parquet is read with `nanoparquet`; Tier 2 tools call `openair`.
 >
-> Analyse-Together commit: `[fill in]` · openair version: `[fill in]`
+> Analyse-Together: data-handling logic adapted (not vendored) · openair 3.x
 
 ## Data format for openair
 
@@ -35,6 +33,14 @@ openair expects one data frame with:
   (source: KNMI hourly data for the nearest weather station `[verify source]`)
 
 The bridge tool `to_openair_format` converts Tier 1 output into this format.
+
+> **What this dataset can and cannot answer.** `data_sensors.parquet` has
+> `pm25_raw`, `pm25_kal` (calibrated) and `pm10_raw` only:
+> - **NO2 is not available** – reject or re-scope `no2` questions.
+> - **PM10 has no calibrated field** – only raw PM10; say so and prefer PM2.5.
+> - `pm1` is not in the data either.
+> Wind (`ws`/`wd`) comes from KNMI, background from the reference stations; both
+> are committed in `data/`, while the two sensor files come from Zenodo at runtime.
 
 ---
 
