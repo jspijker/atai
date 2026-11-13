@@ -134,11 +134,6 @@ All of it is open data.
 Because the data is committed, the sensor tables are explicitly un-ignored in
 `.gitignore` while everything else under `data/` stays ignored by default.
 
-Each resident question becomes a GitHub issue. The issue holds the approved
-analysis plan (step 2). A workflow runs the plan and posts the results and the
-audit log back to the issue (steps 3–5: data check, sensor check and
-background, analysis). The issue is the public audit trail.
-
 ## Agreed output files (one folder per run)
 
 Every question becomes one folder `runs/<run_id>/`. Each step writes one file;
@@ -168,82 +163,53 @@ pip install jsonschema
 python scripts/check_run.py examples/P-2026-11-13-0001
 ```
 
-This validates all files against their schemas, runs the number check, writes
-`05_check.json`, and writes `answer.md` (the answer as the resident sees it).
-Exit code 0 = pass. `examples/P-2026-11-13-0001/` is a checked-in example run (the
-Beverwijk prototype, Dec 2024 vs Jan 2025) kept alongside the other sample files;
-its numbers come from a Python stand-in, not yet the validated tools. Real runs
-live in `runs/<run_id>/`, which is created when a plan is run.
+This validates every file in a run folder against its schema, runs the number
+check, writes `05_check.json`, and writes `answer.md` (the answer as the resident
+sees it). Exit code 0 = pass. `examples/P-2026-11-13-0001/` is a checked-in
+example run (the Beverwijk prototype, Dec 2024 vs Jan 2025); its numbers come
+from an early stand-in rather than a full production run.
 
-To produce `03_results.json` with R: `Rscript scripts/run_analysis.R runs/<id>/02_plan.json runs/<id>`
-(stub: tools still report `not_available` until they are connected).
+To produce `03_results.json` with R:
 
-The plan selects sensors by distance, so `area` needs a centre (`lat`/`lon`), not
-just a postcode. Resolve a resident's postcode to coordinates with
+```bash
+Rscript scripts/run_analysis.R runs/<id>/02_plan.json runs/<id>
+```
+
+The analysis in `run_analysis.R` is largely implemented (sensor selection by
+distance, the Tier 1 / Tier 2 functions); a few tools (for example the
+regional background) still report `not_available` until they are connected.
+
+The plan selects sensors by distance, so `area` needs a centre (`lat`/`lon`),
+not just a postcode. Resolve a resident's postcode to coordinates with
 `python scripts/postcode_to_latlon.py "1941"` (uses the free PDOK Locatieserver).
 
-## Flow on GitHub
+## Deploy it yourself
 
-Everything happens on **one issue** — the resident's **Research question**. One
-approval starts the whole pipeline, and each stage posts its result as a comment
-on that same issue. The two stages that use a Copilot agent run **inside the
-Copilot app with a human checkpoint** (plan mode), not in CI; only the
-deterministic R analysis runs unattended in Actions. See
-[`docs/automated-workflow.md`](docs/automated-workflow.md) for the design and the
-risks behind that choice.
+To run this workflow in your own repository you need:
 
-0. A resident opens a **Research question** issue (just their question, no plan).
-1. A maintainer or collaborator **approves** it by adding the `approved` label
-   (the single gate — only triage/write users can add labels).
-2. An **app orchestrator** (a scheduled session in the Copilot app) sees the
-   approved issue and starts the `analysis-request-planner` agent in **plan
-   mode**. A human reviews it in the app; on approval the agent posts the plan as
-   a comment (steps 1–2) and adds the `plan-ready` label.
-3. The workflow (`run-analysis.yml`, triggered by `plan-ready`) extracts the plan
-   from the comment, checks it against
-   `.github/skills/air-quality-analyst/assets/schemas/plan.schema.json`, and runs
-   `scripts/run_analysis.R`.
-4. A per-step status table, `03_results.json` and the audit log appear as a
-   comment (steps 3–5); the label `results-ready` is added. All outputs are kept
-   as a downloadable artifact.
-5. The orchestrator sees `results-ready` and starts the `analysis-answerer` agent
-   in **plan mode**. On approval it writes `04_answer.json`, assembles the run
-   folder and runs `scripts/check_run.py` (step 7, the number check), and posts
-   `answer.md` — the resident-facing answer with follow-ups — back to the issue
-   (steps 6, 8). The label `answer-ready` is added once the number check passes.
-
-Any stage that fails adds the `needs-attention` label and a short comment so a
-human can step in.
-
-## What your partner needs
-
-1. A GitHub repository with Actions enabled, and a GitHub Copilot licence.
-2. This folder copied into the repository root (the skill is already inside, in
+1. A GitHub repository with Actions enabled and a GitHub Copilot licence.
+2. The contents of this repository in the root (the skill lives in
    `.github/skills/air-quality-analyst/`, where Copilot looks for skills).
-3. The sensor data files in a local folder `data/` (not committed; too large and
-   listed in `.gitignore`).
-4. Python 3 with `pip install jsonschema` for the local check; R with `jsonlite`
-   and `openair` once the R tools are connected.
+3. Python 3 with `pip install jsonschema` for the number check, and R with
+   `jsonlite`, `nanoparquet`, `dplyr` and `lubridate` for the analysis.
 
-## Set-up
+The sensor data is already committed under `data/` (see [Data](#data)), so no
+download is needed.
 
-1. Copy this folder into the root of your repository.
-   In repository Settings › Actions › General, set workflow permissions to
-   "Read and write" if the comment step fails with a permissions error.
+Set-up steps:
+
+1. In repository Settings › Actions › General, set workflow permissions to
+   "Read and write" so the workflow can post comments and manage labels.
 2. Create the labels `research-question`, `approved`, `app-working`,
-   `plan-ready`, `results-ready`, `answer-ready` and `needs-attention` (the
-   answerer creates `answer-ready` automatically if it is missing).
+   `plan-ready`, `results-ready`, `answer-ready` and `needs-attention`.
 3. Set up the **app orchestrator**: a scheduled session in the Copilot app that
-   polls for `approved` and `results-ready` issues, adds the `app-working` claim,
-   and starts the planner / answerer agents in plan mode. It lives **outside this
-   repository** — it is Copilot app state (a scheduled session automation), not a
-   committed workflow — so nothing here adds the `app-working` label; the agents
-   and `run-analysis.yml` only ever remove it. See
-   [`docs/automated-workflow.md`](docs/automated-workflow.md) (section 5) for how
-   it is configured.
-4. Connect each tool in `scripts/run_analysis.R` to the real Samen Analyseren or
-   openair function, and add the data source (the stub only logs
-   "not implemented").
+   polls for `approved` and `results-ready` issues, claims them with
+   `app-working`, and starts the planner / answerer agents in plan mode. It lives
+   **outside this repository** (it is Copilot app state, not a committed
+   workflow). See [`docs/automated-workflow.md`](docs/automated-workflow.md)
+   (section 5) for how it is configured.
+4. Connect any remaining tools in `scripts/run_analysis.R` to the real Samen
+   Analyseren or openair functions where they still report `not_available`.
 
 ## Try it
 
