@@ -44,6 +44,10 @@ live in `runs/<run_id>/`, which is created when a plan is run.
 To produce `03_results.json` with R: `Rscript scripts/run_analysis.R runs/<id>/02_plan.json runs/<id>`
 (stub: tools still report `not_available` until they are connected).
 
+The plan selects sensors by distance, so `area` needs a centre (`lat`/`lon`), not
+just a postcode. Resolve a resident's postcode to coordinates with
+`python scripts/postcode_to_latlon.py "1941"` (uses the free PDOK Locatieserver).
+
 ## Flow on GitHub
 
 1. Someone opens an issue with the **Analysis request** form and pastes the

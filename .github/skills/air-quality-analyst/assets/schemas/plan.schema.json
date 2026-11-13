@@ -16,6 +16,8 @@
       "type": "object",
       "properties": {
         "postcode": {"type": "string"},
+        "lat": {"type": "number", "description": "Centre latitude of the area (the AI fills this from the postcode when it writes the plan; R needs it to select sensors by radius)"},
+        "lon": {"type": "number", "description": "Centre longitude of the area"},
         "radius_km": {"type": "number", "minimum": 0.1, "maximum": 10},
         "sensor_ids": {"type": "array", "items": {"type": "string"}}
       }

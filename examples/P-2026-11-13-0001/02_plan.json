@@ -5,6 +5,8 @@
   "pollutant": "pm25",
   "area": {
     "postcode": "1941",
+    "lat": 52.49,
+    "lon": 4.66,
     "radius_km": 2
   },
   "periods": [

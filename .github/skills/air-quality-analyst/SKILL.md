@@ -58,6 +58,12 @@ Write the plan in two forms:
   a chart per month."
 - **For the system**, as JSON following `assets/schemas/plan.schema.json` (tools with
   their tier, sensors, period, parameters, outlier method).
+- **Resolve the postcode to coordinates.** R selects sensors by distance, so the
+  plan's `area` needs a centre as `lat`/`lon`, not a postcode. When the resident
+  gives a postcode (and not explicit `sensor_ids`), run
+  `python scripts/postcode_to_latlon.py "<postcode>"` and put the returned
+  `lat`/`lon` in `area` together with `radius_km`. Keep the `postcode` in the plan
+  so the resident still recognises it.
 - If a step uses openair, tell the resident in one short phrase, e.g. "For the
   trend I'll use openair, a widely used air-quality analysis package."
 

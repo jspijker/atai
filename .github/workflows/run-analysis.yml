@@ -61,20 +61,37 @@ jobs:
           pip install --quiet check-jsonschema
           check-jsonschema --schemafile .github/skills/air-quality-analyst/assets/schemas/plan.schema.json plan.json
 
-      # 3. Run the plan with R (validated functions + openair).
-      - uses: r-lib/actions/setup-r@v2
-      - name: Install R packages
-        run: Rscript -e 'install.packages(c("jsonlite", "openair"), repos = "https://cloud.r-project.org")'
-      - name: Run analysis
-        run: Rscript scripts/run_analysis.R plan.json out
+      # 3. Download the sensor data (not in the repo; ~80 MB) from Zenodo.
+      - name: Download sensor data from Zenodo
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          base="https://zenodo.org/records/23762846/files"
+          declare -A sums=(
+            [data_sensors.parquet]=9bbbd14b42af5daa071300ce28e72cb7
+            [metadata_sensors.parquet]=9569ae4615bb0bfd25f1a9810376773a
+          )
+          for f in "${!sums[@]}"; do
+            curl -fsSL "$base/$f?download=1" -o "data/$f"
+            echo "${sums[$f]}  data/$f" | md5sum -c -
+          done
 
-      # 4. Keep every output as a downloadable artifact (reproducibility).
+      # 4. Run the plan with R (validated Tier-1 functions + openair).
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+      - name: Install R packages
+        run: Rscript -e 'install.packages(c("jsonlite", "nanoparquet", "dplyr", "lubridate", "openair"))'
+      - name: Run analysis
+        run: Rscript scripts/run_analysis.R plan.json out data
+
+      # 5. Keep every output as a downloadable artifact (reproducibility).
       - uses: actions/upload-artifact@v4
         with:
           name: run-${{ steps.issue.outputs.number }}
           path: out/
 
-      # 5. Post results and audit log back to the issue.
+      # 6. Post results and audit log back to the issue.
       - name: Comment results
         uses: actions/github-script@v7
         with:
