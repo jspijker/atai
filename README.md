@@ -10,6 +10,26 @@
 > answers**. **No one should use this code, or rely on its output, for any
 > real-life purpose.**
 
+## Introduction
+
+This repository is a submission for the **Hackathon Hollandse Luchten**
+(November 13th, 2026), an event organised to collaborate on cleaner air and
+real societal impact using low-cost air-quality sensor data collected by
+residents across North Holland.
+
+Specifically, it is the result of participating in
+[**Challenge 3: Help residents analyse data more easily**](https://github.com/provincieNH/HackathonHollandseLuchten/tree/main/challenge%203).
+That challenge asks for an intelligent assistant that lets residents explore,
+analyse and interpret their own sensor data without needing to be data
+analysts. Residents ask a question in natural language; the system interprets
+it, runs the analysis using the validated
+[Samen Analyseren / Analyse-Together](https://github.com/rivm-syso/Analyse-Together)
+functions, and returns an answer with its interpretation, uncertainties and a
+complete audit trail of the data, choices and methods used.
+
+Our take on this challenge turns every resident question into a GitHub issue
+that doubles as a transparent, public audit trail of the analysis.
+
 Each resident question becomes a GitHub issue. The issue holds the approved
 analysis plan (step 2). A workflow runs the plan and posts the results and the
 audit log back to the issue (steps 3–5: data check, sensor check and
