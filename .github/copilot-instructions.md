@@ -16,8 +16,9 @@ comparisons.
 - The analysis part of the skill (Tier 1 functions, sensor-quality rules,
   schemas, number check) is owned by domain experts. Do not change it unless
   asked; propose changes in a pull request.
-- Sensor data (`data_sensors.parquet`, `metadata_sensors.parquet`) is not in the
-  repository. It is read from the local folder `data/`.
+- Sensor data (`data_sensors.parquet`, `metadata_sensors.parquet`) is committed
+  in the folder `data/` (sourced from Zenodo record 23762846), so runs read it
+  directly and do not re-download it.
 
 ## Code
 - Analysis: R (Samen Analyseren / Analyse-Together functions first, openair

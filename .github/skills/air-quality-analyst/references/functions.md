@@ -39,8 +39,8 @@ The bridge tool `to_openair_format` converts Tier 1 output into this format.
 > - **NO2 is not available** – reject or re-scope `no2` questions.
 > - **PM10 has no calibrated field** – only raw PM10; say so and prefer PM2.5.
 > - `pm1` is not in the data either.
-> Wind (`ws`/`wd`) comes from KNMI, background from the reference stations; both
-> are committed in `data/`, while the two sensor files come from Zenodo at runtime.
+> Wind (`ws`/`wd`) comes from KNMI, background from the reference stations; these
+> and the two sensor files (from Zenodo record 23762846) are all committed in `data/`.
 
 ---
 

@@ -61,20 +61,14 @@ jobs:
           pip install --quiet check-jsonschema
           check-jsonschema --schemafile .github/skills/air-quality-analyst/assets/schemas/plan.schema.json plan.json
 
-      # 3. Download the sensor data (not in the repo; ~80 MB) from Zenodo.
-      - name: Download sensor data from Zenodo
+      # 3. Verify the sensor data committed in the repo (data_sensors.parquet is
+      #    ~80 MB; it originates from Zenodo record 23762846 and is checked in so
+      #    runs do not re-download it).
+      - name: Verify committed sensor data
         run: |
           set -euo pipefail
-          mkdir -p data
-          base="https://zenodo.org/records/23762846/files"
-          declare -A sums=(
-            [data_sensors.parquet]=9bbbd14b42af5daa071300ce28e72cb7
-            [metadata_sensors.parquet]=9569ae4615bb0bfd25f1a9810376773a
-          )
-          for f in "${!sums[@]}"; do
-            curl -fsSL "$base/$f?download=1" -o "data/$f"
-            echo "${sums[$f]}  data/$f" | md5sum -c -
-          done
+          echo "9bbbd14b42af5daa071300ce28e72cb7  data/data_sensors.parquet" | md5sum -c -
+          echo "9569ae4615bb0bfd25f1a9810376773a  data/metadata_sensors.parquet" | md5sum -c -
 
       # 4. Run the plan with R (validated Tier-1 functions + openair).
       - uses: r-lib/actions/setup-r@v2

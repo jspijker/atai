@@ -1,3 +1,7 @@
-data/
-*.parquet
+data/*
 __pycache__/
+*.parquet
+
+# Sensor data committed to the repo so runs don't re-download from Zenodo.
+!data/data_sensors.parquet
+!data/metadata_sensors.parquet
