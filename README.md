@@ -2,7 +2,8 @@
 
 Each resident question becomes a GitHub issue. The issue holds the approved
 analysis plan (step 2). A workflow runs the plan and posts the results and the
-audit log back to the issue (steps 3–5). The issue is the public audit trail.
+audit log back to the issue (steps 3–5: data check, sensor check and
+background, analysis). The issue is the public audit trail.
 
 ## Agreed output files (one folder per run)
 
@@ -13,7 +14,7 @@ the next step reads it. Schemas are in `.github/skills/air-quality-analyst/asset
 | --- | --- | --- | --- | --- |
 | `01_request.json` | 1 Understand | AI | AI (step 2) | `request.schema.json` |
 | `02_plan.json` | 2 Plan (approved) | AI + resident | R | `plan.schema.json` |
-| `03_results.json` | 3–5 Data check, sensor check, background, analysis | R only | AI (step 6), checker | `results.schema.json` |
+| `03_results.json` | 3 data check, 4 sensor check and background, 5 analysis | R only | AI (step 6), checker | `results.schema.json` |
 | `04_answer.json` | 6 Explain | AI | checker, app | `answer.schema.json` |
 | `05_check.json` | 7 Number check | checker | app, team | `check.schema.json` |
 | `audit.jsonl` | every step | R | team, jury | one JSON object per line |

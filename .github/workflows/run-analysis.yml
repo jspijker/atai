@@ -57,7 +57,7 @@ jobs:
             await github.rest.issues.createComment({
               owner: context.repo.owner, repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `## Results (steps 3–5)\n\n\`\`\`json\n${results}\n\`\`\`\n\n## Audit log\n\n\`\`\`json\n${audit}\n\`\`\`\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
+              body: `## Results (steps 3–5: data check, sensor check and background, analysis)\n\n\`\`\`json\n${results}\n\`\`\`\n\n## Audit log\n\n\`\`\`json\n${audit}\n\`\`\`\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
             });
             await github.rest.issues.addLabels({
               owner: context.repo.owner, repo: context.repo.repo,
