@@ -119,7 +119,8 @@ workflow, add a comment holding a `### Analysis plan (JSON)` block (see
 
 ## Safety
 
-- Nothing runs until someone with triage rights adds `run-analysis`.
+- Nothing runs until someone with triage rights adds `approved`, and each
+  Copilot stage pauses in the app for a human to approve before it posts.
 - The issue text is never passed through the shell; the plan is read in a
   script and validated against the schema.
 - `run_analysis.R` refuses any tool that is not on its allowed list.
