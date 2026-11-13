@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "04_answer.json – step 6 output (AI: explain)",
+  "description": "The answer in the sections of answer-template.md. numbers_cited links every number in the text to a value id in 03_results.json.",
+  "type": "object",
+  "required": ["run_id", "language", "short_answer", "what_it_means", "how_sure", "numbers_cited"],
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {"type": "string"},
+    "language": {"type": "string", "enum": ["nl", "en"]},
+    "short_answer": {"type": "string"},
+    "what_it_means": {"type": "string"},
+    "how_sure": {"type": "string"},
+    "how_we_got_this": {"type": "array", "items": {"type": "string"}},
+    "follow_ups": {"type": "array", "items": {"type": "string"}},
+    "chart": {"type": "string"},
+    "numbers_cited": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["text", "value_id"], "additionalProperties": false,
+        "properties": {"text": {"type": "string"}, "value_id": {"type": "string"}}
+      }
+    }
+  }
+}

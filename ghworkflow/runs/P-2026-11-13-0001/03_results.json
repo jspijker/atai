@@ -1,0 +1,242 @@
+{
+  "run_id": "P-2026-11-13-0001",
+  "data_source": {
+    "name": "Hollandse Luchten sensor data",
+    "file": "data_sensors.parquet",
+    "version": "2020-01 to 2025-12",
+    "time_zone": "UTC (assumed)"
+  },
+  "steps": [
+    {
+      "step": "data_check",
+      "tool": "check_data_coverage",
+      "tier": 1,
+      "software": "prototype (Python stand-in)",
+      "status": "warning",
+      "inputs_used": {
+        "radius_km": 2,
+        "periods": [
+          "2024-12",
+          "2025-01"
+        ]
+      },
+      "values": [
+        {
+          "id": "sensors_found",
+          "label": "Sensors in the area",
+          "value": 54,
+          "unit": "count"
+        },
+        {
+          "id": "sensors_sps30",
+          "label": "Sensirion SPS30 sensors",
+          "value": 52,
+          "unit": "count"
+        },
+        {
+          "id": "sensors_sds011",
+          "label": "Nova SDS011 sensors",
+          "value": 2,
+          "unit": "count"
+        },
+        {
+          "id": "coverage_median_dec",
+          "label": "Median data coverage",
+          "value": 88,
+          "unit": "%",
+          "period": "2024-12"
+        },
+        {
+          "id": "coverage_median_jan",
+          "label": "Median data coverage",
+          "value": 96.5,
+          "unit": "%",
+          "period": "2025-01"
+        },
+        {
+          "id": "sensors_below_75pct",
+          "label": "Sensors below 75% coverage in a month",
+          "value": 27,
+          "unit": "count"
+        }
+      ],
+      "warnings": [
+        "27 sensors have less than 75% of their hours in December or January"
+      ],
+      "files": []
+    },
+    {
+      "step": "sensor_check",
+      "tool": "detect_faulty_sensors",
+      "tier": 1,
+      "software": "prototype (Python stand-in)",
+      "status": "warning",
+      "inputs_used": {
+        "stuck_hours": 24,
+        "error_values": [
+          344.54
+        ],
+        "max_value": 1000,
+        "threshold_rh": 85
+      },
+      "values": [
+        {
+          "id": "excluded_broken",
+          "label": "Broken sensors left out",
+          "value": 5,
+          "unit": "count"
+        },
+        {
+          "id": "sensors_remaining",
+          "label": "Sensors after the check",
+          "value": 49,
+          "unit": "count"
+        },
+        {
+          "id": "values_removed",
+          "label": "Single values removed",
+          "value": 31,
+          "unit": "count"
+        },
+        {
+          "id": "values_removed_pct",
+          "label": "Share of values removed",
+          "value": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "humid_hours_pct",
+          "label": "Hours with humidity above 85%",
+          "value": 25.5,
+          "unit": "%"
+        }
+      ],
+      "warnings": [
+        "5 sensors left out: stuck on one value or on an error code",
+        "25.5% of hours very damp: sensors may read too high"
+      ],
+      "files": []
+    },
+    {
+      "step": "background",
+      "tool": "get_background",
+      "tier": null,
+      "software": "-",
+      "status": "not_available",
+      "inputs_used": {
+        "source": "station"
+      },
+      "values": [],
+      "warnings": [
+        "No background station loaded yet: regional vs local cannot be confirmed"
+      ],
+      "files": []
+    },
+    {
+      "step": "analysis",
+      "tool": "average_over_time",
+      "tier": 2,
+      "software": "prototype (Python stand-in for openair)",
+      "status": "ok",
+      "inputs_used": {
+        "avg_time": "day",
+        "min_hours": 18
+      },
+      "values": [
+        {
+          "id": "sensors_used",
+          "label": "Sensors with enough daily data",
+          "value": 39,
+          "unit": "count"
+        },
+        {
+          "id": "median_dec",
+          "label": "Typical day (median of daily values)",
+          "value": 12.0,
+          "unit": "µg/m³",
+          "period": "2024-12"
+        },
+        {
+          "id": "median_jan",
+          "label": "Typical day (median of daily values)",
+          "value": 9.4,
+          "unit": "µg/m³",
+          "period": "2025-01"
+        },
+        {
+          "id": "mean_dec",
+          "label": "Average of all days",
+          "value": 16.3,
+          "unit": "µg/m³",
+          "period": "2024-12"
+        },
+        {
+          "id": "mean_jan",
+          "label": "Average of all days",
+          "value": 18.2,
+          "unit": "µg/m³",
+          "period": "2025-01"
+        },
+        {
+          "id": "high_day_threshold",
+          "label": "Threshold for a high day",
+          "value": 25,
+          "unit": "µg/m³"
+        },
+        {
+          "id": "days_above_25_dec",
+          "label": "Days above the threshold",
+          "value": 5,
+          "unit": "count",
+          "period": "2024-12"
+        },
+        {
+          "id": "days_above_25_jan",
+          "label": "Days above the threshold",
+          "value": 8,
+          "unit": "count",
+          "period": "2025-01"
+        },
+        {
+          "id": "peak_day_1",
+          "label": "Highest day",
+          "value": "2025-01-20",
+          "unit": "date"
+        },
+        {
+          "id": "peak_day_1_value",
+          "label": "Highest daily value",
+          "value": 72.4,
+          "unit": "µg/m³",
+          "period": "2025-01-20"
+        },
+        {
+          "id": "episode_start",
+          "label": "Start of high episode",
+          "value": "2025-01-17",
+          "unit": "date"
+        },
+        {
+          "id": "episode_end",
+          "label": "End of high episode",
+          "value": "2025-01-22",
+          "unit": "date"
+        },
+        {
+          "id": "nye_peak_value",
+          "label": "New Year's Eve peak hour (median of sensors)",
+          "value": 98.8,
+          "unit": "µg/m³",
+          "period": "2024-12-31T23:00Z"
+        }
+      ],
+      "warnings": [
+        "Mean and median point in opposite directions: report both"
+      ],
+      "files": [
+        "chart_daily_pm25.svg",
+        "daily_area_values.csv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+### Resident question
+
+Was the air worse in January than in December, near Beverwijk?
+
+### Analysis plan (JSON)
+
+```json
+{
+  "plan_id": "P-2026-11-13-0001",
+  "question_type": "temporal_comparison",
+  "recipe": "R2",
+  "pollutant": "pm25",
+  "area": {"postcode": "1941", "radius_km": 2},
+  "periods": [
+    {"label": "December", "start": "2024-12-01", "end": "2024-12-31"},
+    {"label": "January", "start": "2025-01-01", "end": "2025-01-31"}
+  ],
+  "assumptions": ["radius 2 km around central Beverwijk (52.49 N, 4.66 E)"],
+  "steps": [
+    {"tool": "check_data_coverage", "tier": 1},
+    {"tool": "get_sensor_data", "tier": 1, "params": {"calibrated": true}},
+    {"tool": "detect_faulty_sensors", "tier": 1, "params": {"stuck_hours": 24, "error_values": [344.54], "max_value": 1000}},
+    {"tool": "flag_high_humidity", "tier": 1, "params": {"threshold_rh": 85}},
+    {"tool": "filter_outliers", "tier": 1, "params": {"method": "default"}},
+    {"tool": "get_background", "params": {"source": "station"}},
+    {"tool": "to_openair_format"},
+    {"tool": "average_over_time", "tier": 2, "params": {"avg_time": "day", "min_hours": 18}},
+    {"tool": "average_over_time", "tier": 2, "params": {"avg_time": "month", "stats": ["mean", "median"]}}
+  ],
+  "approved_by_resident": true
+}
+```
+
+### Approval
+
+- [X] The resident approved this plan

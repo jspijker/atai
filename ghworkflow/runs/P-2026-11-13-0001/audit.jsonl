@@ -1,0 +1,5 @@
+{"run_id":"P-2026-11-13-0001","time":"2026-11-13T10:55:01Z","step":"plan","tool":"-","tier":null,"software":"-","detail":"plan approved by resident"}
+{"run_id":"P-2026-11-13-0001","time":"2026-11-13T10:55:03Z","step":"data_check","tool":"check_data_coverage","tier":1,"software":"prototype","detail":"54 sensors, 27 below 75% in a month"}
+{"run_id":"P-2026-11-13-0001","time":"2026-11-13T10:55:05Z","step":"sensor_check","tool":"detect_faulty_sensors","tier":1,"software":"prototype","detail":"5 excluded; 31 values removed (0.1%); humid hours 25.5%"}
+{"run_id":"P-2026-11-13-0001","time":"2026-11-13T10:55:05Z","step":"background","tool":"get_background","tier":null,"software":"-","detail":"not available"}
+{"run_id":"P-2026-11-13-0001","time":"2026-11-13T10:55:08Z","step":"analysis","tool":"average_over_time","tier":2,"software":"prototype","detail":"39 sensors, daily, min 18 h"}

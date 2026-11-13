@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "05_check.json – step 7 output (number check)",
+  "type": "object",
+  "required": ["run_id", "status", "numbers_found", "numbers_missing", "checked_at"],
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {"type": "string"},
+    "status": {"type": "string", "enum": ["pass", "fail"]},
+    "numbers_found": {
+      "type": "array",
+      "items": {"type": "object", "required": ["text", "value_id"], "properties": {"text": {"type": "string"}, "value_id": {"type": "string"}}}
+    },
+    "numbers_missing": {"type": "array", "items": {"type": "string"}, "description": "Numbers in the answer that match no value in 03_results.json"},
+    "checked_at": {"type": "string", "format": "date-time"}
+  }
+}

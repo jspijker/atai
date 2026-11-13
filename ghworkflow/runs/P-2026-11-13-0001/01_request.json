@@ -1,0 +1,32 @@
+{
+  "run_id": "P-2026-11-13-0001",
+  "question": "Was the air worse in January than in December, near Beverwijk?",
+  "language": "en",
+  "question_type": "temporal_comparison",
+  "recipe": "R2",
+  "pollutant": "pm25",
+  "area": {
+    "name": "Beverwijk centre",
+    "postcode": "1941",
+    "lat": 52.49,
+    "lon": 4.66,
+    "radius_km": 2
+  },
+  "periods": [
+    {
+      "label": "December",
+      "start": "2024-12-01",
+      "end": "2024-12-31"
+    },
+    {
+      "label": "January",
+      "start": "2025-01-01",
+      "end": "2025-01-31"
+    }
+  ],
+  "assumptions": [
+    "radius 2 km (default for a town centre)",
+    "most recent complete December and January in the data"
+  ],
+  "clarification_needed": false
+}

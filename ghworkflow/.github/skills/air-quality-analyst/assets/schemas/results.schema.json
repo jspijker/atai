@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "03_results.json – steps 3-5 output (R tools: data check, sensor check, analysis)",
+  "description": "Written only by R. Every number the AI may use is a 'values' entry with an id, label and unit. The AI never edits this file.",
+  "type": "object",
+  "required": ["run_id", "data_source", "steps"],
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {"type": "string"},
+    "data_source": {
+      "type": "object", "required": ["name", "file"],
+      "properties": {"name": {"type": "string"}, "file": {"type": "string"}, "version": {"type": "string"}, "time_zone": {"type": "string"}}
+    },
+    "steps": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["step", "tool", "status", "values", "warnings"],
+        "additionalProperties": false,
+        "properties": {
+          "step": {"type": "string", "enum": ["data_check", "sensor_check", "background", "analysis"]},
+          "tool": {"type": "string"},
+          "tier": {"type": ["integer", "null"], "enum": [1, 2, null]},
+          "software": {"type": "string", "description": "e.g. 'Analyse-Together a1b2c3d' or 'openair 2.18'"},
+          "status": {"type": "string", "enum": ["ok", "warning", "failed", "not_available"]},
+          "inputs_used": {"type": "object"},
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "object", "required": ["id", "label", "value", "unit"], "additionalProperties": false,
+              "properties": {
+                "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+                "label": {"type": "string"},
+                "value": {"type": ["number", "string"], "description": "number, or an ISO date when unit is 'date'"},
+                "unit": {"type": "string", "description": "µg/m³, %, count, date, hours, ..."},
+                "period": {"type": "string"}
+              }
+            }
+          },
+          "warnings": {"type": "array", "items": {"type": "string"}},
+          "files": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}
