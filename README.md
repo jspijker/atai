@@ -92,6 +92,34 @@ flowchart TD
 Any stage that fails adds `needs-attention` and a short comment so a human can
 step in.
 
+## Data
+
+This repository contains **large datasets in `data/`** (~130 MB in total). Data
+like this normally does not belong in a Git repository, but it is committed here
+for convenience, so that a run can read it directly without anyone having to
+download or register for anything first. The data originates from the
+[Hackathon Hollandse Luchten](https://github.com/provincieNH/HackathonHollandseLuchten)
+materials and the [Zenodo record 23762846](https://zenodo.org/records/23762846).
+All of it is open data.
+
+| Dataset | File(s) | What it contains |
+| --- | --- | --- |
+| **Citizen sensor measurements** | `data_sensors.parquet` (~81 MB) | ~5.7 M hourly measurements from ~520 low-cost Hollandse Luchten sensor kits (2020–2025): raw PM2.5/PM10, calibrated PM2.5, temperature, relative humidity, pressure, and the kit's location. These are the measurements the analysis actually works on. |
+| **Sensor hardware metadata** | `metadata_sensors.parquet` (~8 KB) | One row per sensor kit (569 kits) describing which hardware produced each signal (e.g. Sensirion SPS30 for PM, DHT22 for temperature/humidity). Used for the sensor-quality checks. |
+| **Official reference measurements** | `reference_measurements.parquet` (~39 MB) | ~7.5 M hourly PM10 and PM2.5 values from official Luchtmeetnet stations (2020 – Sept 2026), in µg/m³. Used to compare citizen sensors against calibrated reference stations. |
+| **Reference station metadata** | `reference_station_metadata.csv` | 96 official stations with name, place, coordinates, height, area type (e.g. urban/regional) and station type (e.g. traffic/background). |
+| **KNMI weather** | `knmi_weather_data.parquet` (~12 MB) | ~3.7 M hourly weather records from 70 KNMI stations (2020 – Oct 2026): wind direction, wind speed, temperature and relative humidity. Used for context such as pollution roses. |
+| **Resident questions** | `resident_questions.csv` | 74 real (Dutch) questions residents asked about their air quality, with location, date, title and description — the kind of question this project aims to answer. |
+| **Labeled data** | `labeled_data/<date>/*.csv` | Residents' survey answers and their assessments of algorithmically flagged measurements from two collection rounds. These are participants' judgments, not ground-truth labels. |
+
+> [!NOTE]
+> Only `data_sensors.parquet` and `metadata_sensors.parquet` are strictly
+> required to run an analysis; the other datasets are included for context,
+> validation and future extensions.
+
+Because the data is committed, the sensor tables are explicitly un-ignored in
+`.gitignore` while everything else under `data/` stays ignored by default.
+
 Each resident question becomes a GitHub issue. The issue holds the approved
 analysis plan (step 2). A workflow runs the plan and posts the results and the
 audit log back to the issue (steps 3–5: data check, sensor check and
