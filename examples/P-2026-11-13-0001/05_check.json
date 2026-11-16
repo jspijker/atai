@@ -3,43 +3,31 @@
   "status": "pass",
   "numbers_found": [
     {
-      "text": "9.4",
-      "value_id": "median_jan"
+      "text": "9.48",
+      "value_id": "median_january"
     },
     {
-      "text": "12.0",
-      "value_id": "median_dec"
+      "text": "12.66",
+      "value_id": "median_december"
     },
     {
-      "text": "17",
-      "value_id": "episode_start"
+      "text": "18.01",
+      "value_id": "mean_january"
     },
     {
-      "text": "22",
-      "value_id": "episode_end"
+      "text": "16.42",
+      "value_id": "mean_december"
     },
     {
-      "text": "72.4",
-      "value_id": "peak_day_1_value"
+      "text": "15.31",
+      "value_id": "background_january"
     },
     {
-      "text": "20",
-      "value_id": "peak_day_1"
+      "text": "13.84",
+      "value_id": "background_december"
     },
     {
-      "text": "25",
-      "value_id": "high_day_threshold"
-    },
-    {
-      "text": "8",
-      "value_id": "days_above_25_jan"
-    },
-    {
-      "text": "5",
-      "value_id": "excluded_broken"
-    },
-    {
-      "text": "39",
+      "text": "48",
       "value_id": "sensors_used"
     },
     {
@@ -47,14 +35,18 @@
       "value_id": "sensors_found"
     },
     {
+      "text": "2",
+      "value_id": "sensors_sds011"
+    },
+    {
       "text": "5",
       "value_id": "excluded_broken"
     },
     {
-      "text": "25.5",
+      "text": "26.65",
       "value_id": "humid_hours_pct"
     }
   ],
   "numbers_missing": [],
-  "checked_at": "2026-11-13T14:00:56+00:00"
+  "checked_at": "2026-11-14T19:19:29+00:00"
 }

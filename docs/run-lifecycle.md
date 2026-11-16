@@ -60,14 +60,15 @@ File names in brackets refer to the example run.
    planned tools in order and records, for every step, a `status`, the
    `inputs_used`, `warnings`, any output `files`, and a list of `values`. Each
    value is the only kind of number the answer may quote and has an `id`,
-   `label`, `value` and `unit` (e.g. `{"id": "median_jan", "value": 9.4,
+   `label`, `value` and `unit` (e.g. `{"id": "median_january", "value": 9.48,
    "unit": "µg/m³"}`). Every tool call is also appended to `audit.jsonl`, one
    JSON object per line, giving a complete audit trail. Charts and CSVs produced
    in the analysis step are written alongside.
-   *Example:* four steps (`data_check`, `sensor_check`, `background`,
-   `analysis`); `background` is `not_available` because that tool is not yet
-   connected, and the analysis step produces `chart_daily_pm25.svg` and
-   `daily_area_values.csv`.
+   *Example:* nine tool calls in four steps (`data_check`, `sensor_check`,
+   `background`, `analysis`); the background comes from the nearest official
+   Luchtmeetnet background station, and the analysis step writes
+   `daily_area_values.csv`. No chart yet: `plot_over_time` is not implemented
+   (see [tool-status.md](tool-status.md)).
 
 4. **Explain the result → `04_answer.json`.**
    The AI writes the resident-facing answer (short answer, what it means, how
