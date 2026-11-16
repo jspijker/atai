@@ -1,13 +1,61 @@
 # Air-quality analysis via GitHub issues
 
+## For the jury
+
+**What this is.** This repository is a proof of concept. It shows that a
+resident's question can be turned into an analysis that follows an expert
+method, with numbers that are calculated, checked and traceable. We worked one
+question through completely (Beverwijk, December 2024 versus January 2025)
+rather than building many half-finished features.
+
+**What it already shows**
+
+- **Works with any AI.** The experts' method is written once as plain text (a
+  [skill](.github/skills/air-quality-analyst/SKILL.md)). Any AI assistant can
+  follow it, so it does not depend on one model or one app.
+- **The AI never calculates.** All numbers come from R. An automated check
+  confirms that every number in an answer appears in the R results.
+- **Every step can be traced.** Each step writes a small file that the next
+  step reads, plus an audit log. Anyone can see which data, which choices and
+  which method led to the answer.
+- **Reproducible.** The data and the analysis are in this repository, so anyone
+  gets the same numbers.
+- **Clear roles.** Experts own the method and the calculations. Residents and
+  local groups shape the questions and the answers. The resident approves the
+  plan before anything runs.
+
+**What is still to come**
+
+- **Expert validation.** The pipeline has been checked for reproducibility and
+  traceability. Whether the analysis choices are scientifically right
+  (thresholds, sensor checks, averaging) still needs review by air-quality
+  experts.
+- **Direct use of the Samen Analyseren functions.** The sensor-data steps are
+  adapted from [Samen Analyseren (Analyse-Together)](https://github.com/rivm-syso/Analyse-Together).
+  Calling RIVM's own functions directly is the next step. Charts and
+  wind-direction analyses are not built yet (see
+  [docs/tool-status.md](docs/tool-status.md)).
+- **A resident-friendly way to try it.** For now, testing goes through GitHub,
+  R and the command line. In practice, residents would simply use the AI they
+  already have.
+
+**How to test it**
+
+| | What you do | Time | You need |
+| --- | --- | --- | --- |
+| 1. Read a finished run | Open [`examples/P-2026-11-13-0001/`](examples/P-2026-11-13-0001) and follow the files in order: question (`01_request.json`) → plan (`02_plan.json`) → R results (`03_results.json`) → answer ([`answer.md`](examples/P-2026-11-13-0001/answer.md)) → number check (`05_check.json`) → audit log (`audit.jsonl`). | 5 min | A browser |
+| 2. Reproduce the numbers | Run the two commands in [Reproduce a result yourself](#reproduce-a-result-yourself-no-approval-needed) and compare with the table there. | 15 min | R |
+| 3. Catch a wrong number | Change one number in a copy of the answer and run the check: it says FAIL and names the number. See [Catch a wrong number](#catch-a-wrong-number). | 5 min | Python |
+| 4. Ask your own question | Follow [docs/test-in-any-ai.md](docs/test-in-any-ai.md) in ChatGPT, Claude or another AI. The first steps (listen, understand, plan) need nothing installed. Or ask us for a live run through a GitHub issue. | 15–30 min | Any AI chat |
+
 > [!CAUTION]
 > **Experimental hackathon project — do not use for real purposes.**
 >
 > This repository is **highly experimental**. It was created during a hackathon
 > for demonstration purposes only. Everything here is vibe-coded, and the
-> code's validation and review were also done with AI. While the answers to the
-> questions may look trustworthy, **the authors made no effort to validate the
-> answers**. **No one should use this code, or rely on its output, for any
+> code's validation and review were also done with AI. The answers are checked
+> for traceability and reproducibility, but **the analysis choices have not been
+> validated by air-quality experts**. **No one should use this code, or rely on its output, for any
 > real-life purpose.**
 
 ## Introduction
@@ -156,8 +204,9 @@ python scripts/check_run.py examples/P-2026-11-13-0001
 This validates every file in a run folder against its schema, runs the number
 check, writes `05_check.json`, and writes `answer.md` (the answer as the resident
 sees it). Exit code 0 = pass. `examples/P-2026-11-13-0001/` is a checked-in
-example run (the Beverwijk prototype, Dec 2024 vs Jan 2025); its numbers come
-from an early stand-in rather than a full production run.
+example run (Beverwijk, Dec 2024 vs Jan 2025), produced with the R analysis
+below; its numbers match the table in
+[Reproduce a result yourself](#reproduce-a-result-yourself-no-approval-needed).
 
 To produce `03_results.json` with R (into an output folder of your choice):
 
@@ -205,10 +254,26 @@ Beverwijk example (PM2.5, December 2024 vs January 2025, 2 km around 52.49 N,
 | Average of all days (mean) | 16.42 µg/m³ | 18.01 µg/m³ |
 | Regional background (Beverwijk West-Creutzberglaan, 1.3 km) | 13.84 µg/m³ | 15.31 µg/m³ |
 
-> The committed example run in
-> [`examples/P-2026-11-13-0001/`](examples/P-2026-11-13-0001) was produced by an
-> early stand-in and shows slightly different numbers (e.g. 12.0 → 9.4 and no
-> background); the R run above is the authoritative pipeline.
+The committed example run in
+[`examples/P-2026-11-13-0001/`](examples/P-2026-11-13-0001) contains exactly
+these numbers, together with the answer written from them and its number check.
+
+### Catch a wrong number
+
+The number check is what keeps the AI honest: every number in an answer must
+appear in the R results. To see it work:
+
+```bash
+pip install jsonschema
+cp -r examples/P-2026-11-13-0001 /tmp/tampered
+# change "9.48" (the typical January day) into "8.7" in the answer
+sed -i.bak 's/had 9.48 instead/had 8.7 instead/' /tmp/tampered/04_answer.json
+python scripts/check_run.py examples/P-2026-11-13-0001   # PASS: 11 numbers found, 0 missing
+python scripts/check_run.py /tmp/tampered                # FAIL: ... not in results: 8.7
+```
+
+On Windows, copy the folder by hand and edit `04_answer.json` in any text
+editor; the two `python` commands are the same.
 
 Reproduced on 13 November 2026 with R 4.5 and openair 3.1; any recent R 4.x with
 openair 3.x should give the same numbers.
